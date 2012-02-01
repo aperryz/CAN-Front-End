@@ -1,0 +1,156 @@
+/*
+ * Creative Action Network Stylesheet
+ * Based off of Twitter's Bootstrap CSS Framework
+ */
+ body {
+   font-family: "proxima-nova", sans-serif;
+   padding-top: 40px;
+ }
+ h1 {
+   font: normal 70px/normal "league-gothic", sans-serif;
+ }
+ p {
+   font: 14px/18px "proxima-nova", sans-serif;
+ }
+ a { color: #404040; }
+ a:hover { color: #404040; text-decoration: none; }
+ a:link {
+   color: #fff;
+ }
+ .topbar-inner, .topbar .fill {
+  background: url('../img/header-bg.png') repeat; 
+ }
+ .topbar h3 a, .topbar .brand {
+   font: normal 24px/normal "league-gothic", sans-serif;
+ }
+ .topbar .brand:hover {
+   background-color: transparent;
+ }
+ .topbar li, .topbar a {
+   color: #fff;
+ }
+ li.sep {
+   padding: 12px 5px 10px;
+ }
+ .topbar div > ul a, .nav a {
+   padding: 11px 0;
+   font-size: 14px;
+ }
+ .topbar div > ul .active > a, .nav .active > a {
+   background-color: transparent;
+ }
+ #rollover-bar { position: absolute; bottom: -7px; left: 0; width: 100px; height: 5px; background: #fff; }
+ .topbar .login {
+   float: right;
+ }
+ 
+ 
+/* Page Styles */
+#pages {
+  border-bottom: 2px solid #000;
+}
+.page {
+  border-bottom: 2px solid red;
+}
+
+/* Page header tweaks */
+.page-header {
+padding: 40px 20px 10px;
+margin: -20px -20px 20px;
+text-align: center;
+text-transform: uppercase;
+border-bottom: none;
+}
+
+
+/* Image Styles */
+#images .image {
+  margin: 7px;
+  float: left;
+}
+#images .image img{
+  height: 187px;
+  width: 145px;
+}
+**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* Footer Styles */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+  background: #262626;
+  opacity: .6;
+  padding-top: 0;
+  color: #fff;
+}
+footer .nav {
+  margin-left: 12px;
+  font-size: 20px;
+}
+footer .nav li a {
+  padding: 9px 0;
+}
+footer li.sep {
+  padding: 9px 5px;
+}
+#twitter, #facebook, #mention {
+  float: right;
+}
+#twitter {
+  margin: 7px 0 0 5px;
+}
+#facebook {
+  margin: 5px 0 0;
+}
+#mention {
+  width: auto;
+  padding: 9px 0;
+  margin: 0 10px 0 0;
+}
