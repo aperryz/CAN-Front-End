@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- We can talk about whether we want to include this for better IE support. -->
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -14,17 +15,17 @@
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    
+
     <!-- Typekit files -->
     <!-- The domain must be adjusted on typekit.com before these can be used outside of localhost -->
     <script type="text/javascript" src="http://use.typekit.com/tgl2squ.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    
+
     <!-- Javascript files -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
-    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/scripts.js"></script>
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -35,12 +36,12 @@
 
   <body>
 
-    <div class="topbar">
+    <div class="navbar navbar-fixed-top">
       <div class="fill">
         <div class="container">
           <a class="brand" href="#home">CAMPAIGN TITLE</a>
           <ul class="nav" id="main-nav">
-            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li class="sep">|</li>
             <li><a href="#about">About</a></li>
             <li class="sep">|</li>
@@ -48,12 +49,12 @@
             <li class="sep">|</li>
             <li><a href="#submitting">Submitting</a></li>
           </ul>
-          
+
+          <button class="btn pull-right" type="submit">Submit</button>
           <ul class="nav login">
             <li><a href="#">Login</a></li>
             <li class="sep">|</li>
             <li><a href="#about">Register</a></li>
-            <button class="btn" type="submit">Submit</button>
           </ul>
 
         </div>
@@ -64,56 +65,58 @@
 
       <div class="content">
         <div id="pages">
-          <div class="page">
-            <div class="page-header">
-              <h1><a name="home">Longer Campaign Title</a></h1>
-            </div>
-            <div class="row">
-              <div class="span16">
-                <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
+            <div class="page">
+              <div class="page-header">
+                <h1><a name="home">Longer Campaign Title</a></h1>
+              </div>
+              <div class="row">
+                <div class="span12">
+                  <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
+                  <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div class="page">
-            <div class="page-header">
-              <h1><a name="about">About</a></h1>
-            </div>
-            <div class="row">
-              <div class="span16">
-                <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
+
+            <div class="page">
+              <div class="page-header">
+                <h1><a name="about">About</a></h1>
+              </div>
+              <div class="row">
+                <div class="span12">
+                  <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div class="page">
-            <div class="page-header">
-              <h1><a name="questions">Questions</a></h1>
-            </div>
-            <div class="row">
-              <div class="span16">
-                <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
+
+            <div class="page">
+              <div class="page-header">
+                <h1><a name="questions">Questions</a></h1>
+              </div>
+              <div class="row">
+                <div class="span12">
+                  <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div class="page">
-            <div class="page-header">
-              <h1><a name="submitting">Submitting</a></h1>
-            </div>
-            <div class="row">
-              <div class="span16">
-                <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
+
+            <div class="page">
+              <div class="page-header">
+                <h1><a name="submitting">Submitting</a></h1>
+              </div>
+              <div class="row">
+                <div class="span12">
+                  <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
+                </div>
               </div>
             </div>
-          </div>
-          
+          <a class="page-control left">About</a>
+          <a class="page-control right">Submitting</a>
         </div>
         <!-- End of the pages -->
-      
-      <!-- Begin image gallery -->
-      <div class="row">
-          <div class="span16" id="images">
+
+        <!-- Begin image gallery -->
+        <div class="row">
+          <div class="span12" id="images">
             <div class="image"><img src="http://placehold.it/145x187" /></div>
             <div class="image"><img src="http://placehold.it/145x187" /></div>
             <div class="image"><img src="http://placehold.it/145x187" /></div>
@@ -147,20 +150,20 @@
             itemSelector : '.image'
           });
         </script>
-        
+
       </div><!-- End whole site container -->
 
       <footer>
         <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li class="sep">|</li>
-            <li><a href="#about">About</a></li>
-            <li class="sep">|</li>
-            <li><a href="#questions">Questions</a></li>
-            <li class="sep">|</li>
-            <li><a href="#submitting">Submitting</a></li>
+          <li class="active"><a href="#">Home</a></li>
+          <li class="sep">|</li>
+          <li><a href="#about">About</a></li>
+          <li class="sep">|</li>
+          <li><a href="#questions">Questions</a></li>
+          <li class="sep">|</li>
+          <li><a href="#submitting">Submitting</a></li>
         </ul>
-        
+
         <div id="twitter">
           <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 

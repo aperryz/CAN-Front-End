@@ -1,65 +1,128 @@
 /*
  * Creative Action Network Stylesheet
- * Based off of Twitter's Bootstrap CSS Framework
- */
- body {
-   font-family: "proxima-nova", sans-serif;
-   padding-top: 40px;
- }
- h1 {
-   font: normal 70px/normal "league-gothic", sans-serif;
- }
- p {
-   font: 14px/18px "proxima-nova", sans-serif;
- }
- a { color: #404040; }
- a:hover { color: #404040; text-decoration: none; }
- a:link {
-   color: #fff;
- }
- .topbar-inner, .topbar .fill {
-  background: url('../img/header-bg.png') repeat; 
- }
- .topbar h3 a, .topbar .brand {
-   font: normal 24px/normal "league-gothic", sans-serif;
- }
- .topbar .brand:hover {
-   background-color: transparent;
- }
- .topbar li, .topbar a {
-   color: #fff;
- }
- li.sep {
-   padding: 12px 5px 10px;
- }
- .topbar div > ul a, .nav a {
-   padding: 11px 0;
-   font-size: 14px;
- }
- .topbar div > ul .active > a, .nav .active > a {
-   background-color: transparent;
- }
- #rollover-bar { position: absolute; bottom: -7px; left: 0; width: 100px; height: 5px; background: #fff; }
- .topbar .login {
-   float: right;
- }
- 
- 
-/* Page Styles */
-#pages {
-  border-bottom: 2px solid #000;
+ * Based off of Twitter's Bootstrap v2.0 CSS Framework
+*/
+
+/* General Styles */
+body {
+  font-family: "proxima-nova", sans-serif;
+  padding-top: 40px;
+  background-color: #efeff0;
 }
-.page {
-  border-bottom: 2px solid red;
+h1 {
+  font: normal 70px/normal "league-gothic", sans-serif;
+}
+p {
+  font: 14px/18px "proxima-nova", sans-serif;
+}
+a { color: #404040; }
+a:hover { color: #404040; text-decoration: none; }
+a:link {
+  color: #fff;
+}
+.btn {
+  padding: 2px 10px 2px;
 }
 
-/* Page header tweaks */
+/* Navigation Styles */
+
+.navbar .fill {
+  background: url('../img/header-bg.png') repeat; 
+}
+.navbar .brand {
+  font: normal 24px/normal "league-gothic", sans-serif;
+  padding: 7px 12px 6px 10px;
+}
+.navbar .nav .active > a,
+.navbar .nav > li > a:hover,
+footer .nav .active > a,
+footer .nav > li > a:hover {
+  background-color: transparent;
+  color: #fff;
+}
+.navbar li,
+.navbar .nav > li > a,
+.navbar a,
+footer a {
+  color: #e0e0e0;
+}
+li.sep {
+  padding: 12px 5px 10px;
+}
+.navbar .nav > li > a,
+footer .nav > li > a {
+  padding: 11px 0;
+  font-size: 14px;
+}
+#rollover-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 5px;
+  background: #fff;
+}
+.navbar .login {
+  float: right;
+}
+.navbar .btn {
+  margin-top: 8px;
+}
+
+
+/* Page Styles */
+#pages {
+  position: relative;
+  padding-bottom: 20px;
+  background: url('../img/pages-border.png') repeat-x left bottom;
+}
 .page-header {
-padding: 40px 20px 10px;
-margin: -20px -20px 20px;
-text-align: center;
-text-transform: uppercase;
-border-bottom: none;
+  padding: 40px 20px 10px;
+  margin: -20px -20px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: none;
+}
+#pages .page {
+  display: none;
+  position: relative;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+#pages .page.active {
+  display: block;
+}
+.page-control {
+  position: absolute;
+  top: 80px;
+  left: 15px;
+  height: 30px;
+  padding: 0 0 0 30px;
+  margin-top: -20px;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 30px;
+  color: #999999;
+  background: transparent url('../img/left-arrow.png') no-repeat left top;
+  display: none;
+}
+.page-control.active { display: block; }
+.page-control:hover {
+  cursor: pointer;
+  background-image: url('../img/left-arrow-hover.png');
+}
+.page-control.right {
+  left: auto;
+  right: 15px;
+  padding: 0 30px 0 0;
+  background: transparent url('../img/right-arrow.png') no-repeat right top;
+  text-align: right;
+}
+.page-control.right:hover{
+  background-image: url('../img/right-arrow-hover.png');
 }
 
 
@@ -72,7 +135,7 @@ border-bottom: none;
   height: 187px;
   width: 145px;
 }
-**** Isotope Filtering ****/
+/**** Isotope Filtering ****/
 
 .isotope-item {
   z-index: 2;
@@ -88,23 +151,23 @@ border-bottom: none;
 .isotope,
 .isotope .isotope-item {
   -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
 }
 
 .isotope {
   -webkit-transition-property: height, width;
-     -moz-transition-property: height, width;
-       -o-transition-property: height, width;
-          transition-property: height, width;
+  -moz-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
 }
 
 .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-       -o-transition-property:         top, left, opacity;
-          transition-property:         transform, opacity;
+  -moz-transition-property:    -moz-transform, opacity;
+  -o-transition-property:         top, left, opacity;
+  transition-property:         transform, opacity;
 }
 
 /**** disabling Isotope CSS3 transitions ****/
@@ -113,9 +176,9 @@ border-bottom: none;
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
   -webkit-transition-duration: 0s;
-     -moz-transition-duration: 0s;
-       -o-transition-duration: 0s;
-          transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
 }
 
 /* Footer Styles */
@@ -131,8 +194,12 @@ footer {
   color: #fff;
 }
 footer .nav {
-  margin-left: 12px;
+  margin: 1px 0 0 12px;
   font-size: 20px;
+}
+footer .nav li {
+  display: block;
+  float: left;
 }
 footer .nav li a {
   padding: 9px 0;
