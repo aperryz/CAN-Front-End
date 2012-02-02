@@ -23,9 +23,10 @@ Pagination System
 -----------------
 The pagination system is based on anchor tags being used on the h1 headings for each page.  The code looks like:
 
-<div class="page-header">
-<h1><a name="home">Longer Campaign Title</a></h1>
-</div>
+    <div class="page-header">
+    <h1><a name="home">Longer Campaign Title</a></h1>
+    </div>
+
 
 Copyright and license
 ---------------------
