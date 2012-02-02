@@ -21,12 +21,6 @@
     <script type="text/javascript" src="http://use.typekit.com/tgl2squ.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-    <!-- Javascript files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/scripts.js"></script>
-
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -50,7 +44,7 @@
             <li><a href="#submitting">Submitting</a></li>
           </ul>
 
-          <button class="btn pull-right" type="submit">Submit</button>
+          <button id="submit-btn" class="btn pull-right" type="submit">Submit</button>
           <ul class="nav login">
             <li><a href="#">Login</a></li>
             <li class="sep">|</li>
@@ -62,55 +56,53 @@
     </div>
 
     <div class="container">
-
-      <div class="content">
         <div id="pages">
-            <div class="page">
-              <div class="page-header">
-                <h1><a name="home">Longer Campaign Title</a></h1>
-              </div>
-              <div class="row">
-                <div class="span12">
-                  <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
-                  <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
-                </div>
+          <div class="page">
+            <div class="page-header">
+              <h1><a name="home">Longer Campaign Title</a></h1>
+            </div>
+            <div class="row">
+              <div class="span12">
+                <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
+                <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
               </div>
             </div>
+          </div>
 
-            <div class="page">
-              <div class="page-header">
-                <h1><a name="about">About</a></h1>
-              </div>
-              <div class="row">
-                <div class="span12">
-                  <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
-                </div>
+          <div class="page">
+            <div class="page-header">
+              <h1><a name="about">About</a></h1>
+            </div>
+            <div class="row">
+              <div class="span12">
+                <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
               </div>
             </div>
+          </div>
 
-            <div class="page">
-              <div class="page-header">
-                <h1><a name="questions">Questions</a></h1>
-              </div>
-              <div class="row">
-                <div class="span12">
-                  <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
-                </div>
+          <div class="page">
+            <div class="page-header">
+              <h1><a name="questions">Questions</a></h1>
+            </div>
+            <div class="row">
+              <div class="span12">
+                <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
               </div>
             </div>
+          </div>
 
-            <div class="page">
-              <div class="page-header">
-                <h1><a name="submitting">Submitting</a></h1>
-              </div>
-              <div class="row">
-                <div class="span12">
-                  <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
-                </div>
+          <div class="page">
+            <div class="page-header">
+              <h1><a name="submitting">Submitting</a></h1>
+            </div>
+            <div class="row">
+              <div class="span12">
+                <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
               </div>
             </div>
-          <a class="page-control left">About</a>
-          <a class="page-control right">Submitting</a>
+          </div>
+          <a class="page-control prev">About</a>
+          <a class="page-control next">Submitting</a>
         </div>
         <!-- End of the pages -->
 
@@ -143,13 +135,6 @@
             <div class="image"><img src="http://placehold.it/145x187" /></div>
           </div>
         </div><!-- End image gallery -->
-        <script>
-          var $images = $('#images');
-          $images.isotope({
-            // options
-            itemSelector : '.image'
-          });
-        </script>
 
       </div><!-- End whole site container -->
 
@@ -170,12 +155,18 @@
         </div>
         <div id="facebook">
           <!-- Replace data-href attribute value with the URL you want people to like. -->
-          <div class="fb-like" data-href="http://bignewideas.com/" data-send="false" data-width="300" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
+          <div class="fb-like" data-href="http://bignewideas.com/" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div>
         </div>
         <span id="mention">A part of the Creative Action Network</span>
       </footer>
 
     </div> <!-- /container -->
+
+    <!-- Javascript files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/scripts.js"></script>
 
     <!-- Facebook Like button -->
     <!-- Code available at http://developers.facebook.com/docs/reference/plugins/like/ -->
@@ -184,7 +175,7 @@
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=131925520250901";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
   </body>

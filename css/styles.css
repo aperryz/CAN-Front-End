@@ -6,7 +6,7 @@
 /* General Styles */
 body {
   font-family: "proxima-nova", sans-serif;
-  padding-top: 40px;
+  margin-top: 40px;
   background-color: #efeff0;
 }
 h1 {
@@ -34,11 +34,15 @@ a:link {
   padding: 7px 12px 6px 10px;
 }
 .navbar .nav .active > a,
+.navbar .nav .active > a:hover,
 .navbar .nav > li > a:hover,
 footer .nav .active > a,
 footer .nav > li > a:hover {
   background-color: transparent;
   color: #fff;
+}
+.navbar .nav .active > a:hover {
+  cursor: default;
 }
 .navbar li,
 .navbar .nav > li > a,
@@ -73,24 +77,18 @@ footer .nav > li > a {
 /* Page Styles */
 #pages {
   position: relative;
-  padding-bottom: 20px;
+  clear: both;
   background: url('../img/pages-border.png') repeat-x left bottom;
 }
 .page-header {
   padding: 40px 20px 10px;
-  margin: -20px -20px 20px;
+  margin: 0 0 20px;
   text-align: center;
   text-transform: uppercase;
   border-bottom: none;
 }
 #pages .page {
   display: none;
-  position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  -moz-transition: 0.6s ease-in-out left;
-  -ms-transition: 0.6s ease-in-out left;
-  -o-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
 }
 #pages .page.active {
   display: block;
@@ -114,14 +112,14 @@ footer .nav > li > a {
   cursor: pointer;
   background-image: url('../img/left-arrow-hover.png');
 }
-.page-control.right {
+.page-control.next {
   left: auto;
   right: 15px;
   padding: 0 30px 0 0;
   background: transparent url('../img/right-arrow.png') no-repeat right top;
   text-align: right;
 }
-.page-control.right:hover{
+.page-control.next:hover{
   background-image: url('../img/right-arrow-hover.png');
 }
 
@@ -211,10 +209,10 @@ footer li.sep {
   float: right;
 }
 #twitter {
-  margin: 7px 0 0 5px;
+  margin: 7px -15px 0 5px;
 }
 #facebook {
-  margin: 5px 0 0;
+  margin: 7px -10px 0 0;
 }
 #mention {
   width: auto;
