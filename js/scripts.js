@@ -114,8 +114,26 @@ $(function() {
         height: 0
       }, 300);
     });
+    
+    
+    //Animate the pulldown to show and hide when the pulldown button is clicked.
+    $('#pulldown-btn').click(function(){
+        dropdown = $('.dropdown');
+        if (dropdown.hasClass('active')){
+            dropdown.animate({ height: '5px' }, 500);
+            //We also animate the body so the whole page appears to move back up.
+            $('body').animate({ marginTop: '40px'}, 500);
+            dropdown.removeClass('active');
+        }
+        else{
+            dropdown.animate({ height: '41px' }, 500);
+            //We also animate the body so the whole page appears to move down.
+            $('body').animate({ marginTop: '76px'}, 500);
+            dropdown.addClass('active');  
+        }
+    });
   
-});
+}); //End of document ready function.
 
 
 
