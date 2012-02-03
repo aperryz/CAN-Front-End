@@ -1,14 +1,19 @@
 //Run when the DOM is ready to be manipulated.
 $(function() {    
     
-  /* RUN INITIAL PAGE MOVEMENT
+  /* RUN TO SHOW INITIAL PAGE
   * ====================== */
   
   //show the correct content from the start.
   var currentPage = getCurrentPage();
   var pages = getPages();
-  showLandingPage(currentPage);
-  setPrevNextArrows(getCurrentPage());
+  landingPage = showLandingPage(currentPage);
+  setPrevNextArrows(currentPage);
+  
+  //Call the function to count for every number listed.
+  landingPage.find('.num').each(function(){
+    animateCountUp($(this));
+  });
   
   //Set the correct navigation from the start.
   $('#main-nav a[href="#' + currentPage + '"]').parent().addClass("active");
@@ -87,6 +92,28 @@ $(function() {
   });
   
   
+  /* RUN ISOTOPE AND IMAGE ROLLOVERS
+  * ====================== */ 
+  var $container = $('#images');
+      
+  $container.isotope({
+    itemSelector: '.image'
+  });
+
+    $('#images .image').hover(function(){
+      var imageContainer = $(this);
+      var imgContent = imageContainer.children('.img-content');
+      var imageHeight = imageContainer.css('height');
+      imgContent.animate({
+        height: imageHeight
+      }, 300);
+    }, function(){
+      var imageContainer = $(this);
+      var imgContent = imageContainer.children('.img-content');
+      imgContent.animate({
+        height: 0
+      }, 300);
+    });
   
 });
 
@@ -196,6 +223,8 @@ function getPrevNextPages(currentPage){
 function showLandingPage(landingPageName){
   var landingPage = $('#pages .page a[name="' + landingPageName + '"]').closest('div.page');
   landingPage.addClass("active");
+  
+  return landingPage;
 }
   
   
@@ -209,7 +238,7 @@ function showPageContent(pageToShow, pageLocation){
   pages.css('height', currentContentHeight);
     
   //Hide the current content first
-  currentContent.fadeOut(1000, function(){
+  currentContent.fadeOut(100, function(){
     currentContent.removeClass("active");
     
     //Show the new content.  
@@ -217,13 +246,37 @@ function showPageContent(pageToShow, pageLocation){
       height: pageToShowContent.height()
     }, 100);
       
-    pageToShowContent.fadeIn(1000, function(){
+    pageToShowContent.fadeIn(100, function(){
       pageToShowContent.addClass("active");
     });
   });
   
   //Set the has to be the new page.  This is needed for the prev and next buttons.
   setHash(pageToShow);
+  
+  //Call the function to count for every number listed.
+  pageToShowContent.find('.num').each(function(){
+    animateCountUp($(this));
+  });
     
   return true;
+}
+
+/* COUNTING UP FUNCTION
+  * ====================== */
+function animateCountUp(containerSpan){
+  var maxNumber = containerSpan.text();
+  maxNumber = Number(maxNumber);
+  var currentNumber = 0;  
+  
+  var i = setInterval(function(){
+    if(currentNumber <= maxNumber){
+      containerSpan.text(currentNumber);
+      currentNumber++;
+    }
+    else{
+      clearInterval();
+    }
+  }, 1);
+  
 }
