@@ -246,6 +246,62 @@ footer .nav > li > a {
     transition-duration: 0s;
 }
 
+/**** MODAL STYLES ****/
+/***********************/
+.modal{
+  width: 455px;
+  max-height: 800px;
+  margin: -250px 0 0 -228px;
+  background-color: #e6e6e6;
+  top: 35%;
+}
+.modal-header {
+  border-bottom: 1px solid #a6a6a6;
+}
+.modal.fade.in {
+  top: 35%;
+}
+.modal h3 {
+  font: 28px/28px "league-gothic", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+.modal input {
+  height: 29px;
+}
+.modal input[type="image"], input[type="checkbox"], input[type="radio"] {
+  height: auto;
+}
+select, input[type="file"] {
+  height: 39px;
+}
+.modal .input-xlarge {
+  width: 415px;
+}
+.modal select.input-xlarge {
+  width: 425px;
+}
+.modal .form-horizontal .control-group > label {
+  width: 300px;
+}
+.modal form input,
+.modal form textarea,
+.modal form select {
+  font: 23px/29px "league-gothic", sans-serif;
+}
+.modal form a {
+  text-decoration: underline;
+}
+.modal .file-upload button {
+  width: 223px;
+  background: url('../img/upload.png') no-repeat;
+  border: none;
+  height: 286px;
+  margin: 0 auto;
+  display: block;
+}
+
+
 /**** FOOTER STYLES ****/
 /***********************/
 footer {

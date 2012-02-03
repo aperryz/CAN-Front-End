@@ -100,6 +100,8 @@ $(function() {
     itemSelector: '.image'
   });
 
+
+    //When hovering over the images dropdown text over the top.
     $('#images .image').hover(function(){
       var imageContainer = $(this);
       var imgContent = imageContainer.children('.img-content');
@@ -114,6 +116,12 @@ $(function() {
         height: 0
       }, 300);
     });
+    
+    //When clicking on an image activate a modal window.
+    $('#images .image').click(function(){
+      $('#image-modal').modal();
+    });
+    
     
     
     //Animate the pulldown to show and hide when the pulldown button is clicked.
@@ -283,7 +291,8 @@ function showPageContent(pageToShow, pageLocation){
 /* COUNTING UP FUNCTION
   * ====================== */
 function animateCountUp(containerSpan){
-  var maxNumber = containerSpan.text();
+  //We pull the max number from the data-number attribute on the container span.
+  var maxNumber = containerSpan.attr('data-number');
   maxNumber = Number(maxNumber);
   var currentNumber = 0;  
   
