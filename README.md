@@ -3,9 +3,13 @@ CREATIVE ACTION NETWORK FRONT-END
 
 Social Media Buttons
 --------------------
-Twitter Button: https://twitter.com/about/resources/buttons#tweet
+Tweet Button: https://twitter.com/about/resources/buttons#tweet
 
 Facebook Like Button: http://developers.facebook.com/docs/reference/plugins/like/
+
+Twitter Login Button (PSD): http://designmoo.com/4651/social-logins/
+
+Facebook Login Button (PSD): http://designmoo.com/4651/social-logins/
 
 JS Plugins Used
 ---------------

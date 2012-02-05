@@ -300,6 +300,36 @@ select, input[type="file"] {
   margin: 0 auto;
   display: block;
 }
+.modal .text-links {
+    text-align: center;
+}
+.modal .text-links a {
+    color: #808080;
+}
+#login-reg-modal form {
+    margin-bottom: 0;
+}
+#login-reg-modal .modal-footer {
+    background-color: transparent;
+    border-top: 1px solid #999;
+    padding: 14px 0 0;
+}
+#login-reg-modal #login-reg-button {
+    width: 63%;
+    padding: 21px 0;
+}
+#login-reg-modal .facebook-login,
+#login-reg-modal .twitter-login {
+    display: block;
+    width: 150px;
+    height: 29px;
+    background: url('../img/facebook-login.png') no-repeat 0 0;
+    text-indent: -9999px;
+}
+#login-reg-modal .twitter-login {
+    background-image: url('../img/twitter-login.png');
+    margin-top: 3px;
+}
 
 
 /**** FOOTER STYLES ****/

@@ -19,11 +19,29 @@ $(function() {
   $('#main-nav a[href="#' + currentPage + '"]').parent().addClass("active");
   
   
+  /* HANDLE LOGIN/REGISTER LINKS AND MODAL FIELDS
+  * ====================== */
+  //One modal box used here with JS to show and hide the correct fields.
+  //Allows us to process only one form, not multiple forms.
+  $('#register-link').click(function(){
+      var loginRegModal = $('#login-reg-modal');
+      loginRegModal.find('#login-group').addClass('hide');
+      loginRegModal.find('#register-group, #logreg-email-group').removeClass('hide');
+      loginRegModal.find('#login-reg-button').text('Register');
+  });
+  $('#login-link').click(function(){
+      var loginRegModal = $('#login-reg-modal');
+      loginRegModal.find('#login-group').removeClass('hide');
+      loginRegModal.find('#register-group, #logreg-email-group').addClass('hide');
+      loginRegModal.find('#login-reg-button').text('Login');
+  });
+  
+  
   /* SLIDING BAR FOR MAIN NAVIGATION
   * ====================== */
   //Adjusted from http://css-tricks.com/jquery-magicline-navigation/.
   var $el, leftPos, newWidth,
-  $mainNav = $("#main-nav");
+    $mainNav = $("#main-nav");
 
   $mainNav.append("<li id='rollover-bar'></li>");
   var $rollover_bar = $("#rollover-bar");
@@ -128,15 +146,15 @@ $(function() {
     $('#pulldown-btn').click(function(){
         dropdown = $('.dropdown');
         if (dropdown.hasClass('active')){
-            dropdown.animate({ height: '5px' }, 500);
+            dropdown.animate({height: '5px'}, 500);
             //We also animate the body so the whole page appears to move back up.
-            $('body').animate({ marginTop: '40px'}, 500);
+            $('body').animate({marginTop: '40px'}, 500);
             dropdown.removeClass('active');
         }
         else{
-            dropdown.animate({ height: '41px' }, 500);
+            dropdown.animate({height: '41px'}, 500);
             //We also animate the body so the whole page appears to move down.
-            $('body').animate({ marginTop: '76px'}, 500);
+            $('body').animate({marginTop: '76px'}, 500);
             dropdown.addClass('active');  
         }
     });

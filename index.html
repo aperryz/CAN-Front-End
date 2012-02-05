@@ -58,9 +58,9 @@
           <a id="pulldown-btn" class="pull-right">CAN</a>
           <button id="submit-btn" class="btn pull-right" type="submit" data-toggle="modal" data-target="#submission-modal">Submit</button>
           <ul class="nav login">
-            <li><a data-toggle="modal" href="#login-modal">Login</a></li>
+            <li><a id="login-link" data-toggle="modal" href="#login-reg-modal">Login</a></li>
             <li class="sep">|</li>
-            <li><a href="#about">Register</a></li>
+            <li><a id="register-link" data-toggle="modal" href="#login-reg-modal">Register</a></li>
           </ul>
 
         </div>
@@ -248,24 +248,29 @@
 
     <!-- MODALS -->
     <!-- Login Modal -->
-    <div class="modal hide fade" id="login-modal">
+    <div class="modal hide fade" id="login-reg-modal">
       <div class="modal-body">
         <form class="form-horizontal">
           <div class="control-group">
             <input type="text" class="input-xlarge" id="logreg-name" placeholder="Name">
           </div>
-          <div class="control-group">
+          <div class="control-group hide" id="logreg-email-group">
             <input type="text" class="input-xlarge" id="logreg-email" placeholder="Email">
           </div>
           <div class="control-group">
             <input type="password" class="input-xlarge" id="logreg-password" placeholder="Password">
           </div>
-          <div class="control-group">
-            <a href="#forgot-password" id="forgot-password">I forgot my password</a>/
-            <a href="#forgot-password" id="create-account">I need to create an account</a>
+          <div class="control-group text-links" id="login-group">
+            <a href="#forgot-password" id="forgot-password-link">I forgot my password</a> /
+            <a href="#register" id="create-account-link">I need to create an account</a>
+          </div>
+          <div class="control-group text-links hide" id="register-group">
+            <a href="#login" id="login-account-link">I need to login to my account</a>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-large">Login</button>
+              <button type="submit" class="btn btn-large" id="login-reg-button">Login</button>
+              <a href="#" class="facebook-login">Login with Facebook</a>
+              <a href="#" class="twitter-login">Login with Twitter</a>
           </div>
         </form>
       </div>
