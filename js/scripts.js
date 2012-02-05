@@ -117,6 +117,19 @@ $(function() {
   $container.isotope({
     itemSelector: '.image'
   });
+  
+  $('#filter-one a').click(function(){
+    var selector = $(this).attr('data-filter-one');
+    $container.isotope({ filter: selector });
+    
+    return false;
+  });
+  $('#filter-two a').click(function(){
+     var selector =  $(this).attr('data-filter-two');
+     $container.isotope({ filter: selector });
+     
+     return false;
+  });
 
 
     //When hovering over the images dropdown text over the top.
@@ -141,7 +154,8 @@ $(function() {
     });
     
     
-    
+  /* CAN PULLDOWN MENU
+  * ====================== */     
     //Animate the pulldown to show and hide when the pulldown button is clicked.
     $('#pulldown-btn').click(function(){
         dropdown = $('.dropdown');
