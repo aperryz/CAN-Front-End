@@ -152,9 +152,9 @@ $(function() {
             dropdown.removeClass('active');
         }
         else{
-            dropdown.animate({height: '41px'}, 500);
+            dropdown.animate({height: '36px'}, 500);
             //We also animate the body so the whole page appears to move down.
-            $('body').animate({marginTop: '76px'}, 500);
+            $('body').animate({marginTop: '71px'}, 500);
             dropdown.addClass('active');  
         }
     });
