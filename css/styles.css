@@ -178,8 +178,58 @@ footer .nav > li > a {
 
 /**** SORTING, FILTERING AND SEARCH ****/
 /***************************************/
-#sort-filter {
+#sorts-filters {
     margin: 15px 0 15px -20px;
+    background-color: #efeff0;
+}
+#sorts-filters.low-scroll{
+  position: fixed;
+  top: 30px;
+}
+.sort-filter {
+  display: block;
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  width: 200px;
+}
+.sort-filter ul {
+  position: absolute;
+  list-style: none;
+  margin: 0 0 9px 0;
+  background-color: #fff;
+  width: 200px;
+}
+.sort-filter li {
+  margin-top: 3px;
+}
+.sort-filter span,
+.sort-filter a {
+  padding-left: 2px;
+  color: #595959;
+  display: block;
+}
+.sort-filter span {
+  background: #b2b2b2 url('../img/sort-filter-left-arrow.png') no-repeat 185px 4px;
+}
+.sort-filter:hover span {
+  background-image: url('../img/sort-filter-down-arrow.png');
+}
+.sort-filter a {
+  background: #a6a6a6 url('../img/sort-filter.png') no-repeat 185px 4px;
+}
+.sort-filter a:hover,
+.sort-filter a.active {
+  background: #b2b2b2 url('../img/sort-filter-selected.png') no-repeat 185px 4px;
+}
+#sorts-filters form {
+  margin: 0;
+  position: relative;
+}
+#sorts-filters form input {
+  height: 12px;
+  line-height: 12px;
+  font-size: 10px;
 }
 
 /**** IMAGE AND ISOTOPE ****/

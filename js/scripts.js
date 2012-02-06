@@ -24,16 +24,16 @@ $(function() {
   //One modal box used here with JS to show and hide the correct fields.
   //Allows us to process only one form, not multiple forms.
   $('#register-link').click(function(){
-      var loginRegModal = $('#login-reg-modal');
-      loginRegModal.find('#login-group').addClass('hide');
-      loginRegModal.find('#register-group, #logreg-email-group').removeClass('hide');
-      loginRegModal.find('#login-reg-button').text('Register');
+    var loginRegModal = $('#login-reg-modal');
+    loginRegModal.find('#login-group').addClass('hide');
+    loginRegModal.find('#register-group, #logreg-email-group').removeClass('hide');
+    loginRegModal.find('#login-reg-button').text('Register');
   });
   $('#login-link').click(function(){
-      var loginRegModal = $('#login-reg-modal');
-      loginRegModal.find('#login-group').removeClass('hide');
-      loginRegModal.find('#register-group, #logreg-email-group').addClass('hide');
-      loginRegModal.find('#login-reg-button').text('Login');
+    var loginRegModal = $('#login-reg-modal');
+    loginRegModal.find('#login-group').removeClass('hide');
+    loginRegModal.find('#register-group, #logreg-email-group').addClass('hide');
+    loginRegModal.find('#login-reg-button').text('Login');
   });
   
   
@@ -41,7 +41,7 @@ $(function() {
   * ====================== */
   //Adjusted from http://css-tricks.com/jquery-magicline-navigation/.
   var $el, leftPos, newWidth,
-    $mainNav = $("#main-nav");
+  $mainNav = $("#main-nav");
 
   $mainNav.append("<li id='rollover-bar'></li>");
   var $rollover_bar = $("#rollover-bar");
@@ -120,59 +120,106 @@ $(function() {
   
   $('#filter-one a').click(function(){
     var selector = $(this).attr('data-filter-one');
-    $container.isotope({ filter: selector });
+    $container.isotope({
+      filter: selector
+    });
     
     return false;
   });
   $('#filter-two a').click(function(){
-     var selector =  $(this).attr('data-filter-two');
-     $container.isotope({ filter: selector });
+    var selector =  $(this).attr('data-filter-two');
+    $container.isotope({
+      filter: selector
+    });
      
-     return false;
+    return false;
   });
 
 
-    //When hovering over the images dropdown text over the top.
-    $('#images .image').hover(function(){
-      var imageContainer = $(this);
-      var imgContent = imageContainer.children('.img-content');
-      var imageHeight = imageContainer.css('height');
-      imgContent.animate({
-        height: imageHeight
-      }, 300);
-    }, function(){
-      var imageContainer = $(this);
-      var imgContent = imageContainer.children('.img-content');
-      imgContent.animate({
-        height: 0
-      }, 300);
-    });
+  //When hovering over the images dropdown text over the top.
+  $('#images .image').hover(function(){
+    var imageContainer = $(this);
+    var imgContent = imageContainer.children('.img-content');
+    var imageHeight = imageContainer.css('height');
+    imgContent.animate({
+      height: imageHeight
+    }, 300);
+  }, function(){
+    var imageContainer = $(this);
+    var imgContent = imageContainer.children('.img-content');
+    imgContent.animate({
+      height: 0
+    }, 300);
+  });
     
-    //When clicking on an image activate a modal window.
-    $('#images .image').click(function(){
-      $('#image-modal').modal();
-    });
+  //When clicking on an image activate a modal window.
+  $('#images .image').click(function(){
+    $('#image-modal').modal();
+  });
     
     
   /* CAN PULLDOWN MENU
   * ====================== */     
-    //Animate the pulldown to show and hide when the pulldown button is clicked.
-    $('#pulldown-btn').click(function(){
-        dropdown = $('.dropdown');
-        if (dropdown.hasClass('active')){
-            dropdown.animate({height: '5px'}, 500);
-            //We also animate the body so the whole page appears to move back up.
-            $('body').animate({marginTop: '40px'}, 500);
-            dropdown.removeClass('active');
-        }
-        else{
-            dropdown.animate({height: '36px'}, 500);
-            //We also animate the body so the whole page appears to move down.
-            $('body').animate({marginTop: '71px'}, 500);
-            dropdown.addClass('active');  
-        }
-    });
-  
+  //Animate the pulldown to show and hide when the pulldown button is clicked.
+  $('#pulldown-btn').click(function(){
+    dropdown = $('.dropdown');
+    if (dropdown.hasClass('active')){
+      dropdown.animate({
+        height: '5px'
+      }, 500);
+      //We also animate the body so the whole page appears to move back up.
+      $('body').animate({
+        marginTop: '40px'
+      }, 500);
+      dropdown.removeClass('active');
+    }
+    else{
+      dropdown.animate({
+        height: '36px'
+      }, 500);
+      //We also animate the body so the whole page appears to move down.
+      $('body').animate({
+        marginTop: '71px'
+      }, 500);
+      dropdown.addClass('active');  
+    }
+  });
+    
+    
+  /* SORT AND FILTERS
+  * ====================== */
+  //Make sorts and filters fixed once we scroll down.
+    var $window = $(window),
+    sortsFilters = $('#sorts-filters');
+    sortsFiltersTop = sortsFilters.offset();
+    sortsFiltersTop = sortsFiltersTop.top;
+    console.log(sortsFiltersTop);
+    $window.scroll(function(e){
+      if ($window.scrollTop() > sortsFiltersTop) {
+        console.log($window.scrollTop());
+        sortsFilters.addClass('low-scroll');
+      }
+      else {
+        console.log($window.scrollTop());
+        sortsFilters.removeClass('low-scroll');
+      }
+    }); 
+    
+  //Show the sort and filter dropdowns on hover.
+  $('#sorts-filters .sort-filter').hover(function(){
+    $(this).find('ul').removeClass('hide');
+  },
+  function(){
+    $(this).find('ul').addClass('hide');
+  });
+ 
+  //Add class that we use to show if the sort or filter is selected.
+  $('#sorts-filters .sort-filter a').click(function(){
+    $(this).toggleClass('active');
+  });
+ 
+ 
+
 }); //End of document ready function.
 
 
