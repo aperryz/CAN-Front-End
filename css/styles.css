@@ -179,12 +179,16 @@ footer .nav > li > a {
 /**** SORTING, FILTERING AND SEARCH ****/
 /***************************************/
 #sorts-filters {
-    margin: 15px 0 15px -20px;
+    margin: 0;
     background-color: #efeff0;
+    padding: 15px 0;
+    width: 940px;
 }
 #sorts-filters.low-scroll{
   position: fixed;
-  top: 30px;
+  top: 40px;
+  z-index: 10;
+  border-bottom: 1px solid #606060;
 }
 .sort-filter {
   display: block;
@@ -192,6 +196,10 @@ footer .nav > li > a {
   z-index: 10;
   background-color: #fff;
   width: 200px;
+  margin-left: 15px;
+}
+.sort-filter:first-child{
+  margin-left: 0;
 }
 .sort-filter ul {
   position: absolute;
@@ -222,14 +230,23 @@ footer .nav > li > a {
 .sort-filter a.active {
   background: #b2b2b2 url('../img/sort-filter-selected.png') no-repeat 185px 4px;
 }
+#sorts-filters .image-form {
+  width: 290px;
+}
 #sorts-filters form {
   margin: 0;
   position: relative;
+  margin-top: -1px;
 }
 #sorts-filters form input {
-  height: 12px;
-  line-height: 12px;
+  height: 8px;
+  line-height: 15px;
   font-size: 10px;
+  width: 218px;
+}
+#sorts-filters form button {
+  padding: 0px 20px 0px;
+  line-height: 16px;
 }
 
 /**** IMAGE AND ISOTOPE ****/
@@ -243,6 +260,7 @@ footer .nav > li > a {
     float: left;
     overflow: hidden;
     position: relative;
+    z-index: 1;
 }
 
 #images .image:hover {
@@ -406,6 +424,7 @@ footer {
     opacity: .6;
     padding-top: 0;
     color: #fff;
+    z-index: 10;
 }
 footer .nav {
     margin: 1px 0 0 12px;

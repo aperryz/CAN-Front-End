@@ -144,158 +144,246 @@
                 <div class="span3 sort-filter">
                     <span>Sorting Control</span>
                     <ul id="sort" class="hide">
-                        <li><a data-filter-one=".big" href="#">Big Filter</a></li>
-                        <li><a data-filter-one=".little" href="#">Little Filter</a></li>
+                        <li><a href="#one" class="active">Sort By Letter</a></li>
+                        <li><a href="#two">Sort By Number</a></li>
                     </ul>
                 </div>
                 <div class="span3 sort-filter">
-                    <span>Filtration Control 1</span>
-                    <ul id="filter-one" class="hide">
-                        <li><a data-filter-one="*" href="#">All</a></li>
-                        <li><a data-filter-one=".big" href="#">Big Filter</a></li>
-                        <li><a data-filter-one=".little" href="#">Little Filter</a></li>
+                    <span>Filter 1 - Eye Color</span>
+                    <ul id="filter-one" class="hide filter" data-filter-group="eyes">
+                        <li><a data-filter-value="" href="#" class="active">All Eye Colors</a></li>
+                        <li><a data-filter-value=".blue" href="#">Blue Eyes</a></li>
+                        <li><a data-filter-value=".green" href="#">Green Eyes</a></li>
+                        <li><a data-filter-value=".brown" href="#">Brown Eyes</a></li>
                     </ul>
                 </div>
                 <div class="span3 sort-filter">
-                    <span>Filtration Control 2</span>
-                    <ul id="filter-two" class="hide">
-                        <li><a data-filter-two=".big" href="#">Big Filter</a></li>
-                        <li><a data-filter-two=".little" href="#">Little Filter</a></li>
+                    <span>Filter 2 - Job</span>
+                    <ul id="filter-two" class="hide filter" data-filter-group="job">
+                        <li><a data-filter-value="" href="#" class="active">All Jobs</a></li>
+                        <li><a data-filter-value=".designer" href="#">Designers</a></li>
+                        <li><a data-filter-value=".programmer" href="#">Programmers</a></li>
                     </ul>
                 </div>
-                <div class="span3">
+                <div class="span3 image-form">
                     <form class="form-search" _lpchecked="1">
-                        <input type="text" class="span2" placeholder="Search" />
+                        <input type="text" placeholder="Search" />
                         <button type="submit" class="btn">Go</button>
                     </form>
                 </div>
             </div>
+            
+            <!-- Begin image gallery -->
             <div class="row">
                 <div class="span12" id="images">
-                    <div class="image big little">
+                    <div class="image brown programmer">
+                        <img src="http://placehold.it/145x187" />
+                        <div class="img-content">
+                            <p class="sort-one">B</p>
+                            <p class="sort-two">628</p>
+                        </div>
+                    </div>
+                    <div class="image blue programmer">
                         <img src="http://lorempixel.com/145/187/sports" />
                         <div class="img-content">
-                            <p>A</p>
+                            <p class="sort-one">A</p>
+                            <p class="sort-two">172</p>
                         </div>
                     </div>
-                    <div class="image">
+                    <div class="image blue designer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>B</p>
+                            <p class="sort-one">E</p>
+                            <p class="sort-two">77</p>
                         </div>
                     </div>
-                    <div class="image big">
+                    <div class="image green programmer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>C</p>
+                            <p class="sort-one">C</p>
+                            <p class="sort-two">815</p>
                         </div>
                     </div>
-                    <div class="image big">
+                    <div class="image brown designer">
                         <img src="http://lorempixel.com/145/187/nightlife" />
                         <div class="img-content">
-                            <p>D</p>
+                            <p class="sort-one">D</p>
+                            <p class="sort-two">357</p>
                         </div>
                     </div>
-                    <div class="image big">
-                        <img src="http://placehold.it/145x187" />
-                        <div class="img-content">
-                            <p>E</p>
-                        </div>
-                    </div>
-                    <div class="image big">
-                        <img src="http://placehold.it/145x187" />
-                        <div class="img-content">
-                            <p>F</p>
-                        </div>
-                    </div>
-                    <div class="image big little">
+                    <div class="image blue designer">
                         <img src="http://lorempixel.com/145/187/food" />
                         <div class="img-content">
-                            <p>G</p>
+                            <p class="sort-one">G</p>
+                            <p class="sort-two">21</p>
                         </div>
                     </div>
-                    <div class="image big">
+                    <div class="image brown designer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>H</p>
+                            <p class="sort-one">H</p>
+                            <p class="sort-two">987</p>
                         </div>
                     </div>
-                    <div class="image big">
+                    <div class="image green designer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>I</p>
+                            <p class="sort-one">I</p>
+                            <p class="sort-two">752</p>
                         </div>
                     </div>
-                    <div class="image">
+                    <div class="image brown programmer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>J</p>
+                            <p class="sort-one">F</p>
+                            <p class="sort-two">7</p>
                         </div>
                     </div>
-                    <div class="image">
+                    <div class="image brown designer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>K</p>
+                            <p class="sort-one">J</p>
+                            <p class="sort-two">6</p>
                         </div>
                     </div>
-                    <div class="image big little">
+                    <div class="image green designer">
+                        <img src="http://placehold.it/145x187" />
+                        <div class="img-content">
+                            <p class="sort-one">K</p>
+                            <p class="sort-two">231</p>
+                        </div>
+                    </div>
+                    <div class="image blue designer">
                         <img src="http://lorempixel.com/145/187/food" />
                         <div class="img-content">
-                            <p>L</p>
+                            <p class="sort-one">L</p>
+                            <p class="sort-two">999</p>
                         </div>
                     </div>
-                    <div class="image big">
+                    <div class="image brown designer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>M</p>
+                            <p class="sort-one">M</p>
+                            <p class="sort-two">634</p>
                         </div>
                     </div>
-                    <div class="image big">
+                    <div class="image brown programmer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>N</p>
+                            <p class="sort-one">N</p>
+                            <p class="sort-two">751</p>
                         </div>
                     </div>
-                    <div class="image">
+                    <div class="image brown designer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>O</p>
+                            <p class="sort-one">O</p>
+                            <p class="sort-two">546</p>
                         </div>
                     </div>
-                    <div class="image">
+                    <div class="image brown designer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>P</p>
+                            <p class="sort-one">P</p>
+                            <p class="sort-two">826</p>
                         </div>
                     </div>
-                    <div class="image big little">
+                    <div class="image brown designer">
                         <img src="http://lorempixel.com/145/187/food" />
                         <div class="img-content">
-                            <p>Q</p>
+                            <p class="sort-one">Q</p>
+                            <p class="sort-two">156</p>
                         </div>
                     </div>
-                    <div class="image big">
+                    <div class="image green programmer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>R</p>
+                            <p class="sort-one">R</p>
+                            <p class="sort-two">579</p>
                         </div>
                     </div>
-                    <div class="image big">
+                    <div class="image green designer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>S</p>
+                            <p class="sort-one">S</p>
+                            <p class="sort-two">364</p>
+                        </div>
+                    </div>
+                    <div class="image blue programmer">
+                        <img src="http://placehold.it/145x187" />
+                        <div class="img-content">
+                            <p class="sort-one">T</p>
+                            <p class="sort-two">33</p>
+                        </div>
+                    </div>
+                    <div class="image green programmer">
+                        <img src="http://placehold.it/145x187" />
+                        <div class="img-content">
+                            <p class="sort-one">U</p>
+                            <p class="sort-two">84</p>
+                        </div>
+                    </div>
+                    <div class="image blue programmer">
+                        <img src="http://placehold.it/145x187" />
+                        <div class="img-content">
+                            <p class="sort-one">M</p>
+                            <p class="sort-two">64</p>
+                        </div>
+                    </div>
+                    <div class="image green programmer">
+                        <img src="http://placehold.it/145x187" />
+                        <div class="img-content">
+                            <p class="sort-one">N</p>
+                            <p class="sort-two">97</p>
                         </div>
                     </div>
                     <div class="image">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>T</p>
+                            <p class="sort-one">O</p>
+                            <p class="sort-two">10</p>
                         </div>
                     </div>
-                    <div class="image">
+                    <div class="image blue designer">
                         <img src="http://placehold.it/145x187" />
                         <div class="img-content">
-                            <p>U</p>
+                            <p class="sort-one">P</p>
+                            <p class="sort-two">1</p>
+                        </div>
+                    </div>
+                    <div class="image blue designer">
+                        <img src="http://lorempixel.com/145/187/food" />
+                        <div class="img-content">
+                            <p class="sort-one">Q</p>
+                            <p class="sort-two">51</p>
+                        </div>
+                    </div>
+                    <div class="image blue programmer">
+                        <img src="http://placehold.it/145x187" />
+                        <div class="img-content">
+                            <p class="sort-one">R</p>
+                            <p class="sort-two">80</p>
+                        </div>
+                    </div>
+                    <div class="image brown designer">
+                        <img src="http://placehold.it/145x187" />
+                        <div class="img-content">
+                            <p class="sort-one">S</p>
+                            <p class="sort-two">1400</p>
+                        </div>
+                    </div>
+                    <div class="image green designer">
+                        <img src="http://placehold.it/145x187" />
+                        <div class="img-content">
+                            <p class="sort-one">T</p>
+                            <p class="sort-two">12</p>
+                        </div>
+                    </div>
+                    <div class="image blue designer">
+                        <img src="http://placehold.it/145x187" />
+                        <div class="img-content">
+                            <p class="sort-one">U</p>
+                            <p class="sort-two">575</p>
                         </div>
                     </div>
                 </div>

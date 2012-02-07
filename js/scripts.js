@@ -19,6 +19,34 @@ $(function() {
   $('#main-nav a[href="#' + currentPage + '"]').parent().addClass("active");
   
   
+  /* CAN PULLDOWN MENU
+  * ====================== */     
+  //Animate the pulldown to show and hide when the pulldown button is clicked.
+  $('#pulldown-btn').click(function(){
+    dropdown = $('.dropdown');
+    if (dropdown.hasClass('active')){
+      dropdown.animate({
+        height: '5px'
+      }, 500);
+      //We also animate the body so the whole page appears to move back up.
+      $('body').animate({
+        marginTop: '40px'
+      }, 500);
+      dropdown.removeClass('active');
+    }
+    else{
+      dropdown.animate({
+        height: '36px'
+      }, 500);
+      //We also animate the body so the whole page appears to move down.
+      $('body').animate({
+        marginTop: '71px'
+      }, 500);
+      dropdown.addClass('active');  
+    }
+  });
+  
+  
   /* HANDLE LOGIN/REGISTER LINKS AND MODAL FIELDS
   * ====================== */
   //One modal box used here with JS to show and hide the correct fields.
@@ -110,32 +138,67 @@ $(function() {
   });
   
   
-  /* RUN ISOTOPE AND IMAGE ROLLOVERS
+  /* SORTS, FILTERS, ISOTOPES AND IMAGES
   * ====================== */ 
-  var $container = $('#images');
+  var $container = $('#images'),
+  filters = {};
       
   $container.isotope({
-    itemSelector: '.image'
-  });
-  
-  $('#filter-one a').click(function(){
-    var selector = $(this).attr('data-filter-one');
+    itemSelector: '.image',
+    getSortData : {
+      //SortOne is a regular text field.  We sort alphabetically.
+      one : function ( $elem ) {
+        return $elem.find('.sort-one').text();
+      },
+      //SortTwo is a number so we are going to cast it to an integer then sort counting up.
+      two : function ( $elem ) {
+        return parseInt($elem.find('.sort-two').text(), 10);
+      }
+    }
+  });  
+  $container.isotope({ sortBy : 'one' }); //Start sorting by letters.
+
+  // Handle the combined filters
+  $('.filter a').click(function(){
+    var $this = $(this);
+    // don't proceed if already selected
+    if ( $this.hasClass('active') ) {
+      return;
+    }
+    var $optionSet = $this.parents('.filter');
+    $optionSet.find('.active').removeClass('active');
+    $this.addClass('active');
+      
+    // store filter value in object
+    // i.e. filters.color = 'red'
+    var group = $optionSet.attr('data-filter-group');
+    filters[ group ] = $this.attr('data-filter-value');
+    // convert object into array
+    var isoFilters = [];
+    for ( var prop in filters ) {
+      isoFilters.push( filters[ prop ] )
+    }
+    var selector = isoFilters.join('');
     $container.isotope({
       filter: selector
+    });
+
+    return false;
+  });
+  
+  //Add click event to sorting links.
+  $('#sort a').click(function(){
+    // get href attribute, minus the '#'
+    var sortName = $(this).attr('href').slice(1);
+    $container.isotope({
+      sortBy : sortName
     });
     
     return false;
   });
-  $('#filter-two a').click(function(){
-    var selector =  $(this).attr('data-filter-two');
-    $container.isotope({
-      filter: selector
-    });
-     
-    return false;
-  });
-
-
+  
+  
+  
   //When hovering over the images dropdown text over the top.
   $('#images .image').hover(function(){
     var imageContainer = $(this);
@@ -158,52 +221,20 @@ $(function() {
   });
     
     
-  /* CAN PULLDOWN MENU
-  * ====================== */     
-  //Animate the pulldown to show and hide when the pulldown button is clicked.
-  $('#pulldown-btn').click(function(){
-    dropdown = $('.dropdown');
-    if (dropdown.hasClass('active')){
-      dropdown.animate({
-        height: '5px'
-      }, 500);
-      //We also animate the body so the whole page appears to move back up.
-      $('body').animate({
-        marginTop: '40px'
-      }, 500);
-      dropdown.removeClass('active');
-    }
-    else{
-      dropdown.animate({
-        height: '36px'
-      }, 500);
-      //We also animate the body so the whole page appears to move down.
-      $('body').animate({
-        marginTop: '71px'
-      }, 500);
-      dropdown.addClass('active');  
-    }
-  });
-    
-    
-  /* SORT AND FILTERS
-  * ====================== */
   //Make sorts and filters fixed once we scroll down.
-    var $window = $(window),
-    sortsFilters = $('#sorts-filters');
-    sortsFiltersTop = sortsFilters.offset();
-    sortsFiltersTop = sortsFiltersTop.top;
-    console.log(sortsFiltersTop);
-    $window.scroll(function(e){
-      if ($window.scrollTop() > sortsFiltersTop) {
-        console.log($window.scrollTop());
-        sortsFilters.addClass('low-scroll');
-      }
-      else {
-        console.log($window.scrollTop());
-        sortsFilters.removeClass('low-scroll');
-      }
-    }); 
+  var $window = $(window),
+  sortsFilters = $('#sorts-filters');
+  sortsFiltersTop = sortsFilters.offset();
+  sortsFiltersTop = sortsFiltersTop.top;
+
+  $window.scroll(function(e){
+    if ($window.scrollTop() > sortsFiltersTop) {
+      sortsFilters.addClass('low-scroll');
+    }
+    else {
+      sortsFilters.removeClass('low-scroll');
+    }
+  }); 
     
   //Show the sort and filter dropdowns on hover.
   $('#sorts-filters .sort-filter').hover(function(){
@@ -214,12 +245,12 @@ $(function() {
   });
  
   //Add class that we use to show if the sort or filter is selected.
-  $('#sorts-filters .sort-filter a').click(function(){
-    $(this).toggleClass('active');
+  $('#sort a').click(function(){
+    var $this = $(this);
+    $this.parents('ul').find('.active').removeClass('active');
+    $this.addClass('active');
   });
- 
- 
-
+    
 }); //End of document ready function.
 
 
