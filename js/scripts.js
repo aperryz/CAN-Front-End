@@ -428,13 +428,14 @@ function animateCountUp(containerSpan){
 /* SUBMISSION PROCESS
   * ====================== */ 
 //Use one modal and adjust the content based on the submission type.
-//We use the data-submission-type attribute to find the submission type.
+//We use the data-submission-type attribute on the modal to find the submission type.
 function setupSubmissionModal(submissionModal){
   var submissionType = submissionModal.attr('data-submission-type');
   
   switch(submissionType){
     case 'video':
-      
+      //Set the initial state to be the video buttons.
+      //Then set click events for each link to change the state.
       showVideoState('videoButtons', '');
       
       //Add event listener to upload video link button.
@@ -458,8 +459,9 @@ function setupSubmissionModal(submissionModal){
         console.log('clicked');
       });
       
-      //Add event listener for video upload link.
-      submissionModal.find('.video-upload a.active').click(function(){
+      //Add event listener for processing video.
+      //*TOCHANGE* This would change to an event listener for when the video is finished loading since it shows the submit complete state.
+      submissionModal.find('.processing a').click(function(){
         showVideoState('submitComplete', $(this));
       });
       
@@ -472,20 +474,39 @@ function setupSubmissionModal(submissionModal){
     //The original HTML is set for images, so we'll default to images.
     case 'image':
     case 'default':
+      showImageState('uploadImage', '');
+      
+      //Add even listener for uploading image.
+      submissionModal.find('.image-upload a').click(function(){
+        showImageState('processingImage', $(this));
+      });
+      
+      //Add event listener for processing image.
+      //*TOCHANGE* This would change to an event listener for when the image is finished loading since it shows the submit complete state.
+      submissionModal.find('.processing a').click(function(){
+        showImageState('submitComplete', $(this));
+      });
+      
+      //Add event listener for the back button.
+      submissionModal.find('#back').click(function(){
+        showImageState('uploadImage', '');
+      });    
+      
       console.log('image submission');
       break;
   }
   
 }
 
-//Show and hide certain elements based on the current state we should show.
+//Show and hide certain video groups based on the current state we should show.
 function showVideoState(videoState, $this){
-  //Change heading text, show video buttons, hide image upload button.
   var submissionModal = $('#submission-modal');
-  modalTitle = submissionModal.find('h3'),
-  videoSelection = submissionModal.find('.video-selection'),
-  videoLinkGroup = submissionModal.find('#video-link-group');
-  backButton = submissionModal.find('#back');
+      modalTitle = submissionModal.find('h3'),
+      videoSelection = submissionModal.find('.video-selection'),
+      videoLinkGroup = submissionModal.find('#video-link-group'),
+      processingGroup = submissionModal.find('.processing'),
+      submitCompleteGroup = submissionModal.find('.submit-complete'),
+      backButton = submissionModal.find('#back');
   
   switch(videoState){
     case 'videoButtons':
@@ -493,7 +514,8 @@ function showVideoState(videoState, $this){
       videoSelection.removeClass('hide');
       submissionModal.find('.image-upload').addClass('hide');
       submissionModal.find('.video-upload').addClass('hide');
-      videoSelection.find('a.active').removeClass('active');
+      processingGroup.addClass('hide');
+      submitCompleteGroup.addClass('hide');
       backButton.addClass('hide');
       break;
       
@@ -502,13 +524,11 @@ function showVideoState(videoState, $this){
       submissionModal.find('.video-upload').removeClass('hide');
       videoLinkGroup.addClass('hide');
       videoSelection.addClass('hide');
-      submissionModal.find('.active').removeClass('active');
       backButton.removeClass('hide');
       break;
       
     case 'recordVideo':
       //Use this to display correctly for the record a video button click.
-    
       break;
       
     case 'linkToVideo':
@@ -516,22 +536,52 @@ function showVideoState(videoState, $this){
       $this.toggleClass('active');
       break;
       
-    case 'processingVideo': //This case isn't used when you click upload, but can be used if you want to show a processing screen.
+    case 'processingVideo':
       modalTitle.text('Processing...');
-      $this.removeClass('preprocessing');
-      $this.addClass('active');
-      backButton.removeClass('hide');
-      console.log('processing');
+      $this.parent().addClass('hide');
+      processingGroup.removeClass('hide');
       break;
       
     case 'submitComplete':
       modalTitle.text('Looks Great!');
-      backButton.removeClass('hide');
-      console.log('submit complete');
+      processingGroup.addClass('hide');
+      submitCompleteGroup.removeClass('hide');
+      break;
+  }
+}
+
+//Show and hide certain image groups based on the current state we should show.
+function showImageState(imageState, $this){
+  var submissionModal = $('#submission-modal');
+      modalTitle = submissionModal.find('h3'),
+      processingGroup = submissionModal.find('.processing'),
+      submitCompleteGroup = submissionModal.find('.submit-complete'),
+      backButton = submissionModal.find('#back');
+  
+  switch(imageState){      
+    case 'uploadImage':
+      modalTitle.text('Submit an Image');
+      submissionModal.find('.image-upload').removeClass('hide');
+      processingGroup.addClass('hide');
+      submitCompleteGroup.addClass('hide');
+      backButton.addClass('hide');
+      console.log('uploadImage');
       break;
       
-    default:
+    case 'processingImage':
+      modalTitle.text('Processing...');
+      $this.parent().addClass('hide');
+      processingGroup.removeClass('hide');
+      backButton.removeClass('hide');
+      console.log('processingImage');
+      break;
       
+    case 'submitComplete':
+      modalTitle.text('Looks Great!');
+      processingGroup.addClass('hide');
+      submitCompleteGroup.removeClass('hide');
+      backButton.removeClass('hide');
+      console.log('submitComplete');
       break;
   }
 }

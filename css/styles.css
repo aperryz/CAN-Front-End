@@ -372,23 +372,33 @@ select, input[type="file"] {
 .modal form a {
   text-decoration: underline;
 }
-.modal .image-upload a {
+.modal .image-upload a,
+.modal .video-upload a,
+.modal .processing a {
   color: #a6a6a6;
-  width: 223px;
-  background: url('../img/upload-image.png') no-repeat;
+  width: 343px;
+  background: #fff url('../img/upload-image.png') no-repeat 50% 50%;
   border: none;
-  height: 286px;
+  height: 210px;
   margin: 0 auto;
   display: block;
+  border: 3px solid #e6e6e6;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   text-align: center;
   line-height: 105px;
   text-decoration: none;
 }
-.modal .image-upload a.active {
+.modal .video-upload a {
+  background-image: url('../img/upload-video.png');
+}
+.modal .processing a {
   border: 3px dashed #a6a6a6;
+  background: #e6e6e6 url('../img/ajax-loader.gif') no-repeat 50% 50%;
 }
 .modal .image-upload a span,
-.modal .video-upload a span { display: block; }
+.modal .video-upload a span,
+.modal .processing a span { display: block; }
 
 .modal .text-links {
     text-align: center;
@@ -396,7 +406,19 @@ select, input[type="file"] {
 .modal .text-links a {
     color: #808080;
 }
-/* Video submission styles */
+#back {
+  position: absolute;
+  line-height: 27px;
+  text-shadow: 0 1px 0 white;
+  opacity: 0.6;
+  background: url('../img/back-arrow.png') no-repeat 0 35%;
+  padding-left: 20px;
+}
+#back:hover{
+  color: #595959;
+  opacity: 1;
+  background: url('../img/back-arrow-hover.png') no-repeat 0 35%;
+}
 .modal form a.select-video {
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -427,22 +449,10 @@ select, input[type="file"] {
 #link-video-select.active,
 #link-video-select:hover { background-image: url('../img/you-tube-selected.png'); }
 
-.modal .video-upload a {
-  color: #a6a6a6;
-  width: 343px;
-  background: #fff url('../img/upload-video.png') no-repeat 50% 50%;
-  border: none;
-  height: 210px;
-  margin: 0 auto;
+.modal .submit-complete img {
   display: block;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  text-align: center;
-  line-height: 105px;
-  text-decoration: none;
-}
-.modal .video-upload a.active {
-  border: 3px dashed #a6a6a6;
+  margin: 0 auto;
+  border: 5px solid #fff;
 }
 
 /* Login sytles */

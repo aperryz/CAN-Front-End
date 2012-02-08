@@ -444,12 +444,12 @@
             </div>
         </div>
 
-        <!-- Submission Modals -->
+        <!-- Submission Modal -->
         <!-- Adjust data-submission-type between 'video' and 'image' to show the different submission processes. -->
-        <div class="modal hide fade" id="submission-modal" data-submission-type="video">
+        <div class="modal hide fade" id="submission-modal" data-submission-type="image">
             <div class="modal-header">
-                <a href="#" class="hide" id="back">Back</a>
                 <a class="close" data-dismiss="modal">×</a>
+                <a href="#" class="hide" id="back">Back</a>
                 <h3>Submit an Image</h3>
             </div>
             <div class="modal-body">
@@ -470,6 +470,15 @@
                             Click to upload a video file
                             <span>Or drag a video from your desktop</span>
                         </a>
+                    </div>
+                    <div class="control-group processing hide">
+                        <a href="#">
+                            Please wait while we process your file
+                            <span>Click again to see submit complete state.</span>
+                        </a>
+                    </div>
+                    <div class="control-group submit-complete hide">
+                        <img src="http://placehold.it/203x264" />
                     </div>
                     <div class="control-group hide" id="video-link-group">
                         <input type="text" class="input-xlarge" id="video-link" placeholder="Link">
