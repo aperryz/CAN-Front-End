@@ -156,7 +156,9 @@ $(function() {
       }
     }
   });  
-  $container.isotope({ sortBy : 'one' }); //Start sorting by letters.
+  $container.isotope({
+    sortBy : 'one'
+  }); //Start sorting by letters.
 
   // Handle the combined filters
   $('.filter a').click(function(){
@@ -196,9 +198,7 @@ $(function() {
     
     return false;
   });
-  
-  
-  
+
   //When hovering over the images dropdown text over the top.
   $('#images .image').hover(function(){
     var imageContainer = $(this);
@@ -250,6 +250,12 @@ $(function() {
     $this.parents('ul').find('.active').removeClass('active');
     $this.addClass('active');
   });
+  
+  
+  /* SETUP SUBMISSION MODAL
+  * ====================== */ 
+  setupSubmissionModal($('#submission-modal'));
+  
     
 }); //End of document ready function.
 
@@ -416,4 +422,116 @@ function animateCountUp(containerSpan){
     }
   }, 1);
   
+}
+
+
+/* SUBMISSION PROCESS
+  * ====================== */ 
+//Use one modal and adjust the content based on the submission type.
+//We use the data-submission-type attribute to find the submission type.
+function setupSubmissionModal(submissionModal){
+  var submissionType = submissionModal.attr('data-submission-type');
+  
+  switch(submissionType){
+    case 'video':
+      
+      showVideoState('videoButtons', '');
+      
+      //Add event listener to upload video link button.
+      submissionModal.find('#upload-video-select').click(function(){
+        showVideoState('uploadVideo', $(this));
+      });
+      
+      //Add event listener to record video link button.
+      submissionModal.find('#record-video-select').click(function(){
+        //This can be used to place JS actions for the record video content.
+      });
+      
+      //Add event listener to the add video link button.
+      submissionModal.find('#link-video-select').click(function(){
+        showVideoState('linkToVideo', $(this));
+      });
+      
+      //Add event listener for video upload link.
+      submissionModal.find('.video-upload a').click(function(){
+        showVideoState('processingVideo', $(this));
+        console.log('clicked');
+      });
+      
+      //Add event listener for video upload link.
+      submissionModal.find('.video-upload a.active').click(function(){
+        showVideoState('submitComplete', $(this));
+      });
+      
+      //Add event listener for the back button.
+      submissionModal.find('#back').click(function(){
+        showVideoState('videoButtons', '');
+      });
+      break;
+      
+    //The original HTML is set for images, so we'll default to images.
+    case 'image':
+    case 'default':
+      console.log('image submission');
+      break;
+  }
+  
+}
+
+//Show and hide certain elements based on the current state we should show.
+function showVideoState(videoState, $this){
+  //Change heading text, show video buttons, hide image upload button.
+  var submissionModal = $('#submission-modal');
+  modalTitle = submissionModal.find('h3'),
+  videoSelection = submissionModal.find('.video-selection'),
+  videoLinkGroup = submissionModal.find('#video-link-group');
+  backButton = submissionModal.find('#back');
+  
+  switch(videoState){
+    case 'videoButtons':
+      modalTitle.text('Submit a Video');
+      videoSelection.removeClass('hide');
+      submissionModal.find('.image-upload').addClass('hide');
+      submissionModal.find('.video-upload').addClass('hide');
+      videoSelection.find('a.active').removeClass('active');
+      backButton.addClass('hide');
+      break;
+      
+    case 'uploadVideo':
+      modalTitle.text('Upload a Video');
+      submissionModal.find('.video-upload').removeClass('hide');
+      videoLinkGroup.addClass('hide');
+      videoSelection.addClass('hide');
+      submissionModal.find('.active').removeClass('active');
+      backButton.removeClass('hide');
+      break;
+      
+    case 'recordVideo':
+      //Use this to display correctly for the record a video button click.
+    
+      break;
+      
+    case 'linkToVideo':
+      videoLinkGroup.toggleClass('hide');
+      $this.toggleClass('active');
+      break;
+      
+    case 'processingVideo': //This case isn't used when you click upload, but can be used if you want to show a processing screen.
+      modalTitle.text('Processing...');
+      $this.removeClass('preprocessing');
+      $this.addClass('active');
+      backButton.removeClass('hide');
+      console.log('processing');
+      break;
+      
+    case 'submitComplete':
+      modalTitle.text('Looks Great!');
+      backButton.removeClass('hide');
+      console.log('submit complete');
+      break;
+      
+    default:
+      
+      break;
+  }
 }

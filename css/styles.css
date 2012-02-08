@@ -372,20 +372,80 @@ select, input[type="file"] {
 .modal form a {
   text-decoration: underline;
 }
-.modal .file-upload button {
+.modal .image-upload a {
+  color: #a6a6a6;
   width: 223px;
-  background: url('../img/upload.png') no-repeat;
+  background: url('../img/upload-image.png') no-repeat;
   border: none;
   height: 286px;
   margin: 0 auto;
   display: block;
+  text-align: center;
+  line-height: 105px;
+  text-decoration: none;
 }
+.modal .image-upload a.active {
+  border: 3px dashed #a6a6a6;
+}
+.modal .image-upload a span,
+.modal .video-upload a span { display: block; }
+
 .modal .text-links {
     text-align: center;
 }
 .modal .text-links a {
     color: #808080;
 }
+/* Video submission styles */
+.modal form a.select-video {
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: #b2b2b2 url('../img/upload-video-arrow.png') no-repeat 50% 30%;
+  width: 132px;
+  height: 132px;
+  display: block;
+  float: left;
+  margin-left: 14px;
+  line-height: 190px;
+  text-align: center; 
+  text-decoration: none;
+}
+.modal form a.select-video.active,
+.modal form a.select-video:hover {
+  background-color: #737373;
+  color: #fff;
+}
+#upload-video-select { margin: 0; }
+#upload-video-select.active,
+#upload-video-select:hover { background-image: url('../img/upload-video-arrow-selected.png'); }
+
+#record-video-select { background-image: url('../img/record-video-icon.png'); }
+#record-video-select.active,
+#record-video-select:hover { background-image: url('../img/record-video-icon-selected.png'); }
+
+#link-video-select { background-image: url('../img/you-tube.png'); }
+#link-video-select.active,
+#link-video-select:hover { background-image: url('../img/you-tube-selected.png'); }
+
+.modal .video-upload a {
+  color: #a6a6a6;
+  width: 343px;
+  background: #fff url('../img/upload-video.png') no-repeat 50% 50%;
+  border: none;
+  height: 210px;
+  margin: 0 auto;
+  display: block;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 105px;
+  text-decoration: none;
+}
+.modal .video-upload a.active {
+  border: 3px dashed #a6a6a6;
+}
+
+/* Login sytles */
 #login-reg-modal form {
     margin-bottom: 0;
 }
