@@ -213,13 +213,7 @@ $(function() {
     imgContent.animate({
       height: 0
     }, 300);
-  });
-    
-  //When clicking on an image activate a modal window.
-  $('#images .image').click(function(){
-    $('#image-modal').modal();
-  });
-    
+  });    
     
   //Make sorts and filters fixed once we scroll down.
   var $window = $(window),
@@ -256,6 +250,28 @@ $(function() {
   * ====================== */ 
   setupSubmissionModal($('#submission-modal'));
   
+  
+ /* SETUP CONTENT THICKBOX
+  * ====================== */ 
+ //Call colorbox on all images and adjust settings.
+ //Colorbox settings can be found at http://jacklmoore.com/colorbox/.
+ //Set an event listener for clicking on an image that isn't hidden by isotope.
+ $('.image').not('.isotope-hidden').colorbox({
+     rel:'image',
+     inline:true,
+     width:"50%",
+     href:'#thickbox',
+     opacity:0.8
+ });
+ 
+ $('.image').not('.isotope-hidden').click(function(){
+   var $this = $(this),
+       imageEl = $this.find('img'),
+       imgSource = imageEl.attr('src');
+   
+   
+   console.log(imgSource);
+ });
     
 }); //End of document ready function.
 
@@ -456,7 +472,6 @@ function setupSubmissionModal(submissionModal){
       //Add event listener for video upload link.
       submissionModal.find('.video-upload a').click(function(){
         showVideoState('processingVideo', $(this));
-        console.log('clicked');
       });
       
       //Add event listener for processing video.
@@ -491,8 +506,6 @@ function setupSubmissionModal(submissionModal){
       submissionModal.find('#back').click(function(){
         showImageState('uploadImage', '');
       });    
-      
-      console.log('image submission');
       break;
   }
   
@@ -565,7 +578,6 @@ function showImageState(imageState, $this){
       processingGroup.addClass('hide');
       submitCompleteGroup.addClass('hide');
       backButton.addClass('hide');
-      console.log('uploadImage');
       break;
       
     case 'processingImage':
@@ -573,7 +585,6 @@ function showImageState(imageState, $this){
       $this.parent().addClass('hide');
       processingGroup.removeClass('hide');
       backButton.removeClass('hide');
-      console.log('processingImage');
       break;
       
     case 'submitComplete':
@@ -581,7 +592,6 @@ function showImageState(imageState, $this){
       processingGroup.addClass('hide');
       submitCompleteGroup.removeClass('hide');
       backButton.removeClass('hide');
-      console.log('submitComplete');
       break;
   }
 }
