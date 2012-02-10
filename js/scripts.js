@@ -5,9 +5,10 @@ $(function() {
   * ====================== */
   
   //show the correct content from the start.
-  var currentPage = getCurrentPage();
-  var pages = getPages();
-  landingPage = showLandingPage(currentPage);
+  var currentPage = getCurrentPage(),
+    pages = getPages(),
+    landingPage = showLandingPage(currentPage);
+    
   setPrevNextArrows(currentPage);
   
   //Call the function to count for every number listed.
@@ -126,14 +127,16 @@ $(function() {
       width: $rollover_bar.data("origWidth")
     }); 
     
-    
     //Handle page movement when a new page is clicked.
     var pageToShow = $el.children("a").attr('href');
     pageToShow = removeHash(pageToShow);
-    showPageContent(pageToShow ,'next');
     
-    var currentPage = removeHash($el.children().attr("href"))
-    setPrevNextArrows(currentPage);
+    currentPage = getCurrentPage();
+    
+    var moveDirection = getPageDirection(currentPage, pageToShow);
+    
+    showPageContent(pageToShow, moveDirection);
+    setPrevNextArrows(pageToShow);
     
     evt.preventDefault();
   });
@@ -153,9 +156,9 @@ $(function() {
   //Set click event for the previous and next arrows.
   //We do this by triggering a click event on that navigation item.
   $('.page-control').click(function(evt){
-    var clickedArrow = $(this);
-    var currentPage = getCurrentPage();
-    var prevNextPages = getPrevNextPages(currentPage);
+    var clickedArrow = $(this),
+      currentPage = getCurrentPage(),
+      prevNextPages = getPrevNextPages(currentPage);
     
     if(clickedArrow.hasClass("prev")){ //If they clicked the previous arrow.
       $("#main-nav li a[href='#" + prevNextPages['prev'] + "']").parent().trigger('click');
@@ -217,8 +220,6 @@ $(function() {
     
     //Run colorbox again so those that were filtered out are no longer included.
     setupColorBox();
-
-    return false;
   });
   
   //Add click event to sorting links.
@@ -234,34 +235,24 @@ $(function() {
 
   //When hovering over the images dropdown text over the top.
   $('#images .image').hover(function(){
-    var imageContainer = $(this);
-    var imgContent = imageContainer.children('.img-content');
-    var imageHeight = imageContainer.css('height');
+    var imageContainer = $(this),
+      imgContent = imageContainer.children('.img-content'),
+      imageHeight = imageContainer.css('height');
+      
     imgContent.animate({
       height: imageHeight
     }, 300);
   }, function(){
-    var imageContainer = $(this);
-    var imgContent = imageContainer.children('.img-content');
+    var imageContainer = $(this),
+      imgContent = imageContainer.children('.img-content');
+      
     imgContent.animate({
       height: 0
     }, 300);
   });    
     
-  //Make sorts and filters fixed once we scroll down.
-  var $window = $(window),
-  sortsFilters = $('#sorts-filters');
-  sortsFiltersTop = sortsFilters.offset();
-  sortsFiltersTop = sortsFiltersTop.top;
-
-  $window.scroll(function(e){
-    if ($window.scrollTop() > sortsFiltersTop) {
-      sortsFilters.addClass('low-scroll');
-    }
-    else {
-      sortsFilters.removeClass('low-scroll');
-    }
-  }); 
+  //Set filters to stick when we move below the page.
+  makeFilterStick();
     
   //Show the sort and filter dropdowns on hover.
   $('#sorts-filters .sort-filter').hover(function(){
@@ -310,7 +301,6 @@ $(function() {
       $this.siblings().removeClass('active');
       
       //Add and remove hide class from social box with content.
-      console.log(thisSocialBox.siblings());
       thisSocialBox.removeClass('hide');
       thisSocialBox.siblings().addClass('hide');
    });
@@ -348,10 +338,38 @@ function getLinkString(pageName){
 function getPages(){
   var pages = [];
   $("#pages .page-header a").each(function(index){
-    pages.push($(this).attr('name'));
+    pages.push($(this).attr('data-name'));
   })
       
   return pages;
+}
+
+//Find out if the page we are going to show is before or after the current page.
+function getPageDirection(currentPage, pageToShow){
+  var pages = getPages(),
+    currentPagePlace,
+    pageToShowPlace;
+    
+  //Find the location of both the current page and the page to show in the array.
+  for(var i = 0; i < pages.length; i++){
+    if(currentPage == pages[i]){
+      currentPagePlace = i;
+    }
+    if(pageToShow == pages[i]){
+      pageToShowPlace = i;
+    }
+  }
+
+  //Return next if the page comes later, prev if it comes before and same if they clicked the same page.
+  if(pageToShowPlace > currentPagePlace){
+    return 'next';
+  }
+  else if (pageToShowPlace < currentPagePlace){
+    return 'prev';
+  }
+  else {
+    return 'same';
+  }  
 }
   
   
@@ -379,33 +397,34 @@ function getCurrentPage(){
   
   
 //Set previous and next button text.
-function setPrevNextArrows(currentPage){
-  var prevNextPages = getPrevNextPages(currentPage);
-  var pageControlPrev = $('#pages .page-control.prev');
-  var pageControlNext = $('#pages .page-control.next');
+function setPrevNextArrows(currentPage, moveDirection){
+  var prevNextPages = getPrevNextPages(currentPage),
+    pageControlPrev = $('#pages .page-control.prev'),
+    pageControlNext = $('#pages .page-control.next');
     
-  pageControlPrev.removeClass("active");
-  pageControlNext.removeClass("active");
+  pageControlPrev.fadeOut(100);
+  pageControlNext.fadeOut(100);
     
-  //If the previous link should be shown change the text and set it to active.
+  //If the previous link should be shown change the text and fade it in.
   if(prevNextPages['prev'] != false){
     pageControlPrev.html(getLinkString(prevNextPages['prev']));
-    pageControlPrev.addClass("active");
+    pageControlPrev.fadeIn(100);
   }
     
-  //If the next link should be showng change the text and set it to active.
+  //If the next link should be showng change the text and fade it in.
   if(prevNextPages['next'] != false){
     pageControlNext.html(getLinkString(prevNextPages['next']));
-    pageControlNext.addClass("active");
-  }
+    pageControlNext.fadeIn(100);
+  }  
 }
   
   
 //Get the previous and next pages of the current page.
 //Return false for that array value if a previous or current doesn't exist.
 function getPrevNextPages(currentPage){
-  var prevNextPages = [];
-  var pages = getPages();
+  var prevNextPages = [],
+    pages = getPages();
+  
   for (i = 0; i < pages.length; i++){
     if (pages[i] ==  currentPage){
       if(i == 0){
@@ -428,35 +447,48 @@ function getPrevNextPages(currentPage){
 
   
 function showLandingPage(landingPageName){
-  var landingPage = $('#pages .page a[name="' + landingPageName + '"]').closest('div.page');
+  var landingPage = $('#pages .page a[data-name="' + landingPageName + '"]').closest('div.page');
   landingPage.addClass("active");
   
   return landingPage;
 }
   
   
-function showPageContent(pageToShow, pageLocation){
-  var pages = $('#pages');
-  var currentContent = $('#pages .page.active');
-  var currentContentHeight = currentContent.height();
-  var pageToShowContent = $('#pages .page a[name="' + pageToShow + '"]').closest('div.page');
+function showPageContent(pageToShow, moveDirection){
+  var pages = $('#pages'),
+    currentContent = $('#pages .page.active'),
+    currentContentHeight = currentContent.height(),
+    pageToShowContent = $('#pages .page a[data-name="' + pageToShow + '"]').closest('div.page');
     
   //Set the height of the pages div to the current page height.
   pages.css('height', currentContentHeight);
     
-  //Hide the current content first
-  currentContent.fadeOut(100, function(){
-    currentContent.removeClass("active");
-    
-    //Show the new content.  
-    pages.animate({
-      height: pageToShowContent.height()
-    }, 100);
+  //Hide the current content first, when that's finished we animate and show the new content.
+  if(moveDirection != 'same'){
+    currentContent.animate({
+      opacity: 0
+    }, 100, function(){
+      currentContent.removeClass("active");
+
+      $('html, body').scrollTop(0);
       
-    pageToShowContent.fadeIn(100, function(){
-      pageToShowContent.addClass("active");
+      pages.animate({
+        height: pageToShowContent.height()
+      }, 200, 'linear', function(){
+        //Since the height has changed we need to call the filter stick function again.
+        makeFilterStick();
+      });
+      
+      //Based on the location of the new page vs. the old page, we set the starting location.
+      var startLocation = (moveDirection == 'next') ? '100px' : '-100px';
+      pageToShowContent.css('left', startLocation);
+      pageToShowContent.addClass("active");  
+      pageToShowContent.animate({
+        opacity: 1,
+        left: 0
+      }, 100);
     });
-  });
+  }
   
   //Set the has to be the new page.  This is needed for the prev and next buttons.
   setHash(pageToShow);
@@ -469,7 +501,31 @@ function showPageContent(pageToShow, pageLocation){
   return true;
 }
 
-/* COUNTING UP FUNCTION
+
+/* FILTERS
+  * ====================== */
+function makeFilterStick(){  
+  //Make sorts and filters fixed once we scroll down.
+  var $window = $(window),
+    images = $('#images'),
+    imagesTop = images.offset().top,
+    sortsFilters = $('#sorts-filters');
+     
+  //Remove any previously set scroll events.
+  $window.unbind('scroll');  
+
+  $window.scroll(function(e){
+    if ($window.scrollTop() > imagesTop) {
+      sortsFilters.addClass('low-scroll');
+    }
+    else {
+      sortsFilters.removeClass('low-scroll');
+    }
+  }); 
+}
+
+
+/* COUNTING UP
   * ====================== */
 function animateCountUp(containerSpan){
   //We pull the max number from the data-number attribute on the container span.
@@ -486,7 +542,6 @@ function animateCountUp(containerSpan){
       clearInterval();
     }
   }, 1);
-  
 }
 
 

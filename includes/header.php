@@ -75,10 +75,10 @@
           <a href="#" class="edit">Edit</a>
           <span>
             How Does This Look?
-            <form>
-              <button type="submit" class="btn">Publish</button>
-            </form>
           </span>
+          <form>
+              <button type="submit" class="btn">Publish</button>
+          </form>
           
         </div>
       </div>

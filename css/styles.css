@@ -121,6 +121,7 @@ footer .nav > li > a {
 }
 #pages .page {
     display: none;
+    position: relative;
 }
 #pages .page.active {
     display: block;
@@ -139,7 +140,6 @@ footer .nav > li > a {
     background: transparent url('../img/left-arrow.png') no-repeat left top;
     display: none;
 }
-.page-control.active { display: block; }
 .page-control:hover {
     cursor: pointer;
     background-image: url('../img/left-arrow-hover.png');
@@ -647,7 +647,7 @@ select, input[type="file"] {
 /*Submit Confirmation and Share Fixed Bar Styles*/
 #share-bar,
 #submit-confirm-bar {
-  display: none;
+ display: none;
 }
 .navbar .submit-bar {
   background: #1a1a1a;
@@ -678,7 +678,7 @@ select, input[type="file"] {
   height: 34px;
   border-radius: 20px;
   -moz-border-radius: 20px;
-  line-height: 35px;
+  line-height: 33px;
   color: #1a1a1a;
 }
 .navbar .submit-bar a.close:hover {
@@ -713,10 +713,11 @@ select, input[type="file"] {
 }
 .navbar .submit-bar form,
 .navbar .submit-bar form button {
-  display: inline;
+  display: inline-block;
+  vertical-align: middle;
 }
 .navbar .submit-bar form button {
-  margin-top: -10px;
+  margin-top: -15px;
 }
 
 /**** FOOTER STYLES ****/

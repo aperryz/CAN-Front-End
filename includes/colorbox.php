@@ -8,7 +8,7 @@
 <!-- ColorBox for displaying individual submissions in modal view. -->
 <div id="colorbox-info">
   <div id="image-holder">
-    <img src="http://placehold.it/435x564" />
+    <img src="http://placehold.it/435x564" alt="filler-alt" title="filler-title" />
     <div class="fb-like" data-href="http://bignewideas.com/" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div>
   </div>
   <div id="submission-content">
@@ -26,7 +26,7 @@
       </div>
       <div id="social-boxes">
         <div id="comments">
-          <form class="form-search" _lpchecked="1">
+          <form class="form-search">
               <input type="text" />
               <button type="submit" class="btn">Add Comment</button>
           </form>
