@@ -525,9 +525,12 @@ select, input[type="file"] {
   font-weight: normal;
   cursor: pointer;
 }
-#submission-social .social-heading.active {
+#submission-social .social-heading.active,
+#submission-social .social-heading:hover {
   border-bottom: 4px solid #808080;
   color: #000;
+}
+#submission-social .social-heading.active {
   cursor: default;
 }
 #social-boxes div {
@@ -641,6 +644,80 @@ select, input[type="file"] {
 #cboxLoadingGraphic{background:url('../img/colorbox-loader.gif') no-repeat center center;}
 #cboxClose{display: none;}
 
+/*Submit Confirmation and Share Fixed Bar Styles*/
+#share-bar,
+#submit-confirm-bar {
+  display: none;
+}
+.navbar .submit-bar {
+  background: #1a1a1a;
+  text-align: center;
+  border-bottom: none;
+  padding: 10px 0;
+  opacity: 8.5;
+}
+.navbar .submit-bar .container {
+  position: relative;
+}
+.navbar .submit-bar a.edit {
+  padding-top: 10px;
+  font: 22px/22px "proxima-nova", serif;
+  padding: 7px 0 10px 30px;
+  color: #999;
+  background: url('../img/submit-confirm-edit.png') no-repeat 0 0;
+  position: absolute;
+  top: 8px;
+}
+.navbar .submit-bar a.close {
+  background: #fff;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  line-height: 35px;
+  color: #1a1a1a;
+}
+.navbar .submit-bar a.close:hover {
+  background: #ccc;
+}
+
+.navbar .submit-bar a.edit:hover {
+  color: #bfbfbf;
+  background-image: url('../img/submit-confirm-edit-hover.png');
+}
+.navbar .submit-bar span {
+  font: 50px/50px "league-gothic", sans-serif;
+  text-transform: uppercase;
+  color: #f2f2f2;
+}
+.navbar .submit-bar span a {
+  text-transform: none;
+  background: #F2F2F2;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  font: 25px/30px "league-gothic", sans-serif;
+  margin-top: -10px;
+  color: #595959;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  padding-right: 1px;
+}
+.navbar .submit-bar span a:hover {
+   background: #f2f2f2;
+}
+.navbar .submit-bar form,
+.navbar .submit-bar form button {
+  display: inline;
+}
+.navbar .submit-bar form button {
+  margin-top: -10px;
+}
 
 /**** FOOTER STYLES ****/
 /***********************/
