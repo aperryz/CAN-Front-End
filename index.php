@@ -61,7 +61,7 @@
               <p>Morbi ac tortor ac augue sollicitudin cursus. Nunc sagittis, ipsum quis congue venenatis, tortor sapien vulputate ante, in hendrerit mi risus eu augue. Nam sed ultricies sem. Quisque pharetra vestibulum nibh et faucibus. Aliquam faucibus pellentesque massa non venenatis. Nunc tristique ante vel diam rhoncus nec eleifend est mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam eget mauris vel arcu ullamcorper aliquet. Sed tempus posuere mauris non sagittis.</p>
               <div class="row">
                 <div class="span6 offset3">
-                  <button class="btn btn-large">Submit</button>
+                  <button class="btn btn-large" data-toggle="modal" data-target="#submission-modal">Submit</button>
                 </div>
               </div>
             </div>

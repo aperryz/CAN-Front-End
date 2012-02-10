@@ -44,19 +44,19 @@
       </div>
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#home">Campaign Title</a>
+          <a class="brand" href="#home" id="logo">Campaign Title</a>
           <ul class="nav" id="main-nav">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" class="home">Home</a></li>
             <li class="sep">|</li>
             <li><a href="#about">About</a></li>
             <li class="sep">|</li>
             <li><a href="#questions">Questions</a></li>
             <li class="sep">|</li>
-            <li><a href="#submitting">Submitting</a></li>
+            <li><a href="#submitting" class="submit">Submitting</a></li>
           </ul>
 
           <a id="pulldown-btn" class="pull-right">CAN</a>
-          <button id="submit-btn" class="btn pull-right" type="submit" data-toggle="modal" data-target="#submission-modal">Submit</button>
+          <button id="submit-btn" class="btn pull-right" type="submit">Submit</button>
           <ul class="nav login">
             <li><a id="login-link" data-toggle="modal" href="#login-reg-modal">Login</a></li>
             <li class="sep">|</li>

@@ -23,26 +23,42 @@ $(function() {
   * ====================== */     
   //Animate the pulldown to show and hide when the pulldown button is clicked.
   $('#pulldown-btn').click(function(){
-    dropdown = $('.dropdown');
+    var dropdown = $('.dropdown'),
+      body = $('body'),
+      sortsFilters = $('#sorts-filters');
+    
     if (dropdown.hasClass('active')){
       dropdown.animate({
         height: '5px'
       }, 500);
+      dropdown.removeClass('active');
+      
       //We also animate the body so the whole page appears to move back up.
-      $('body').animate({
+      body.animate({
         marginTop: '40px'
       }, 500);
-      dropdown.removeClass('active');
+      
+      
+      //We also animate the sort and filter bar back up if it's fixed.
+      sortsFilters.animate({
+        top: '40px'
+      }, 500);
     }
     else{
       dropdown.animate({
         height: '36px'
       }, 500);
+      dropdown.addClass('active'); 
+      
       //We also animate the body so the whole page appears to move down.
-      $('body').animate({
+      body.animate({
         marginTop: '71px'
       }, 500);
-      dropdown.addClass('active');  
+      
+      //We also animate the sort and filter bar down if it's fixed.
+      sortsFilters.animate({
+        top: '71px'
+      }, 500); 
     }
   });
   
@@ -51,13 +67,15 @@ $(function() {
   * ====================== */
   //One modal box used here with JS to show and hide the correct fields.
   //Allows us to process only one form, not multiple forms.
-  $('#register-link').click(function(){
+  //We also included the create account and login links within the modal
+  //so users can move back and forth between login and register.
+  $('#register-link, #create-account-link').click(function(){
     var loginRegModal = $('#login-reg-modal');
     loginRegModal.find('#login-group').addClass('hide');
     loginRegModal.find('#register-group, #logreg-email-group').removeClass('hide');
     loginRegModal.find('#login-reg-button').text('Register');
   });
-  $('#login-link').click(function(){
+  $('#login-link, #login-account-link').click(function(){
     var loginRegModal = $('#login-reg-modal');
     loginRegModal.find('#login-group').removeClass('hide');
     loginRegModal.find('#register-group, #logreg-email-group').addClass('hide');
@@ -65,7 +83,7 @@ $(function() {
   });
   
   
-  /* SLIDING BAR FOR MAIN NAVIGATION
+  /* MAIN NAVIGATION AND SHOWING PAGES
   * ====================== */
   //Adjusted from http://css-tricks.com/jquery-magicline-navigation/.
   var $el, leftPos, newWidth,
@@ -118,6 +136,18 @@ $(function() {
     setPrevNextArrows(currentPage);
     
     evt.preventDefault();
+  });
+  
+  //Add event handler to submit button in top right that loads the submit page.
+  //We determine which page is the submit page because that anchor tag has a class of submit.
+  $('#submit-btn').click(function(){
+    $('#main-nav li .submit').trigger('click');
+  });
+  
+  //Add event handler to the campaign logo that loads up the homepage.
+  //We determine which page is the homepage because that anchor tag has a class of home.
+  $('#logo').click(function(){
+    $('#main-nav li .home').trigger('click');
   });
   
   //Set click event for the previous and next arrows.
@@ -328,13 +358,19 @@ function getPages(){
 //Find the current page by using the current URL.
 //We can't use this when we click the navigation because the default change comes after what we do.
 function getCurrentPage(){
-  var currentPage;
-  currentPage = window.location.hash;
-  if(currentPage != ""){
-    currentPage = removeHash(currentPage);
+  var pages = getPages(),
+      currentPage = removeHash(window.location.hash),
+      foundPage = false;
+  
+  //Loop through each of the pages and if one of the pages matches then keep that as the current page.
+  for(var i=0; i < pages.length; i++){
+    if(pages[i] == currentPage){
+      foundPage = true;
+    }
   }
-  else{ //If there is no hash than use the first page in the list.
-    var pages = getPages();
+  
+  //If the has doesn't match any of th pages then show the first page.
+  if (foundPage == false) { 
     currentPage = pages[0];
   }
     
