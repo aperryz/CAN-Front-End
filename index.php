@@ -1,71 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Campaign Title</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- We can talk about whether we want to include this for better IE support. -->
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Stylesheets -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-
-    <!-- Typekit files -->
-    <!-- The domain must be adjusted on typekit.com before these can be used outside of localhost -->
-    <script type="text/javascript" src="http://use.typekit.com/tgl2squ.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  </head>
-
-  <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="fill dropdown">
-        <div class="container">
-          <ul class="nav" id="dropdown-nav">
-            <li><a href="#home">All Campaigns</a></li>
-            <li class="sep">|</li>
-            <li><a href="#about">All Partners</a></li>
-            <li class="sep">|</li>
-            <li><a href="#questions">All Causes</a></li>
-          </ul>
-          <a class="brand" href="#">Creative Action Network</a>
-        </div>
-      </div>
-      <div class="fill">
-        <div class="container">
-          <a class="brand" href="#home">Campaign Title</a>
-          <ul class="nav" id="main-nav">
-            <li><a href="#home">Home</a></li>
-            <li class="sep">|</li>
-            <li><a href="#about">About</a></li>
-            <li class="sep">|</li>
-            <li><a href="#questions">Questions</a></li>
-            <li class="sep">|</li>
-            <li><a href="#submitting">Submitting</a></li>
-          </ul>
-
-          <a id="pulldown-btn" class="pull-right">CAN</a>
-          <button id="submit-btn" class="btn pull-right" type="submit" data-toggle="modal" data-target="#submission-modal">Submit</button>
-          <ul class="nav login">
-            <li><a id="login-link" data-toggle="modal" href="#login-reg-modal">Login</a></li>
-            <li class="sep">|</li>
-            <li><a id="register-link" data-toggle="modal" href="#login-reg-modal">Register</a></li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
+<?php include_once 'includes/header.php'; ?>
 
     <div class="container">
       <div id="pages">
@@ -176,210 +109,210 @@
       <!-- Begin image gallery -->
       <div class="row">
         <div class="span12" id="images">
-          <div class="image brown programmer" data-colorbox-url="colorbox.php?id=34">
+          <div class="image brown programmer" data-colorbox-url="includes/colorbox.php?id=34">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">Bill Nye</p>
               <p class="sort-two">628</p>
             </div>
           </div>
-          <div class="image blue programmer" data-colorbox-url="colorbox.php?id=33">
+          <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=33">
             <img src="http://lorempixel.com/145/187/sports" />
             <div class="img-content">
               <p class="sort-one">Athlete</p>
               <p class="sort-two">172</p>
             </div>
           </div>
-          <div class="image blue designer" data-colorbox-url="colorbox.php?id=32">
+          <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=32">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">James Earl Jones</p>
               <p class="sort-two">77</p>
             </div>
           </div>
-          <div class="image green programmer" data-colorbox-url="colorbox.php?id=31">
+          <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=31">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">Marie Curie</p>
               <p class="sort-two">815</p>
             </div>
           </div>
-          <div class="image brown designer" data-colorbox-url="colorbox.php?id=30">
+          <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=30">
             <img src="http://lorempixel.com/145/187/nightlife" />
             <div class="img-content">
               <p class="sort-one">Diana, Princess of Whales</p>
               <p class="sort-two">357</p>
             </div>
           </div>
-          <div class="image blue designer" data-colorbox-url="colorbox.php?id=29">
+          <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=29">
             <img src="http://lorempixel.com/145/187/food" />
             <div class="img-content">
               <p class="sort-one">Mohandas Gandhi</p>
               <p class="sort-two">21</p>
             </div>
           </div>
-          <div class="image brown designer" data-colorbox-url="colorbox.php?id=28">
+          <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=28">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">H</p>
               <p class="sort-two">987</p>
             </div>
           </div>
-          <div class="image green designer" data-colorbox-url="colorbox.php?id=27">
+          <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=27">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">I</p>
               <p class="sort-two">752</p>
             </div>
           </div>
-          <div class="image brown programmer" data-colorbox-url="colorbox.php?id=26">
+          <div class="image brown programmer" data-colorbox-url="includes/colorbox.php?id=26">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">F</p>
               <p class="sort-two">7</p>
             </div>
           </div>
-          <div class="image brown designer" data-colorbox-url="colorbox.php?id=25">
+          <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=25">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">J</p>
               <p class="sort-two">6</p>
             </div>
           </div>
-          <div class="image green designer" data-colorbox-url="colorbox.php?id=24">
+          <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=24">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">K</p>
               <p class="sort-two">231</p>
             </div>
           </div>
-          <div class="image blue designer" data-colorbox-url="colorbox.php?id=23">
+          <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=23">
             <img src="http://lorempixel.com/145/187/food" />
             <div class="img-content">
               <p class="sort-one">L</p>
               <p class="sort-two">999</p>
             </div>
           </div>
-          <div class="image brown designer" data-colorbox-url="colorbox.php?id=22">
+          <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=22">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">M</p>
               <p class="sort-two">634</p>
             </div>
           </div>
-          <div class="image brown programmer" data-colorbox-url="colorbox.php?id=21">
+          <div class="image brown programmer" data-colorbox-url="includes/colorbox.php?id=21">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">N</p>
               <p class="sort-two">751</p>
             </div>
           </div>
-          <div class="image brown designer" data-colorbox-url="colorbox.php?id=20">
+          <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=20">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">O</p>
               <p class="sort-two">546</p>
             </div>
           </div>
-          <div class="image brown designer" data-colorbox-url="colorbox.php?id=19">
+          <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=19">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">P</p>
               <p class="sort-two">826</p>
             </div>
           </div>
-          <div class="image brown designer" data-colorbox-url="colorbox.php?id=18">
+          <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=18">
             <img src="http://lorempixel.com/145/187/food" />
             <div class="img-content">
               <p class="sort-one">Q</p>
               <p class="sort-two">156</p>
             </div>
           </div>
-          <div class="image green programmer" data-colorbox-url="colorbox.php?id=17">
+          <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=17">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">R</p>
               <p class="sort-two">579</p>
             </div>
           </div>
-          <div class="image green designer" data-colorbox-url="colorbox.php?id=16">
+          <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=16">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">S</p>
               <p class="sort-two">364</p>
             </div>
           </div>
-          <div class="image blue programmer" data-colorbox-url="colorbox.php?id=15">
+          <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=15">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">T</p>
               <p class="sort-two">33</p>
             </div>
           </div>
-          <div class="image green programmer" data-colorbox-url="colorbox.php?id=14">
+          <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=14">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">U</p>
               <p class="sort-two">84</p>
             </div>
           </div>
-          <div class="image blue programmer" data-colorbox-url="colorbox.php?id=13">
+          <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=13">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">M</p>
               <p class="sort-two">64</p>
             </div>
           </div>
-          <div class="image green programmer" data-colorbox-url="colorbox.php?id=12">
+          <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=12">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">N</p>
               <p class="sort-two">97</p>
             </div>
           </div>
-          <div class="image green programmer" data-colorbox-url="colorbox.php?id=11">
+          <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=11">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">O</p>
               <p class="sort-two">10</p>
             </div>
           </div>
-          <div class="image blue designer" data-colorbox-url="colorbox.php?id=10">
+          <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=10">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">P</p>
               <p class="sort-two">1</p>
             </div>
           </div>
-          <div class="image blue designer" data-colorbox-url="colorbox.php?id=9">
+          <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=9">
             <img src="http://lorempixel.com/145/187/food" />
             <div class="img-content">
               <p class="sort-one">Q</p>
               <p class="sort-two">51</p>
             </div>
           </div>
-          <div class="image blue programmer" data-colorbox-url="colorbox.php?id=8">
+          <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=8">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">R</p>
               <p class="sort-two">80</p>
             </div>
           </div>
-          <div class="image brown designer" data-colorbox-url="colorbox.php?id=6">
+          <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=6">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">S</p>
               <p class="sort-two">1400</p>
             </div>
           </div>
-          <div class="image green designer" data-colorbox-url="colorbox.php?id=6">
+          <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=6">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">T</p>
               <p class="sort-two">12</p>
             </div>
           </div>
-          <div class="image blue designer" data-colorbox-url="colorbox.php?id=5">
+          <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=5">
             <img src="http://placehold.it/145x187" />
             <div class="img-content">
               <p class="sort-one">U</p>
@@ -388,158 +321,6 @@
           </div>
         </div>
       </div><!-- End image gallery -->
-
-      <footer>
-        <ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li class="sep">|</li>
-          <li><a href="#about">About</a></li>
-          <li class="sep">|</li>
-          <li><a href="#questions">Questions</a></li>
-          <li class="sep">|</li>
-          <li><a href="#submitting">Submitting</a></li>
-        </ul>
-
-        <div id="twitter">
-          <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
-        </div>
-        <div id="facebook">
-          <!-- Replace data-href attribute value with the URL you want people to like. -->
-          <div class="fb-like" data-href="http://bignewideas.com/" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div>
-        </div>
-        <span id="mention">A part of the Creative Action Network</span>
-      </footer>
-
-    </div> <!-- /container -->
-
-
-    <!-- MODALS -->
-    <!-- Login Modal -->
-    <div class="modal hide fade" id="login-reg-modal">
-      <div class="modal-body">
-        <form class="form-horizontal">
-          <div class="control-group">
-            <input type="text" class="input-xlarge" id="logreg-name" placeholder="Name">
-          </div>
-          <div class="control-group hide" id="logreg-email-group">
-            <input type="text" class="input-xlarge" id="logreg-email" placeholder="Email">
-          </div>
-          <div class="control-group">
-            <input type="password" class="input-xlarge" id="logreg-password" placeholder="Password">
-          </div>
-          <div class="control-group text-links" id="login-group">
-            <a href="#forgot-password" id="forgot-password-link">I forgot my password</a> /
-            <a href="#register" id="create-account-link">I need to create an account</a>
-          </div>
-          <div class="control-group text-links hide" id="register-group">
-            <a href="#login" id="login-account-link">I need to login to my account</a>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-large" id="login-reg-button">Login</button>
-            <a href="#" class="facebook-login">Login with Facebook</a>
-            <a href="#" class="twitter-login">Login with Twitter</a>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- Submission Modal -->
-    <!-- Adjust data-submission-type between 'video' and 'image' to show the different submission processes. -->
-    <div class="modal hide fade" id="submission-modal" data-submission-type="image">
-      <div class="modal-header">
-        <a class="close" data-dismiss="modal">×</a>
-        <a href="#" class="hide" id="back">Back</a>
-        <h3>Submit an Image</h3>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal">
-          <div class="control-group image-upload">
-            <a href="#">
-              Click to upload an image file
-              <span>Or drag an image from your desktop</span>
-            </a>
-          </div>
-          <div class="control-group video-selection hide">
-            <a href="#" id="upload-video-select" class="select-video">Upload a video</a>
-            <a href="#" id="record-video-select" class="select-video">Record a video</a>
-            <a href="#" id="link-video-select" class="select-video">Link to a video</a>
-          </div>
-          <div class="control-group video-upload hide">
-            <a href="#">
-              Click to upload a video file
-              <span>Or drag a video from your desktop</span>
-            </a>
-          </div>
-          <div class="control-group processing hide">
-            <a href="#">
-              Please wait while we process your file
-              <span>Click again to see submit complete state.</span>
-            </a>
-          </div>
-          <div class="control-group submit-complete hide">
-            <img src="http://placehold.it/203x264" />
-          </div>
-          <div class="control-group hide" id="video-link-group">
-            <input type="text" class="input-xlarge" id="video-link" placeholder="Link">
-          </div>
-          <div class="control-group">
-            <input type="text" class="input-xlarge" id="title" placeholder="Title">
-          </div>
-          <div class="control-group">
-            <textarea class="input-xlarge" id="description" rows="3" placeholder="Description"></textarea>
-          </div>
-          <div class="control-group">
-            <select id="select01" class="input-xlarge">
-              <option>Tag1</option>
-              <option>Tag2</option>
-              <option>Tag3</option>
-              <option>Tag4</option>
-              <option>Tag5</option>
-            </select>
-          </div>
-          <div class="control-group">
-            <label class="checkbox inline">
-              <input type="checkbox" id="inlineCheckbox1" value="option1"> I agree to the <a href="#">terms and service agreement</a> thingy.
-            </label>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <a href="#" class="btn btn-large">Preview</a>
-      </div>
-    </div>
-
-    <!-- Image Modal -->
-    <div class="modal hide fade" id="image-modal">
-      <a class="close" data-dismiss="modal">×</a>
-      <div class="modal-body">
-        <p>Image information goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#" class="btn btn-primary">Save changes</a>
-        <a href="#" class="btn">Close</a>
-      </div>
-    </div>
-
-    <!-- Javascript files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.colorbox.min.js"></script>
-    <script src="js/scripts.js"></script>
-
-    <!-- Facebook Like button -->
-    <!-- Code available at http://developers.facebook.com/docs/reference/plugins/like/ -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=131925520250901";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <!-- Don't forget about Google Analytics here -->
-  </body>
-</html>
+      
+      <?php include_once 'includes/modals.php'; ?>
+<?php include_once 'includes/footer.php'; ?>

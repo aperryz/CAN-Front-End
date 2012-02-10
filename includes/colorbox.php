@@ -5,7 +5,7 @@
   
   //All the content shown below if filler.  It should be replaced using php and the submission id.
 ?>
-<!-- ColorBox -->
+<!-- ColorBox for displaying individual submissions in modal view. -->
 <div id="colorbox-info">
   <div id="image-holder">
     <img src="http://placehold.it/435x564" />
