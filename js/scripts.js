@@ -184,6 +184,9 @@ $(function() {
     $container.isotope({
       filter: selector
     });
+    
+    //Run colorbox again so those that were filtered out are no longer included.
+    setupColorBox();
 
     return false;
   });
@@ -251,29 +254,39 @@ $(function() {
   setupSubmissionModal($('#submission-modal'));
   
   
- /* SETUP CONTENT THICKBOX
+ /* SETUP COLORBOX FROM PAGE LOAD
   * ====================== */ 
- //Call colorbox on all images and adjust settings.
- //Colorbox settings can be found at http://jacklmoore.com/colorbox/.
- //Set an event listener for clicking on an image that isn't hidden by isotope.
- $('.image').not('.isotope-hidden').colorbox({
-     rel:'image',
-     inline:true,
-     width:"50%",
-     href:'#thickbox',
-     opacity:0.8
- });
+ //Setup colorbox to run on the current submissions that are available.
+ setupColorBox();
  
- $('.image').not('.isotope-hidden').click(function(){
-   var $this = $(this),
-       imageEl = $this.find('img'),
-       imgSource = imageEl.attr('src');
-   
-   
-   console.log(imgSource);
- });
+ $(document).bind('cbox_complete', function(){
+    //Handle showing and hiding the sidebar boxes for colorbox.
+    $('.submission-engage-box').click(function(){
+      var $this = $(this);
+      $this.toggleClass('active');
+      $this.find('.submission-engage-content').slideToggle(200);
+      
+      $this.siblings('.submission-engage-box').removeClass('active');
+      $this.siblings('.submission-engage-box').find('.submission-engage-content').slideUp(200);
+    });
     
-}); //End of document ready function.
+   //Handle show and hiding the social boxes for Twitter and Comments.
+   $('.social-heading').click(function(){
+     var $this = $(this),
+      thisSocialBox = $('#' + $this.attr('data-social-box'));
+      
+      //Add and remove active class from headings.
+      $this.addClass('active');
+      $this.siblings().removeClass('active');
+      
+      //Add and remove hide class from social box with content.
+      console.log(thisSocialBox.siblings());
+      thisSocialBox.removeClass('hide');
+      thisSocialBox.siblings().addClass('hide');
+   });
+});
+    
+}); //END OF DOCUMENT READY FUNCTION
 
 
 
@@ -594,4 +607,20 @@ function showImageState(imageState, $this){
       backButton.removeClass('hide');
       break;
   }
+}
+
+
+/* COLORBOX
+  * ====================== */
+function setupColorBox(){
+  //Remove all colorbox functionality in case it had been done before and submissions had been removed from filters.
+  $.colorbox.remove();
+  
+  //Add colorbox functionality to only images that aren't hidden by isotope.
+  $('.image').not('.isotope-hidden')
+    .colorbox({
+       rel:'image',
+       width:"50%",
+       opacity:0.8
+    });  
 }

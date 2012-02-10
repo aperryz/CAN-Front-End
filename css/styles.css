@@ -481,11 +481,8 @@ select, input[type="file"] {
     margin-top: 3px;
 }
 
-/**** CONTENT THICKBOX STYLES ****/
-/*********************************/
-#content-thickbox {
-  display: none;
-}
+/**** COLORBOX STYLES ****/
+/*************************/
 #image-holder {
   margin: 0 auto;
   width: 435px;
@@ -505,16 +502,72 @@ select, input[type="file"] {
 #submission-desc,
 #submission-social {
   float: right;
-  width: 532px;
+  width: 505px;
   background-color: #fff;
   opacity: 0.75;
   padding: 15px;
+  min-height: 90px;
 }
 #submission-social {
-  margin-top: 3px;
+  margin: 3px 0 150px 0;
+}
+#social-headings {
+  overflow: hidden;
+  border-bottom: 1px solid #808080;
+}
+#submission-social h3.social-heading {
+  display: block;
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+#submission-social .social-heading.active {
+  border-bottom: 4px solid #808080;
+  color: #000;
+  cursor: default;
+}
+#social-boxes div {
+  padding-top: 15px;
+}
+#social-boxes input {
+  width: 76%;
+}
+#comments-list,
+#comments-list ul,
+#tweets-list {
+  margin: 0;
+}
+#comments-list li,
+#tweets-list li {
+  list-style-type: none;
+  background: url('../img/comment-up-arrow.png') no-repeat 0 17px;
+  padding: 12px 0 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+#tweets-list li {
+  background: none;
+  padding: 12px 0 10px 0;
+}
+#comments-list li.last,
+#tweets-list li.last {
+  border-bottom: none;
+}
+#comments-list ul li {
+  padding: 12px 0 10px 20px;
+  margin-left: 20px;
+}
+#comments-list .author,
+#comments-list .reply,
+#tweets-list .author,
+#tweets-list .author {
+  display: block;
 }
 #submission-engage {
-  margin-right: 565px;
+  margin-right: 538px;
 }
 .submission-engage-box {
   background-color: #fff;
@@ -522,12 +575,29 @@ select, input[type="file"] {
   padding: 10px;
   margin-bottom: 3px;
 }
-.submission-engage-box:hover {
+.submission-engage-box:hover,
+.submission-engage-box.active {
   opacity: 1; 
   cursor: pointer;
 }
 .submission-engage-box h4 {
   font-size: 16px;
+}
+.submission-engage-content {
+  border-top: 1px solid #a6a6a6;
+  padding-top: 9px;
+  margin-top: 9px;
+  overflow: hidden;
+  display: none;
+}
+.submission-engage-content .download-type {
+  font-size: 11px;
+  line-height: 14px;
+  clear: both;
+}
+.submission-engage-content .download-type img {
+  float: left;
+  margin: 0 7px 5px 0;
 }
 #submission-desc h3,
 #submission-desc address {

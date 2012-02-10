@@ -17,7 +17,7 @@ jQuery: http://jquery.com/
 
 Isotope: http://isotope.metafizzy.co/
 
-ColorBox: http://jacklmoore.com/colorbox/
+ColorBox (modified slightly to use proper html): http://jacklmoore.com/colorbox/
 
 Google Code Prettify (for reference guide): http://code.google.com/p/google-code-prettify/
 
