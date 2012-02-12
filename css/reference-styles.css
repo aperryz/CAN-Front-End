@@ -1,7 +1,37 @@
 /*
- * Creative Action Network Reference Stylesheet
+ * Creative Action Network Documentation Stylesheet
  * Based off of Twitter's Bootstrap v2.0 CSS Framework
 */
 body{
   padding-top: 60px;
+}
+code, pre {
+  margin-bottom: 10px;
+}
+a.heading {
+  position: absolute;
+  margin-top: -50px;
+  left: -1000px;
+}
+
+/* Styles from CAN Front-End */
+h1.can {
+    font: 70px/normal "league-gothic", sans-serif;
+    text-transform: uppercase;
+    color: #4e4e4e;
+}
+h2.can {
+  font: bold 24px/24px "proxima-nova", sans-serif;
+  color: #000;
+}
+h3.can {
+  font: 28px/28px "league-gothic", sans-serif;
+  text-transform: uppercase;
+  color: #333;
+}
+h4.can {
+  font: 18px/22px "proxima-nova", serif;
+}
+h5.can {
+  font: bold 16px/18px "proxima-nova", serif;
 }

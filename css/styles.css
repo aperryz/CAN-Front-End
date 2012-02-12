@@ -584,7 +584,6 @@ select, input[type="file"] {
 }
 #submission-desc,
 #submission-social {
-  float: right;
   width: 505px;
   background-color: #fff;
   opacity: 0.75;
@@ -664,6 +663,9 @@ select, input[type="file"] {
   filter: alpha(opacity=75); 
   padding: 10px;
   margin-bottom: 3px;
+}
+.lt-ie8 .submission-engage-box {
+  zoom: 1; /* IE7 Transparency Fix */
 }
 .submission-engage-box:hover,
 .submission-engage-box.active {

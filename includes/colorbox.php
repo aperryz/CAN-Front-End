@@ -1,9 +1,9 @@
 <?php
-  //Pull the id so you can get the information for that submission from the database
-  $submission_id = htmlspecialchars($_GET['id']);
-  $submission_id = (int) $submission_id;
-  
-  //All the content shown below if filler.  It should be replaced using php and the submission id.
+//Pull the id so you can get the information for that submission from the database
+$submission_id = htmlspecialchars($_GET['id']);
+$submission_id = (int) $submission_id;
+
+//All the content shown below if filler.  It should be replaced using php and the submission id.
 ?>
 <!-- ColorBox for displaying individual submissions in modal view. -->
 <div id="colorbox-info">
@@ -13,56 +13,58 @@
   </div>
   <div id="submission-content">
 
-    <div id="submission-desc">
-      <h2>Submission ID: <?php echo $submission_id; ?></h2>
-      <address>by <a href="mailto:info@jgvisual.com">Don Button</a>, San Francisco, CA</address>
-      <div id="submission-description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-    </div>
-    
-    <div id="submission-social">
-      <div id="social-headings">
-        <h4 class="social-heading active" data-social-box="comments">Comments (3)</h4>
-        <h4 class="social-heading" data-social-box="on-twitter">On Twitter (2)</h4>
+    <div class="pull-right"><!-- IE7 Fix -->
+      <div id="submission-desc">
+        <h2>Submission ID: <?php echo $submission_id; ?></h2>
+        <address>by <a href="mailto:info@jgvisual.com">Don Button</a>, San Francisco, CA</address>
+        <div id="submission-description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
       </div>
-      <div id="social-boxes">
-        <div id="comments">
-          <form class="form-search">
+
+      <div id="submission-social">
+        <div id="social-headings">
+          <h4 class="social-heading active" data-social-box="comments">Comments (3)</h4>
+          <h4 class="social-heading" data-social-box="on-twitter">On Twitter (2)</h4>
+        </div>
+        <div id="social-boxes">
+          <div id="comments">
+            <form class="form-search">
               <input type="text" />
               <button type="submit" class="btn">Add Comment</button>
-          </form>
-          <ul id="comments-list">
-            <li>
-              <span class="comment-author">jonny_eh 37 minutes ago | <a href="#">link</a></span>
-              I read the overview but I'm still not clear on why/how I would use this.
-              What other existing frameworks would I use this instead of?
-              <a href="#" class="reply">reply</a>
-            </li>
-            <ul>
+            </form>
+            <ul id="comments-list">
               <li>
-                <span class="author">ryanwatkins 32 minutes ago | <a href="#">link</a></span>
-                Its a good mobile development framework. It would likely compete with things like Sencha Touch, jQuery Mobile, Jo, and other frameworks targeted at building mobile and hybrid applications.
+                <span class="comment-author">jonny_eh 37 minutes ago | <a href="#">link</a></span>
+                I read the overview but I'm still not clear on why/how I would use this.
+                What other existing frameworks would I use this instead of?
+                <a href="#" class="reply">reply</a>
+              </li>
+              <ul>
+                <li>
+                  <span class="author">ryanwatkins 32 minutes ago | <a href="#">link</a></span>
+                  Its a good mobile development framework. It would likely compete with things like Sencha Touch, jQuery Mobile, Jo, and other frameworks targeted at building mobile and hybrid applications.
+                  <a href="#" class="reply">reply</a>
+                </li>
+              </ul>
+              <li class="last">
+                <span class="author">jonny_eh 37 minutes ago | <a href="#">link</a></span>
+                I read the overview but I'm still not clear on why/how I would use this.
+                What other existing frameworks would I use this instead of?
                 <a href="#" class="reply">reply</a>
               </li>
             </ul>
-            <li class="last">
-              <span class="author">jonny_eh 37 minutes ago | <a href="#">link</a></span>
-              I read the overview but I'm still not clear on why/how I would use this.
-              What other existing frameworks would I use this instead of?
-              <a href="#" class="reply">reply</a>
-            </li>
-          </ul>
-        </div>                
-        <div id="on-twitter" class="hide">
-          <ul id="tweets-list">
-            <li>
-              <span class="author">@1200posters  35 minutes ago | <a href="#">link</a></span>
-              "Ask what's possible, not what's wrong. Keep asking." - Poster 2 from Catherine Chi 1200posters.com/posters/cather…
-            </li>
-            <li class="last">
-              <span class="author">@jgvisual  47 minutes ago | <a href="#">link</a></span>
-              Love this submission.  Just flat out awesome.
-            </li>
-          </ul>
+          </div>                
+          <div id="on-twitter" class="hide">
+            <ul id="tweets-list">
+              <li>
+                <span class="author">@1200posters  35 minutes ago | <a href="#">link</a></span>
+                "Ask what's possible, not what's wrong. Keep asking." - Poster 2 from Catherine Chi 1200posters.com/posters/cather…
+              </li>
+              <li class="last">
+                <span class="author">@jgvisual  47 minutes ago | <a href="#">link</a></span>
+                Love this submission.  Just flat out awesome.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
