@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <title>Campaign Title</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- We can talk about whether we want to include this for better IE support. -->
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -18,14 +19,39 @@
 
     <!-- Typekit files -->
     <!-- The domain must be adjusted on typekit.com before these can be used outside of localhost -->
-    <script type="text/javascript" src="http://use.typekit.com/tgl2squ.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!-- We use an asynchronous download and hide the text while typekit is loading. -->
+    <script type="text/javascript">
+      TypekitConfig = {
+        kitId: 'tgl2squ',
+        scriptTimeout: 3000
+      };
+      (function() {
+        var h = document.getElementsByTagName('html')[0];
+        h.className += ' wf-loading';
+        var t = setTimeout(function() {
+          h.className = h.className.replace(/(\s|^)wf-loading(\s|$)/g, '');
+          h.className += ' wf-inactive';
+        }, TypekitConfig.scriptTimeout);
+        var tk = document.createElement('script');
+        tk.src = '//use.typekit.com/' + TypekitConfig.kitId + '.js';
+        tk.type = 'text/javascript';
+        tk.async = 'true';
+        tk.onload = tk.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          clearTimeout(t);
+          try { Typekit.load(TypekitConfig); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(tk, s);
+      })();
+    </script>
 
-    <!-- Le fav and touch icons -->
+    <!-- Favicon and Touch Icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
   </head>
 
   <body>

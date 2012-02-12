@@ -21,6 +21,8 @@ ColorBox (modified slightly to use proper html): http://jacklmoore.com/colorbox/
 
 Google Code Prettify (for reference guide): http://code.google.com/p/google-code-prettify/
 
+HTML5 Placeholder jQuery Plugin: https://github.com/mathiasbynens/jquery-placeholder
+
 Fonts Used
 ----------
 League Gothic (Typekit)

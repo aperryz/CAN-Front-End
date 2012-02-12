@@ -7,6 +7,8 @@
           <li><a href="#questions">Questions</a></li>
           <li class="sep">|</li>
           <li><a href="#submitting">Submitting</a></li>
+          <li class="sep">|</li>
+          <li><a href="docs.html" target="_blank">Documentation</a></li>
         </ul>
 
         <div id="twitter">
@@ -28,6 +30,7 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.colorbox.min.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
     <script src="js/scripts.js"></script>
 
     <!-- Facebook Like button -->

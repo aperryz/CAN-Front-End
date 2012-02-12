@@ -62,7 +62,7 @@
         </a>
       </div>
       <div class="control-group submit-complete hide">
-        <img src="http://placehold.it/203x264" alt="filler-alt" title="filler-title" />
+        <img src="http://placehold.it/203x264" width="203" height="264" alt="filler-alt" title="filler-title" />
       </div>
       <div class="control-group hide" id="video-link-group">
         <input type="text" class="input-xlarge" id="video-link" placeholder="Link">

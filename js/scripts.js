@@ -1,5 +1,4 @@
-//Run when the DOM is ready to be manipulated.
-$(function() {    
+$(function() { //Run when the DOM is ready to be manipulated.    
     
   /* RUN TO SHOW INITIAL PAGE
   * ====================== */
@@ -10,11 +9,6 @@ $(function() {
     landingPage = showLandingPage(currentPage);
     
   setPrevNextArrows(currentPage);
-  
-  //Call the function to count for every number listed.
-  landingPage.find('.num').each(function(){
-    animateCountUp($(this));
-  });
   
   //Set the correct navigation from the start.
   $('#main-nav a[href="#' + currentPage + '"]').parent().addClass("active");
@@ -114,7 +108,7 @@ $(function() {
     });
   });
     
-  $("#main-nav li").click(function(evt) {
+  $("#main-nav li").not('.sep').click(function(evt) {
     $("#main-nav li").removeClass("active");
     $el = $(this);
     $el.addClass("active");
@@ -135,9 +129,11 @@ $(function() {
     
     var moveDirection = getPageDirection(currentPage, pageToShow);
     
-    showPageContent(pageToShow, moveDirection);
-    setPrevNextArrows(pageToShow);
-    
+    if(moveDirection != 'same') { //Only show the new page and previous and next arrows if it's a different page.
+      showPageContent(pageToShow, moveDirection);
+      setPrevNextArrows(pageToShow, moveDirection);
+    }
+
     evt.preventDefault();
   });
   
@@ -194,7 +190,7 @@ $(function() {
   }); //Start sorting by letters.
 
   // Handle the combined filters
-  $('.filter a').click(function(){
+  $('.filter a').click(function(evt){
     var $this = $(this);
     // don't proceed if already selected
     if ( $this.hasClass('active') ) {
@@ -305,6 +301,20 @@ $(function() {
       thisSocialBox.siblings().addClass('hide');
    });
 });
+
+/* FACEBOOK LIKE BUTTON FOR COLORBOX
+  * ====================== */ 
+//In order to load another Facebook like button from AJAX we need to reparse the FBML.
+$(document).ajaxComplete(function(){
+    try{
+        FB.XFBML.parse(); 
+    }catch(ex){}
+});
+
+/* PLACEHOLDER SUPPORT
+  * ====================== */ 
+//Add support for the placeholder attribute in older browsers.
+$('input, textarea').placeholder(); 
     
 }); //END OF DOCUMENT READY FUNCTION
 
@@ -337,7 +347,7 @@ function getLinkString(pageName){
 //Get all the pages on the site by using the name attribute from each .page-header a tag.
 function getPages(){
   var pages = [];
-  $("#pages .page-header a").each(function(index){
+  $("#pages .page-header h1").each(function(index){
     pages.push($(this).attr('data-name'));
   })
       
@@ -447,8 +457,13 @@ function getPrevNextPages(currentPage){
 
   
 function showLandingPage(landingPageName){
-  var landingPage = $('#pages .page a[data-name="' + landingPageName + '"]').closest('div.page');
+  var landingPage = $('#pages .page h1[data-name="' + landingPageName + '"]').closest('div.page');
   landingPage.addClass("active");
+  
+  //Call the function to count for every number listed.
+  landingPage.find('.num').not('.active').each(function(){
+    animateCountUp($(this));
+  });
   
   return landingPage;
 }
@@ -458,43 +473,41 @@ function showPageContent(pageToShow, moveDirection){
   var pages = $('#pages'),
     currentContent = $('#pages .page.active'),
     currentContentHeight = currentContent.height(),
-    pageToShowContent = $('#pages .page a[data-name="' + pageToShow + '"]').closest('div.page');
+    pageToShowContent = $('#pages .page h1[data-name="' + pageToShow + '"]').closest('div.page');
     
   //Set the height of the pages div to the current page height.
   pages.css('height', currentContentHeight);
     
   //Hide the current content first, when that's finished we animate and show the new content.
-  if(moveDirection != 'same'){
-    currentContent.animate({
-      opacity: 0
-    }, 100, function(){
-      currentContent.removeClass("active");
+  currentContent.animate({
+    opacity: 0
+  }, 100, function(){
+    currentContent.removeClass("active");
 
-      $('html, body').scrollTop(0);
-      
-      pages.animate({
-        height: pageToShowContent.height()
-      }, 200, 'linear', function(){
-        //Since the height has changed we need to call the filter stick function again.
-        makeFilterStick();
-      });
-      
-      //Based on the location of the new page vs. the old page, we set the starting location.
-      var startLocation = (moveDirection == 'next') ? '100px' : '-100px';
-      pageToShowContent.css('left', startLocation);
-      pageToShowContent.addClass("active");  
-      pageToShowContent.animate({
-        opacity: 1,
-        left: 0
-      }, 100);
+    $('html, body').scrollTop(0);
+
+    pages.animate({
+      height: pageToShowContent.height()
+    }, 200, 'linear', function(){
+      //Since the height has changed we need to call the filter stick function again.
+      makeFilterStick();
     });
-  }
+
+    //Based on the location of the new page vs. the old page, we set the starting location.
+    var startLocation = (moveDirection == 'next') ? '100px' : '-100px';
+    pageToShowContent.css('left', startLocation);
+    pageToShowContent.addClass("active");  
+    pageToShowContent.animate({
+      opacity: 1,
+      left: 0
+    }, 100);
+  });
   
   //Set the has to be the new page.  This is needed for the prev and next buttons.
   setHash(pageToShow);
   
   //Call the function to count for every number listed.
-  pageToShowContent.find('.num').each(function(){
+  pageToShowContent.find('.num').not('.active').each(function(){
     animateCountUp($(this));
   });
     
@@ -530,18 +543,23 @@ function makeFilterStick(){
 function animateCountUp(containerSpan){
   //We pull the max number from the data-number attribute on the container span.
   var maxNumber = containerSpan.attr('data-number');
-  maxNumber = Number(maxNumber);
-  var currentNumber = 0;  
   
-  var i = setInterval(function(){
+  //Add active class at start and remove at the end.  This way we don't run it again while it's already running.
+  //This was required for IE7 and IE8.
+  containerSpan.addClass('active');
+  
+  var currentNumber = 0;
+  var timer = setInterval(function(){
     if(currentNumber <= maxNumber){
       containerSpan.text(currentNumber);
       currentNumber++;
+      
     }
     else{
-      clearInterval();
+      clearInterval(timer);
+      containerSpan.removeClass('active');
     }
-  }, 1);
+  }, 35);  
 }
 
 
@@ -629,6 +647,7 @@ function showVideoState(videoState, $this){
     case 'videoButtons':
       modalTitle.text('Submit a Video');
       videoSelection.removeClass('hide');
+      videoSelection.find('a.active').removeClass('active');
       submissionModal.find('.image-upload').addClass('hide');
       submissionModal.find('.video-upload').addClass('hide');
       processingGroup.addClass('hide');
@@ -711,7 +730,9 @@ function setupColorBox(){
   $('.image').not('.isotope-hidden')
     .colorbox({
        rel:'image',
-       width:"50%",
-       opacity:0.8
+       width:'849px',
+       opacity:0.8,
+       scalePhotos: false,
+       scrolling: false
     });  
 }
