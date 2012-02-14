@@ -721,9 +721,9 @@ select, input[type="file"] {
 #cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
 #cboxCurrent{display: none;}
 #cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff;}
-#cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url('../img/colorbox-prev-arrow.png') no-repeat top left; width:58px; height:58px; text-indent:-9999px; opacity: 0.85;}
+#cboxPrevious{position:absolute; top:292px; left:5px; margin-top:-32px; background:url('../img/colorbox-prev-arrow.png') no-repeat top left; width:58px; height:58px; text-indent:-9999px; opacity: 0.85;}
 #cboxPrevious:hover{opacity: 1;}
-#cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url('../img/colorbox-next-arrow.png') no-repeat top left; width:58px; height:58px; text-indent:-9999px; opacity: 0.85;}
+#cboxNext{position:absolute; top:292px; right:5px; margin-top:-32px; background:url('../img/colorbox-next-arrow.png') no-repeat top left; width:58px; height:58px; text-indent:-9999px; opacity: 0.85;}
 #cboxNext:hover{opacity: 1;}
 #cboxLoadingOverlay{background:transparent;}
 #cboxLoadingGraphic{background:none;}

@@ -185,7 +185,16 @@
       <p>The modal code is:</p>
       <pre class="prettyprint">
         &lt;div class="modal hide fade" id="login-reg-modal"&gt;Modal information here.  See includes/modals.php for more examples.&lt;/div&gt;</pre>
-
+      
+      <h3>Accepting Either Video or Image Submissions</h3>
+      <p>You can set whether you want to accept the video or image submission type by using the data-submission-type attribute on the #subission-modal in includes/modals.php.</p>
+      <p>Here is the code when you'd like to accept image submissions.  Images are set as the default state in case an incorrect value is used for the attribute.</p>
+      <pre class="prettyprint">
+        &lt;div class=&quot;modal hide fade&quot; id=&quot;submission-modal&quot; data-submission-type=&quot;image&quot;&gt;...&lt;/div&gt;</pre>
+      <p>If you want to accept videos you would change the attribute to "video".  It would look like this:</p>
+      <pre class="prettyprint">
+        &lt;div class=&quot;modal hide fade&quot; id=&quot;submission-modal&quot; data-submission-type=&quot;video&quot;&gt;...&lt;/div&gt;</pre>
+      
       
       <!-- Grid -->
       <a id="grid" class="heading"></a>
