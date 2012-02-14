@@ -15,6 +15,7 @@ h1 {
     font: 70px/normal "league-gothic", sans-serif;
     text-transform: uppercase;
     color: #4e4e4e;
+    text-rendering: auto;
 }
 h2 {
   font: bold 24px/24px "proxima-nova", sans-serif;

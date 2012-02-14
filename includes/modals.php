@@ -30,7 +30,7 @@
 
 <!-- Submission Modal -->
 <!-- Adjust data-submission-type between 'video' and 'image' to show the different submission processes. -->
-<div class="modal hide fade" id="submission-modal" data-submission-type="image">
+<div class="modal hide fade" id="submission-modal" data-submission-type="video">
   <div class="modal-header">
     <a class="close" data-dismiss="modal">×</a>
     <a href="#" class="hide" id="back">Back</a>

@@ -552,8 +552,22 @@ function animateCountUp(containerSpan){
   var timer = setInterval(function(){
     if(currentNumber <= maxNumber){
       containerSpan.text(currentNumber);
-      currentNumber++;
       
+      if((currentNumber + 100000) < maxNumber){ //Over 100,000 difference count up by 10,000
+        currentNumber = currentNumber + 10000;
+      }
+      else if((currentNumber + 10000) < maxNumber){ //Between 10,000 and 100,000 difference count up by 1,000
+        currentNumber = currentNumber + 1000;
+      }
+      else if((currentNumber + 1000) < maxNumber){ //Between 1,000 and 10,000 difference count up by 50
+        currentNumber = currentNumber + 50;
+      }
+      else if ((currentNumber + 50) < maxNumber){ //Between 50 and 1,000 difference count up by 10
+        currentNumber = currentNumber + 10;
+      }
+      else {
+        currentNumber++; //Between 1 and 50 difference count up by 1
+      }
     }
     else{
       clearInterval(timer);
