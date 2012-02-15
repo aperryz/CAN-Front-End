@@ -174,6 +174,7 @@ $(function() { //Run when the DOM is ready to be manipulated.
       
   $container.isotope({
     itemSelector: '.image',
+    itemPositionDataEnabled: true,
     getSortData : {
       //SortOne is a regular text field.  We sort alphabetically.
       one : function ( $elem ) {
@@ -183,11 +184,9 @@ $(function() { //Run when the DOM is ready to be manipulated.
       two : function ( $elem ) {
         return parseInt($elem.find('.sort-two').text(), 10);
       }
-    }
-  });  
-  $container.isotope({
+    },
     sortBy : 'one'
-  }); //Start sorting by letters.
+  });
   
   //Fade in the sorts and filters when you rollover the grid.
   $container.mouseover(function(){

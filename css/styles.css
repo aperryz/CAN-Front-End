@@ -359,6 +359,7 @@ footer .nav > li > a {
     width: 145px;
     opacity: .8;
     filter: alpha(opacity=80);
+    z-index: 1;
 }
 
 #images .img-content p {
@@ -572,6 +573,12 @@ select, input[type="file"] {
 /**** COLORBOX STYLES ****/
 /*************************/
 #colorbox-info { padding-bottom: 150px; }
+#colorbox-info:hover { cursor: pointer; }
+#colorbox-info #image-holder:hover,
+#colorbox-info #submission-desc:hover,
+#colorbox-info #submission-social:hover {
+  cursor: default;
+}
 #image-holder {
   margin: 0 auto;
   width: 435px;

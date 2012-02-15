@@ -30,7 +30,7 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.hover-intent.min.js"></script>
-    <script src="js/jquery.colorbox.min.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
     <script src="js/jquery.placeholder.min.js"></script>
     <script src="js/scripts.js"></script>
 
