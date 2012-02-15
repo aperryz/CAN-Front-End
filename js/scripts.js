@@ -188,6 +188,13 @@ $(function() { //Run when the DOM is ready to be manipulated.
   $container.isotope({
     sortBy : 'one'
   }); //Start sorting by letters.
+  
+  //Fade in the sorts and filters when you rollover the grid.
+  $container.mouseover(function(){
+    $('#sorts-filters').animate({
+      opacity: 100
+    }, 3000);
+  });
 
   // Handle the combined filters
   $('.filter a').click(function(evt){
@@ -230,12 +237,12 @@ $(function() { //Run when the DOM is ready to be manipulated.
   });
 
   //When hovering over the images dropdown text over the top.
-  $('#images .image').hover(function(){
+  $('#images .image').hoverIntent(function(){
     var imageContainer = $(this),
       imgContent = imageContainer.children('.img-content'),
       imageHeight = imageContainer.css('height');
       
-    imgContent.animate({
+    imgContent.stop(true, false).animate({
       height: imageHeight
     }, 300);
   }, function(){
@@ -299,6 +306,13 @@ $(function() { //Run when the DOM is ready to be manipulated.
       //Add and remove hide class from social box with content.
       thisSocialBox.removeClass('hide');
       thisSocialBox.siblings().addClass('hide');
+   });
+   
+   //Make clicking outside of any of the content boxes close the colorbox.
+   $('#colorbox-info, #submission-content').click(function(evt){
+     if (evt.target.id === "colorbox-info" || evt.target.id === "submission-content"){
+      $.colorbox.close();
+     }
    });
 });
 
@@ -519,16 +533,20 @@ function showPageContent(pageToShow, moveDirection){
   * ====================== */
 function makeFilterStick(){  
   //Make sorts and filters fixed once we scroll down.
-  var $window = $(window),
-    images = $('#images'),
-    imagesTop = images.offset().top,
-    sortsFilters = $('#sorts-filters');
+  var $window = $(window),  
+    sortsFilters = $('#sorts-filters'),
+    sortsFiltersTop = sortsFilters.offset().top;
      
   //Remove any previously set scroll events.
   $window.unbind('scroll');  
 
   $window.scroll(function(e){
-    if ($window.scrollTop() > imagesTop) {
+    if ($window.scrollTop() > sortsFiltersTop - 50) {
+      //If the sorts and filters aren't already shown we want to do that here.
+      sortsFilters.animate({
+        opacity: 100
+      }, 3000);
+      
       sortsFilters.addClass('low-scroll');
     }
     else {

@@ -11,6 +11,9 @@
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    
+    <!--HTML5 Shiv for IE6 - IE8 HTML5 Support - Must place before body tag -->
+    <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
 
     <!-- Typekit files -->
     <!-- The domain must be adjusted on typekit.com before these can be used outside of localhost -->

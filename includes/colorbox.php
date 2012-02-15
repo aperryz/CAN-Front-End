@@ -28,7 +28,7 @@ $submission_id = (int) $submission_id;
         <div id="social-boxes">
           <div id="comments">
             <form class="form-search">
-              <input type="text" />
+              <textarea rows="3"></textarea>
               <button type="submit" class="btn">Add Comment</button>
             </form>
             <ul id="comments-list">
