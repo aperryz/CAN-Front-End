@@ -250,9 +250,30 @@
         //ADJUSTED TO WORK WITH ISOTOPE//
         $related.each(function(){
           var position = $(this).data('isotope-item-position'),
-            xPosition = position.x.toPrecision(4).toString().replace(".",""),
-            yPosition = position.y.toString();
-          
+            xPosition = position.x,
+            yPosition = (position.y + 1).toString();
+            
+            if (xPosition < 10){
+              xPosition.toString();
+              xPosition = '00000' + xPosition;
+            }
+            else if (xPosition < 100){
+              xPosition.toString();
+              xPosition = '0000' + xPosition;
+            }
+            else if (xPosition < 1000){
+              xPosition.toString();
+              xPosition = '000' + xPosition;
+            }
+            else if (xPosition < 10000){
+              xPosition.toString();
+              xPosition = '00' + xPosition;
+            }
+            else {
+              xPosition.toString();
+              xPosition = '0' + xPosition;
+            }
+            
           $(this).data('isotope-order', parseFloat(yPosition + xPosition));
         }); 
         
