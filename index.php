@@ -1,6 +1,7 @@
 <?php include_once 'includes/header.php'; ?>
 
     <!-- PAGES -->
+    <div id="pages-container">
     <div class="container">
       <div id="pages">
         <div class="page">
@@ -71,8 +72,10 @@
         <a class="page-control prev"></a>
         <a class="page-control next"></a>
       </div>
+    </div><!-- End .container div -->
+    </div><!-- End #pages-container div -->
       <!-- End of the pages -->
-
+      <div class="container">
      <?php include_once 'includes/grid.php'; ?>
       
      <?php include_once 'includes/modals.php'; ?>

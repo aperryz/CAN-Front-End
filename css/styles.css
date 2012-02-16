@@ -180,10 +180,12 @@ footer .nav > li > a {
 
 /**** PAGE STYLES ****/
 /*********************/
+#pages-container {
+  background: url('../img/pages-border.png') repeat-x left bottom;
+}
 #pages {
     position: relative;
     clear: both;
-    background: url('../img/pages-border.png') repeat-x left bottom;
     padding-bottom: 20px;
 }
 .page-header {
@@ -572,7 +574,6 @@ select, input[type="file"] {
 
 /**** COLORBOX STYLES ****/
 /*************************/
-#colorbox-info { padding-bottom: 150px; }
 #colorbox-info:hover { cursor: pointer; }
 #colorbox-info #image-holder:hover,
 #colorbox-info #submission-desc:hover,
@@ -734,7 +735,10 @@ select, input[type="file"] {
 .cboxIframe{width:100%; height:100%; display:block; border:0;}
 
 /*Adjusted Colorbox Styles*/
-#colorbox-info { overflow: hidden; }
+#colorbox-info {
+  overflow: hidden;
+  padding-bottom: 150px;
+}
 #cboxOverlay{background:#000;}
 #colorbox{}
 #cboxContent{margin-top:20px;}
