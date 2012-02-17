@@ -735,10 +735,7 @@ select, input[type="file"] {
 .cboxIframe{width:100%; height:100%; display:block; border:0;}
 
 /*Adjusted Colorbox Styles*/
-#colorbox-info {
-  overflow: hidden;
-  padding-bottom: 150px;
-}
+#colorbox-info { overflow: hidden; }
 #cboxOverlay{background:#000;}
 #colorbox{}
 #cboxContent{margin-top:20px;}
@@ -753,7 +750,7 @@ select, input[type="file"] {
 #cboxNext{position:absolute; top:292px; right:5px; margin-top:-32px; background:url('../img/colorbox-next-arrow.png') no-repeat top left; width:58px; height:58px; text-indent:-9999px; opacity: 0.85;}
 #cboxNext:hover{opacity: 1;}
 #cboxLoadingOverlay{background:transparent;}
-#cboxLoadingGraphic{background:none;}
+#cboxLoadingGraphic{background:url('../img/colorbox-loader.gif') no-repeat center top;}
 #cboxClose{display: none;}
 
 /*Submit Confirmation and Share Fixed Bar Styles*/

@@ -6,7 +6,8 @@ $submission_id = (int) $submission_id;
 //All the content shown below if filler.  It should be replaced using php and the submission id.
 ?>
 <!-- ColorBox for displaying individual submissions in modal view. -->
-<div id="colorbox-info">
+<!-- Inline height for #colorbox-info needs to be adjusted with PHP to content height to avoid cutting off content -->
+<div id="colorbox-info" style="height: 1300px;">
   <div id="image-holder">
     <img src="http://placehold.it/435x564" width="435" height="564" alt="filler-alt" title="filler-title" />
     <div class="fb-like" data-href="http://bignewideas.com/" data-send="false" data-layout="button_count" data-width="40" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div>
@@ -74,19 +75,19 @@ $submission_id = (int) $submission_id;
         <h5>Download</h5>
         <div class="submission-engage-content">
           <div class="download-type">
-            <img src="img/85-11.png" alt="8.5x11" />
+            <img src="img/85-11.png" alt="8.5x11" width="50" height="65" />
             File: PDF<br />
             Paper: 8.5"x11"<br />
             Size: 8.5"x11"
           </div>
           <div class="download-type">
-            <img src="img/17-22.png" alt="8.5x11" />
+            <img src="img/17-22.png" alt="8.5x11" width="50" height="65" />
             File: PDF<br />
             Paper: (8.5"x11")<sup>4</sup><br />
             Size: 17"x22"
           </div>
           <div class="download-type">
-            <img src="img/255-33.png" alt="8.5x11" />
+            <img src="img/255-33.png" alt="8.5x11" width="50" height="65" />
             File: PDF<br />
             Paper: (8.5"x11")<sup>9</sup><br />
             Size: 25.5"x33"
@@ -102,9 +103,9 @@ $submission_id = (int) $submission_id;
       <div class="submission-engage-box">
         <h5>Share</h5>
         <div class="submission-engage-content">
-          <img src="img/share-filler.png" alt="share filler" class="share-button" />
-          <img src="img/share-filler.png" alt="share filler" class="share-button" />
-          <img src="img/share-filler.png" alt="share filler" class="share-button" />
+          <img src="img/share-filler.png" alt="share filler" class="share-button" width="68" height="68"  />
+          <img src="img/share-filler.png" alt="share filler" class="share-button" width="68" height="68"  />
+          <img src="img/share-filler.png" alt="share filler" class="share-button" width="68" height="68"  />
         </div>
       </div>                
     </div>
