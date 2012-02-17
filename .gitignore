@@ -1,2 +1,3 @@
 #NetBeans Ignores
 /nbproject/*
+.DS_STORE

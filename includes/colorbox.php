@@ -3,8 +3,9 @@
 $submission_id = htmlspecialchars($_GET['id']);
 $submission_id = (int) $submission_id;
 
-//All the content shown below if filler.  It should be replaced using php and the submission id.
+//All the content shown below is filler.  It should be replaced using php and the submission id.
 ?>
+
 <!-- ColorBox for displaying individual submissions in modal view. -->
 <!-- Inline height for #colorbox-info needs to be adjusted with PHP to content height to avoid cutting off content -->
 <div id="colorbox-info" style="height: 1300px;">
