@@ -4,13 +4,14 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    <title>Campaign Title</title>
+    <title>Design for Obama</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/dfo.css" rel="stylesheet">
     
     <!--HTML5 Shiv for IE6 - IE8 HTML5 Support - Must place before body tag -->
     <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
@@ -54,19 +55,6 @@
 
   <body>
     <div class="navbar navbar-fixed-top">
-      <!-- CAN Pulldown bar -->
-      <div class="fill dropdown">
-        <div class="container">
-          <ul class="nav" id="dropdown-nav">
-            <li><a href="#home">All Campaigns</a></li>
-            <li class="sep">|</li>
-            <li><a href="#about">All Partners</a></li>
-            <li class="sep">|</li>
-            <li><a href="#questions">All Causes</a></li>
-          </ul>
-          <a class="brand" href="#">Creative Action Network</a>
-        </div>
-      </div>
       
       <!-- Main navigation bar -->
       <div class="fill">
@@ -77,17 +65,17 @@
             <li class="sep">|</li>
             <li><a href="#about">About</a></li>
             <li class="sep">|</li>
-            <li><a href="#questions">Questions</a></li>
+            <li><a href="#the-book">The Book</a></li>
             <li class="sep">|</li>
-            <li><a href="#submitting" class="submit">Submitting</a></li>
+            <li><a href="#contributing" class="submit">Contributing</a></li>
           </ul>
           
           <a id="pulldown-btn" class="pull-right">CAN</a>
-          <button id="submit-btn" class="btn pull-right" type="submit">Submit</button>
-          <ul class="nav login">
-            <li><a id="login-link" data-toggle="modal" href="#login-reg-modal">Login</a></li>
-            <li class="sep">|</li>
+          <button id="submit-btn" class="btn pull-right" type="submit">Contribute</button>
+          <ul class="nav login">            
             <li><a id="register-link" data-toggle="modal" href="#login-reg-modal">Register</a></li>
+            <li class="sep">|</li>
+            <li><a id="login-link" data-toggle="modal" href="#login-reg-modal">Login</a></li>
           </ul>
 
         </div>
