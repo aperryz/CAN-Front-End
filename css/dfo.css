@@ -1,0 +1,212 @@
+/*
+ * Design for Obama Stylesheet
+*/
+
+/**** GENERAL STYLES ****/
+/************************/
+body {
+  margin-top: 38px;
+}
+
+body, .navbar .fill  {
+  background: url('../img/dfo/body-bg.png') repeat 0 0;
+  color: #fff;
+}
+
+.span12 {
+  text-align: justify;
+}
+
+/**** NAVIGATION STYLES ****/
+/***************************/
+.navbar .fill {
+  border-bottom: none;
+  -moz-box-shadow:    0 0 20px 2px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0 0 20px 2px rgba(0,0,0,0.7);
+  box-shadow:         0 0 20px 2px rgba(0,0,0,0.7);
+}
+
+.navbar .brand,
+.navbar .fill.dropdown,
+#pulldown-btn{
+  display: none;
+}
+
+#pulldown-btn {
+  display: none;
+}
+
+li.sep {
+ padding: 10px 8px 11px;
+ font-size: 16px;
+}
+
+
+.navbar .nav > li > a, footer .nav > li > a {
+  font-size: 16px;
+}
+
+.navbar .btn {
+  margin-top: 7px;
+  color: #156990;
+  font-weight: bold;
+}
+
+#rollover-bar {
+  background: url('../img/dfo/header-bg.png') repeat 0 0;
+}
+
+
+/**** PAGE STYLES ****/
+/*********************/
+#pages-container {
+  background: url('../img/dfo/header-bg.png') repeat 0 0;
+  -webkit-box-shadow: inset 0px -1px 20px rgba(0,0,0,0.7);
+	   -moz-box-shadow: inset 0px -1px 20px rgba(0,0,0,0.7);
+	        box-shadow: inset 0px -1px 20px rgba(0,0,0,0.7);
+}
+
+.page-control {
+  color: #fff;
+  text-shadow: 1px 1px 2px #000; 
+  background: transparent url('../img/dfo/prev-arrow.png') no-repeat 0 20px;
+  line-height: 54px;
+  height: 55px;
+  top: 85px;
+}
+
+.page-control.next {
+  background: transparent url('../img/dfo/next-arrow.png') no-repeat right 20px;
+}
+
+.page-control:hover {
+    cursor: pointer;
+    background: transparent url('../img/dfo/prev-arrow.png') repeat-y 0 0;   
+    color: #fff;
+}
+
+.page-control.next:hover {
+    background: transparent url('../img/dfo/next-arrow.png') repeat-y right 0;    
+}
+
+h1.dfo-logo {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  border: 0;
+  background: transparent url('../img/dfo/design-obama-logo.png') no-repeat 50% 0;
+  height: 99px;
+}
+
+.align-center {
+  text-align: center;
+}
+a.link-pop {
+  text-align: center;
+  padding: 4px 15px;
+  -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  background-color: #a7d2e2;
+  color: #156990;
+  font-size: 16px;
+}
+
+
+
+
+/**** COUNTING ****/
+/******************/
+
+
+
+/**** SORTING, FILTERING AND SEARCH ****/
+/***************************************/
+#sorts-filters {
+  background: url('../img/dfo/body-bg.png') repeat 0 0;
+}
+
+#sorts-filters.low-scroll {
+  top: 38px;
+  border-bottom: none;
+}
+
+.sort-filter, .image-form {
+  -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
+      box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
+  width: 304px;
+}
+
+.sort-filter ul,
+#sorts-filters .image-form {
+  width: 304px;
+}
+
+#sorts-filters .image-form {
+  margin-left: 13px;
+}
+
+.sort-filter span, .sort-filter a {
+  color: #214251;
+}
+
+.sort-filter span {
+  background: #d9e3e6 url('../img/sort-filter-left-arrow.png') no-repeat 289px 4px;
+}
+
+.sort-filter a {
+  background: #d9e3e6 url('../img/sort-filter.png') no-repeat 289px 4px;
+}
+
+.sort-filter a:hover, .sort-filter a.active {
+  background: #d9e3e6 url('../img/sort-filter-selected.png') no-repeat 289px 4px;
+}
+
+.form-search input, .form-search button {
+  -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+      border-radius: 0;
+}
+
+#sorts-filters form input {
+  width: 214px;
+}
+
+.form-search button {
+  background-image: none;
+  background-color: #d32f2f;
+  color: #fff;
+  border-color: #d32f2f;
+  text-shadow: none;
+  margin-left: -3px;
+  font: bold 12px/12px "proxima-nova", sans-serif;
+}
+
+.form-search .btn:hover {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+
+/**** IMAGE AND ISOTOPE ****/
+/***************************/
+#images .image {
+  -moz-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+}
+
+
+/**** MODAL STYLES ****/
+/***********************/
+
+
+
+/**** COLORBOX STYLES ****/
+/*************************/
+
+
+
+/**** FOOTER STYLES ****/
+/***********************/
