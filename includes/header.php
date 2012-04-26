@@ -59,7 +59,7 @@
       <!-- Main navigation bar -->
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#home" id="logo">Campaign Title</a>
+          <a class="brand" href="#home" id="logo">Design for Obama</a>
           <ul class="nav" id="main-nav">
             <li><a href="#home" class="home">Home</a></li>
             <li class="sep">|</li>

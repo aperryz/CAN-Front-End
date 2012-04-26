@@ -14,8 +14,54 @@ $submission_id = (int) $submission_id;
     <div class="fb-like" data-href="http://bignewideas.com/" data-send="false" data-layout="button_count" data-width="40" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div>
   </div>
   <div id="submission-content">
-
-    <div class="pull-right"><!-- IE7 Fix -->
+    
+    <div id="submission-engage">
+      <div class="submission-engage-box download">
+        <h5>Download</h5>
+        <div class="submission-engage-content">
+          <div class="download-type first">
+            <img src="img/85-11.png" alt="8.5x11" width="50" height="65" />
+            <h6>8.5"x11"</h6>
+            <span class="download-size">2550x3300 pixels</span>
+            <a href="#">JPG</a> | <a href="#">PDF</a>
+          </div>
+          <div class="download-type">
+            <img src="img/85-11.png" alt="8.5x11" width="50" height="65" />
+            <h6>17"x2"</h6>
+            <span class="download-size">Four, titled 8.5"x11"s</span>
+            <a href="#">PDF</a>
+          </div>
+          <div class="download-type">
+            <img src="img/85-11.png" alt="8.5x11" width="50" height="65" />
+            <h6>25.5"x33"</h6>
+            <span class="download-size">Nine, titled 8.5"x11"s</span>
+            <a href="#">PDF</a>
+          </div>
+        </div>
+      </div>
+      <div class="submission-engage-count download">235 times</div>
+      
+      <div class="submission-engage-box purchase">
+        <h5>Purchase</h5>
+        <div class="submission-engage-content">
+          Vivamus interdum, justo a vehicula ullamcorper, diam orci congue est, sit amet tempor est libero sed velit. Sed eu mauris non nunc feugiat varius.
+        </div>
+      </div>
+      <div class="submission-engage-count purchase">96 times</div>
+      
+      <div class="submission-engage-box share">
+        <h5>Share</h5>
+        <div class="submission-engage-content">
+          <img src="img/share-filler.png" alt="share filler" class="share-button" width="68" height="68"  />
+          <img src="img/share-filler.png" alt="share filler" class="share-button" width="68" height="68"  />
+          <img src="img/share-filler.png" alt="share filler" class="share-button" width="68" height="68"  />
+        </div>
+      </div>
+      <div class="submission-engage-count share">2.5K times</div>
+    </div><!-- #submission-engage -->
+    
+    
+    
       <div id="submission-desc">
         <h2>Submission ID: <?php echo $submission_id; ?></h2>
         <address>by <a href="mailto:info@jgvisual.com">Don Button</a>, San Francisco, CA</address>
@@ -25,12 +71,12 @@ $submission_id = (int) $submission_id;
       <div id="submission-social">
         <div id="social-headings">
           <h4 class="social-heading active" data-social-box="comments">Comments (3)</h4>
-          <h4 class="social-heading" data-social-box="on-twitter">On Twitter (2)</h4>
+          <h4 class="social-heading last" data-social-box="on-twitter">On Twitter (2)</h4>
         </div>
         <div id="social-boxes">
           <div id="comments">
             <form class="form-search">
-              <textarea rows="3"></textarea>
+              <textarea rows="1"></textarea>
               <button type="submit" class="btn">Add Comment</button>
             </form>
             <ul id="comments-list">
@@ -69,46 +115,7 @@ $submission_id = (int) $submission_id;
           </div>
         </div>
       </div>
-    </div>
 
-    <div id="submission-engage">
-      <div class="submission-engage-box">
-        <h5>Download</h5>
-        <div class="submission-engage-content">
-          <div class="download-type">
-            <img src="img/85-11.png" alt="8.5x11" width="50" height="65" />
-            File: PDF<br />
-            Paper: 8.5"x11"<br />
-            Size: 8.5"x11"
-          </div>
-          <div class="download-type">
-            <img src="img/17-22.png" alt="8.5x11" width="50" height="65" />
-            File: PDF<br />
-            Paper: (8.5"x11")<sup>4</sup><br />
-            Size: 17"x22"
-          </div>
-          <div class="download-type">
-            <img src="img/255-33.png" alt="8.5x11" width="50" height="65" />
-            File: PDF<br />
-            Paper: (8.5"x11")<sup>9</sup><br />
-            Size: 25.5"x33"
-          </div>
-        </div>
-      </div>
-      <div class="submission-engage-box">
-        <h5>Purchase</h5>
-        <div class="submission-engage-content">
-          Vivamus interdum, justo a vehicula ullamcorper, diam orci congue est, sit amet tempor est libero sed velit. Sed eu mauris non nunc feugiat varius.
-        </div>
-      </div>
-      <div class="submission-engage-box">
-        <h5>Share</h5>
-        <div class="submission-engage-content">
-          <img src="img/share-filler.png" alt="share filler" class="share-button" width="68" height="68"  />
-          <img src="img/share-filler.png" alt="share filler" class="share-button" width="68" height="68"  />
-          <img src="img/share-filler.png" alt="share filler" class="share-button" width="68" height="68"  />
-        </div>
-      </div>                
-    </div>
+    
   </div>
 </div>
