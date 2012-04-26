@@ -498,9 +498,9 @@ function showPageContent(pageToShow, moveDirection){
     currentContent.removeClass("active");
 
     $('html, body').scrollTop(0);
-
-    pages.animate({
-      height: pageToShowContent.height()
+    
+    $('#pages-container').animate({
+      height: pageToShowContent.height() + parseFloat(pages.css('padding-bottom'))
     }, 200, 'linear', function(){
       //Since the height has changed we need to call the filter stick function again.
       makeFilterStick();
