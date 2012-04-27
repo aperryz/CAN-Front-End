@@ -6,7 +6,7 @@
       <div id="pages">
         <div class="page">
           <div class="page-header">
-            <h1 data-name="home" class="dfo-logo">Design for Obama 2012</h1>
+            <h1 data-name="home" data-text="Home" class="dfo-logo">Design for Obama 2012</h1>
           </div>
           <div class="row">
             <div class="span12">
@@ -17,7 +17,7 @@
 
         <div class="page">
           <div class="page-header">
-            <h1 data-name="about" class="dfo-logo">Design for Obama 2012 About</h1>
+            <h1 data-name="about" data-text="About" class="dfo-logo">Design for Obama 2012 About</h1>
           </div>
           <div class="row">
             <div class="span12">
@@ -38,7 +38,7 @@
 
         <div class="page">
           <div class="page-header">
-            <h1 data-name="the-book">The Book</h1>
+            <h1 data-name="the-book" data-text="The Book">The Book</h1>
           </div>
           <div class="row">
             <div class="span12">
@@ -49,7 +49,7 @@
 
         <div class="page">
           <div class="page-header">
-            <h1 data-name="contributing">Contributing</h1>
+            <h1 data-name="contributing" data-text="Contributing">Contributing</h1>
           </div>
           <div class="row">
             <div class="span12">

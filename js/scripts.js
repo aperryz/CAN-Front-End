@@ -125,17 +125,7 @@ $(function() { //Run when the DOM is ready to be manipulated.
       }); 
 
       //Handle page movement when a new page is clicked.
-      var pageToShow = $el.children("a").attr('href');
-      pageToShow = removeHash(pageToShow);
-
-      currentPage = getCurrentPage();
-
-      var moveDirection = getPageDirection(currentPage, pageToShow);
-
-      if(moveDirection != 'same') { //Only show the new page and previous and next arrows if it's a different page.
-        showPageContent(pageToShow, moveDirection);
-        setPrevNextArrows(pageToShow, moveDirection);
-      }
+      changePage($el.children("a").attr('href'));
 
       evt.preventDefault();
     });
@@ -160,11 +150,16 @@ $(function() { //Run when the DOM is ready to be manipulated.
       currentPage = getCurrentPage(),
       prevNextPages = getPrevNextPages(currentPage);
     
-    if(clickedArrow.hasClass("prev")){ //If they clicked the previous arrow.
-      $("#main-nav li a[href='#" + prevNextPages['prev'] + "']").parent().trigger('click');
+    if($("#main-nav").exists()){ //If the main nav exists we just trigger a click event.
+      if(clickedArrow.hasClass("prev")){ //If they clicked the previous arrow.
+        $("#main-nav li a[href='#" + prevNextPages['prev'] + "']").parent().trigger('click');
+      }
+      else{ //If they clicked the next arrow.
+        $("#main-nav li a[href='#" + prevNextPages['next'] + "']").parent().trigger('click');
+      }
     }
-    else{ //If they clicked the next arrow.
-      $("#main-nav li a[href='#" + prevNextPages['next'] + "']").parent().trigger('click');
+    else { //If the main nav doesn't exist we move the pages without adjusting the navigation.
+      changePage(clickedArrow.attr('data-name'));
     }
     
     evt.preventDefault();
@@ -346,6 +341,21 @@ $('input, textarea').placeholder();
 
 /* PAGE MOVEMENT FUNCTIONS
   * ====================== */
+//Handle all page movement
+function changePage(pageToShow){
+  //Handle page movement when a new page is clicked.
+  pageToShow = removeHash(pageToShow);
+
+  currentPage = getCurrentPage();
+
+  var moveDirection = getPageDirection(currentPage, pageToShow);
+
+  if(moveDirection != 'same') { //Only show the new page and previous and next arrows if it's a different page.
+    showPageContent(pageToShow, moveDirection);
+    setPrevNextArrows(pageToShow, moveDirection);
+  }
+}
+  
 //Remove the hash sign from a string
 function removeHash(string){
   string = string.replace("#","");
@@ -362,7 +372,7 @@ function setHash(string){
   
   
 function getLinkString(pageName){
-  var linkString = $('#main-nav a[href="#' + pageName + '"]').text();
+  var linkString = $('#pages .page-header h1[data-name="' + pageName + '"]').attr('data-text');  
     
   return linkString;
 }
@@ -442,12 +452,16 @@ function setPrevNextArrows(currentPage, moveDirection){
   //If the previous link should be shown change the text and fade it in.
   if(prevNextPages['prev'] != false){
     pageControlPrev.html(getLinkString(prevNextPages['prev']));
+    pageControlPrev.attr('data-name', prevNextPages['prev']);
+    
     pageControlPrev.fadeIn(100);
   }
     
   //If the next link should be showng change the text and fade it in.
   if(prevNextPages['next'] != false){
     pageControlNext.html(getLinkString(prevNextPages['next']));
+    pageControlNext.attr('data-name', prevNextPages['next']);
+    
     pageControlNext.fadeIn(100);
   }  
 }
