@@ -9,12 +9,16 @@ body {
 }
 
 body, .navbar .fill  {
-  background: url('../img/dfo/body-bg.png') repeat 0 0;
+  background: url('../img/dfo/body-bg.jpg') repeat 0 0;
   color: #fff;
 }
 
 .span12 {
   text-align: justify;
+}
+
+h1, h2, h3 {
+  color: #fff;
 }
 
 /**** NAVIGATION STYLES ****/
@@ -53,14 +57,14 @@ li.sep {
 }
 
 #rollover-bar {
-  background: url('../img/dfo/header-bg.png') repeat 0 0;
+  background: url('../img/dfo/header-bg.jpg') repeat 0 0;
 }
 
 
 /**** PAGE STYLES ****/
 /*********************/
 #pages-container {
-  background: url('../img/dfo/header-bg.png') repeat 0 0;
+  background: url('../img/dfo/header-bg.jpg') repeat 0 0;
   -webkit-box-shadow: inset 0px -1px 20px rgba(0,0,0,0.7);
 	   -moz-box-shadow: inset 0px -1px 20px rgba(0,0,0,0.7);
 	        box-shadow: inset 0px -1px 20px rgba(0,0,0,0.7);
@@ -101,29 +105,48 @@ h1.dfo-logo {
 .align-center {
   text-align: center;
 }
-a.link-pop {
-  text-align: center;
-  padding: 4px 15px;
-  -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-  background-color: #a7d2e2;
-  color: #156990;
-  font-size: 16px;
+
+.page a {
+  color: #fff;
+  text-decoration: underline;
 }
 
+.page .row {
+  margin-top: 30px;
+}
 
+.book-links {
+  margin-left: 0;
+}
 
+.book-links div {
+  border: 1px solid #fff;
+  border-right: none;
+  padding: 11px 0;
+  width: 234px;
+  margin-left: 0;
+}
+
+.book-links .first {
+  border-left: none;
+}
 
 /**** COUNTING ****/
 /******************/
+.count {
+  background-color: #0E527C;
+  color: #fff;
+}
 
+.count span {
+  color: #fff;
+}
 
 
 /**** SORTING, FILTERING AND SEARCH ****/
 /***************************************/
 #sorts-filters {
-  background: url('../img/dfo/body-bg.png') repeat 0 0;
+  background: url('../img/dfo/body-bg.jpg') repeat 0 0;
 }
 
 #sorts-filters.low-scroll {
