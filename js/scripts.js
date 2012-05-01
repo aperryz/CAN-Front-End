@@ -257,6 +257,7 @@ $(function() { //Run when the DOM is ready to be manipulated.
   }//End of if statement to see if filters exist.
 
   //When hovering over the images dropdown text over the top.
+  /*
   $('#images .image').hoverIntent(function(){
     var imageContainer = $(this),
       imgContent = imageContainer.children('.img-content'),
@@ -272,7 +273,8 @@ $(function() { //Run when the DOM is ready to be manipulated.
     imgContent.animate({
       height: 0
     }, 300);
-  });    
+  });  
+*/  
   
   
   /* SETUP SUBMISSION MODAL

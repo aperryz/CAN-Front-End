@@ -217,7 +217,37 @@ h1.dfo-logo {
 #images .image {
   -moz-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
     -webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
-    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7); 
+    
+  -webkit-transition: margin-left 200ms linear, margin-top 200ms linear;
+    /*-moz-transition: height 100ms linear, width 100ms linear;
+      -o-transition: height 100ms linear, width 100ms linear;
+        -ms-transition: height 100ms linear, width 100ms linear;
+          transition: height 100ms linear, width 100ms linear;*/
+}
+
+#images .image:hover {
+  margin-left: -4px;
+  margin-top: -24px;
+}
+
+#images img, 
+#images .image {
+  height: 187px;
+  width: 145px;
+  
+  -webkit-transition: height 100ms linear, width 100ms linear;
+    -moz-transition: height 100ms linear, width 100ms linear;
+      -o-transition: height 100ms linear, width 100ms linear;
+        -ms-transition: height 100ms linear, width 100ms linear;
+          transition: height 100ms linear, width 100ms linear;
+}
+
+#images img:hover,
+#images .image:hover {
+  height: 235px;
+  width: 181px;
+  z-index: 1000;
 }
 
 
