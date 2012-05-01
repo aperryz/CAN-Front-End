@@ -59,7 +59,7 @@
       <!-- Main navigation bar -->
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#home" id="logo">Design for Obama</a>
+          <a class="brand hide-text" href="#home" id="logo">Design for Obama</a>
           <ul class="nav" id="main-nav">
             <li><a href="#home" class="home">Home</a></li>
             <li class="sep">|</li>
@@ -70,13 +70,29 @@
             <li><a href="#contributing" class="submit">Contributing</a></li>
           </ul>
           
-          <a id="pulldown-btn" class="pull-right">CAN</a>
           <button id="submit-btn" class="btn pull-right" type="submit">Contribute</button>
+          
           <ul class="nav login">            
             <li><a id="register-link" data-toggle="modal" href="#login-reg-modal">Register</a></li>
             <li class="sep">|</li>
             <li><a id="login-link" data-toggle="modal" href="#login-reg-modal">Login</a></li>
           </ul>
+          
+          <ul class="logged-in">            
+            <li>Hey
+              <div>
+                <a href="#">Aaron</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">My Profile</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </div>
+              only 198 days until the election!</li>
+          </ul>
+          
 
         </div>
       </div>

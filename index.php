@@ -6,13 +6,13 @@
       <div id="pages">
         <div class="page">
           <div class="page-header">
-            <h1 data-name="home" data-text="Home" class="dfo-logo">Design for Obama 2012</h1>
+            <h1 data-name="home" data-text="Home" class="dfo-logo hide-text">Design for Obama 2012</h1>
           </div>
         </div>
 
         <div class="page">
           <div class="page-header">
-            <h1 data-name="about" data-text="About" class="dfo-logo">Design for Obama 2012 About</h1>
+            <h1 data-name="about" data-text="About" class="dfo-logo hide-text">Design for Obama 2012 About</h1>
           </div>
           <div class="row">
             <div class="span12">
@@ -39,13 +39,11 @@
           </div>
         </div>
 
-        <div class="page">
+        <div class="page" id="the-book">
           <div class="page-header">
-            <h1 data-name="the-book" data-text="The Book">Design for Obama</h1>
-            <h2>POSTERS FOR CHANGE - A GRASSROOTS ANTHOLOGY</h2>
-            <h3>Edited by Spike LEE and Aaron perry-zucker, essay by steven heller</h3>
+            <h1 data-name="the-book" data-text="The Book">Design for Obama, Posters for Change - A Grassroots Anthology, Edited by Spike Lee and Aaron Perry-Zucker, Essay by Steven Heller</h1>
           </div>
-          <div class="row">
+          <div class="row" id="book-pics">
             <div class="span3">
               <img src="img/dfo/book/design-for-obama-book-closed.jpg" width="225"  height="225" alt="Design for Obama Book" title="Design for Obama Book Closed" />
             </div>

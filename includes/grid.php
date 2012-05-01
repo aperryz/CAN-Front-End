@@ -28,12 +28,18 @@
       <div class="row">
         <div class="span12" id="images">
           <div class="image brown programmer" data-colorbox-url="includes/colorbox.php?id=34">
+            <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
             <div class="img-content">
               <p class="sort-one">Bill Nye</p>
               <p class="sort-two">628</p>
               <p>Submission ID: 34</p>
             </div>
-            <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+            <ul class="dropdown-menu">
+                <li class="submission-title">Did the Right Thing</li>
+                <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+                <li class="divider"></li>
+                <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+            </ul>
           </div>
           <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=33">
             <div class="img-content">
