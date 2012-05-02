@@ -254,27 +254,7 @@ $(function() { //Run when the DOM is ready to be manipulated.
       $this.parents('ul').find('.active').removeClass('active');
       $this.addClass('active');
     });
-  }//End of if statement to see if filters exist.
-
-  //When hovering over the images dropdown text over the top.
-  /*
-  $('#images .image').hoverIntent(function(){
-    var imageContainer = $(this),
-      imgContent = imageContainer.children('.img-content'),
-      imageHeight = imageContainer.css('height');
-      
-    imgContent.stop(true, false).animate({
-      height: imageHeight
-    }, 300);
-  }, function(){
-    var imageContainer = $(this),
-      imgContent = imageContainer.children('.img-content');
-      
-    imgContent.animate({
-      height: 0
-    }, 300);
-  });  
-*/  
+  }//End of if statement to see if filters exist. 
   
   
   /* SETUP SUBMISSION MODAL
@@ -336,6 +316,21 @@ $(document).ajaxComplete(function(){
   * ====================== */ 
 //Add support for the placeholder attribute in older browsers.
 $('input, textarea').placeholder(); 
+
+
+
+/* POSTER CONFIRMATION - DISABLE BUTTON UNTIL TERMS AND POSTER CONFIRMED
+  * ====================== */ 
+$('#confirm-posters input').change(function() {
+    var proceedButton = $('#proceed');
+    
+    if (!$(this).is(':checked')) {
+      proceedButton.attr('disabled', 'disabled');
+    }
+    else {
+      proceedButton.removeAttr('disabled');
+    }
+});
     
 }); //END OF DOCUMENT READY FUNCTION
 
