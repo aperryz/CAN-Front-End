@@ -693,7 +693,7 @@ a.disagree:hover {
 }
 
 
-/**** STANDALONE CONTENT STYLES ****/
+/**** STANDALONE CONTENT STYLES *********/
 /****************************************/
 body.content {
   background: url('../img/dfo/header-bg.jpg') repeat 0 0;
@@ -775,4 +775,62 @@ body.content {
   -moz-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
     -webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
       box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+}
+
+
+/**** PROFILE STYLES *********/
+/*****************************/
+.profile #pages {
+  padding-bottom: 0;
+}
+
+.profile #pages .page {
+  display: block;
+}
+
+#user-info {
+  width: 742px;
+  padding: 19px;
+  margin: 47px auto;
+  background-color: #fff;
+  color: #0E527C;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -moz-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+      box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+}
+
+#user-info img {
+  float: left;
+  background-color: #0e527c;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+#user-info #user-content {
+  margin-left: 115px;
+}
+
+#user-info h1 {
+  font: bold 32px/36px "proxima-nova", sans-serif;
+  color: #0E527C;
+  text-transform: none;
+  border-bottom: 1px solid #0E527C;
+  padding-bottom: 3px;
+  margin-bottom: 12px;
+}
+
+.circle-nav a {
+  float: left;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #0e527c;
+  margin-right: 3px;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
 }
