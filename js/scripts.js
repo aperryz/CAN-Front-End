@@ -275,38 +275,9 @@ $(function() { //Run when the DOM is ready to be manipulated.
  //Setup colorbox to run on the current submissions that are available.
  setupColorBox();
  
- $(document).bind('cbox_complete', function(){
-    //Handle showing and hiding the sidebar boxes for colorbox.
-    $('.submission-engage-box').click(function(){
-      var $this = $(this);
-      $this.toggleClass('active');
-      $this.find('.submission-engage-content').slideToggle(200);
-      
-      $this.siblings('.submission-engage-box').removeClass('active');
-      $this.siblings('.submission-engage-box').find('.submission-engage-content').slideUp(200);
-    });
-    
-   //Handle show and hiding the social boxes for Twitter and Comments.
-   $('.social-heading').click(function(){
-     var $this = $(this),
-      thisSocialBox = $('#' + $this.attr('data-social-box'));
-      
-      //Add and remove active class from headings.
-      $this.addClass('active');
-      $this.siblings().removeClass('active');
-      
-      //Add and remove hide class from social box with content.
-      thisSocialBox.removeClass('hide');
-      thisSocialBox.siblings().addClass('hide');
-   });
-   
-   //Make clicking outside of any of the content boxes close the colorbox.
-   $('#colorbox-info, #submission-content').click(function(evt){
-     if (evt.target.id === "colorbox-info" || evt.target.id === "submission-content"){
-      $.colorbox.close();
-     }
-   });
-});
+ //Setup click events from initial page load in case we're on a standalone content page.
+ colorboxClickEvents();
+ 
 
 /* FACEBOOK LIKE BUTTON FOR COLORBOX
   * ====================== */ 
@@ -793,7 +764,44 @@ function setupColorBox(){
        scalePhotos: false,
        scrolling: false
     });  
+    
+  //Add establish click events again when colorbox runs
+  $(document).bind('cbox_complete', colorboxClickEvents);
 }
+
+function colorboxClickEvents(){
+   //Handle showing and hiding the sidebar boxes for colorbox.
+    $('.submission-engage-box').click(function(){
+      var $this = $(this);
+      $this.toggleClass('active');
+      $this.find('.submission-engage-content').slideToggle(200);
+
+      $this.siblings('.submission-engage-box').removeClass('active');
+      $this.siblings('.submission-engage-box').find('.submission-engage-content').slideUp(200);
+    });
+
+   //Handle show and hiding the social boxes for Twitter and Comments.
+   $('.social-heading').click(function(){
+     var $this = $(this),
+      thisSocialBox = $('#' + $this.attr('data-social-box'));
+
+      //Add and remove active class from headings.
+      $this.addClass('active');
+      $this.siblings().removeClass('active');
+
+      //Add and remove hide class from social box with content.
+      thisSocialBox.removeClass('hide');
+      thisSocialBox.siblings().addClass('hide');
+   });
+
+   //Make clicking outside of any of the content boxes close the colorbox.
+   $('#colorbox-info, #submission-content').click(function(evt){
+     if (evt.target.id === "colorbox-info" || evt.target.id === "submission-content"){
+      $.colorbox.close();
+     }
+   });
+}
+
 
 
 /* GENERAL FUNCTIONS

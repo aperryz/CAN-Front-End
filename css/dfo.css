@@ -481,8 +481,7 @@ h1, h2, h3 {
 #submission-desc, #submission-social {
   color: #1a1a1a;
   width: 622px;
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20px auto 0;
   opacity: 0.95;
   filter: alpha(opacity=95);
   -webkit-border-radius: 5px 5px 0 0;
@@ -546,6 +545,9 @@ h1, h2, h3 {
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
+  font: 14px/18px "proxima-nova", sans-serif;
+  color: #0e527c;
+  text-transform: none;
 }
 
 #comments .form-search button {
@@ -554,7 +556,7 @@ h1, h2, h3 {
   border: none;
   margin-left: -3px;
   font: bold 12px/14px "proxima-nova", sans-serif;
-  height: 39px;
+  height: 28px;
   width: 100px;
 }
 
@@ -695,4 +697,82 @@ a.disagree:hover {
 /****************************************/
 body.content {
   background: url('../img/dfo/header-bg.jpg') repeat 0 0;
+}
+
+.content #image-holder {
+  margin: 33px 0 23px;
+}
+
+.content #submission-engage {
+  margin: 0;
+  position: static;
+  width: 455px;
+}
+
+.content .submission-engage-box {
+  position: relative;
+  width: 143px;
+  margin-right: 12px;
+}
+
+.content .submission-engage-content {
+  width: 143px;
+}
+
+.content .submission-engage-box.share,
+.content .submission-engage-count.share{
+  margin-right: 0;
+}
+
+.content .submission-engage-count {
+  position: static;
+  width: 143px;
+  margin-right: 12px;
+  float: left;
+}
+
+.content #submission-content {
+  width: 463px;
+  margin-top: 33px;
+}
+
+.content #submission-desc {
+  margin-top: 0;
+  width: 433px;
+}
+
+.content #submission-social {
+  width: 463px;
+}
+
+.content h1 {
+  color: #000;
+  font: bold 24px/28px "proxima-nova", sans-serif;
+  text-transform: none;
+}
+
+.content address {
+  display: block;
+}
+
+.content #comments textarea {
+  width: 74%;
+}
+
+.content .more-posters {
+  margin: 10px 0 0 -14px;
+  text-align: center;
+  overflow: visible;
+}
+
+.content #submission-content .more-posters a {
+  color: #fff;
+}
+
+.content .more-posters img {
+  float: left;
+  margin: 0 0 14px 14px;
+  -moz-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+      box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
 }

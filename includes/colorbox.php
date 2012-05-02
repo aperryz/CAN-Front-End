@@ -118,6 +118,5 @@ if(isset($_GET['id'])){
         </div>
       </div>
 
-    
   </div><!-- #submittion-content -->
 </div><!-- #colorbox-info -->
