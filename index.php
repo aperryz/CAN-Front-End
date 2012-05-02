@@ -1,4 +1,6 @@
+<?php $page_class = 'home'; //Used to add a body class to each page. ?>
 <?php include_once 'includes/header.php'; ?>
+<?php include_once 'includes/navigation.php'; ?>
 
     <!-- PAGES -->
     <div id="pages-container">
