@@ -3,15 +3,15 @@
   <!-- Main navigation bar -->
   <div class="fill">
     <div class="container">
-      <a class="brand hide-text" href="#home" id="logo">Design for Obama</a>
+      <a class="brand hide-text" href="/can-front-end/#home" id="logo">Design for Obama</a>
       <ul class="nav" id="main-nav">
-        <li><a href="#home" class="home">Home</a></li>
+        <li><a href="/can-front-end/#home" data-name="home" class="home">Home</a></li>
         <li class="sep">|</li>
-        <li><a href="#about">About</a></li>
+        <li><a href="/can-front-end/#about" data-name="about">About</a></li>
         <li class="sep">|</li>
-        <li><a href="#the-book">The Book</a></li>
+        <li><a href="/can-front-end/#the-book" data-name="the-book">The Book</a></li>
         <li class="sep">|</li>
-        <li><a href="#contributing" class="submit">Contributing</a></li>
+        <li><a href="/can-front-end/#contributing" data-name="contributing" class="submit">Contributing</a></li>
       </ul>
 
       <button id="submit-btn" class="btn pull-right" type="submit">Contribute</button>

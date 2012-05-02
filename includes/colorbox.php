@@ -1,7 +1,9 @@
 <?php
 //Pull the id so you can get the information for that submission from the database
-$submission_id = htmlspecialchars($_GET['id']);
-$submission_id = (int) $submission_id;
+if(isset($_GET['id'])){
+  $submission_id = htmlspecialchars($_GET['id']);
+  $submission_id = (int) $submission_id;
+}
 
 //All the content shown below is filler.  It should be replaced using php and the submission id.
 ?>
@@ -10,7 +12,7 @@ $submission_id = (int) $submission_id;
 <!-- Inline height for #colorbox-info needs to be adjusted with PHP to content height to avoid cutting off content -->
 <div id="colorbox-info" style="height: 1300px;">
   <div id="image-holder">
-    <img src="http://placehold.it/435x564" width="435" height="564" alt="filler-alt" title="filler-title" />
+    <img src="img/dfo/designs/example-poster-443-573.jpg" width="435" height="564" alt="Crazy Awesome Poster Alt" title="Crazy Totally Sweet Poster Title" />
     <div class="fb-like" data-href="http://bignewideas.com/" data-send="false" data-layout="button_count" data-width="40" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div>
   </div>
   <div id="submission-content">
@@ -63,7 +65,7 @@ $submission_id = (int) $submission_id;
     
     
       <div id="submission-desc">
-        <h2>Submission ID: <?php echo $submission_id; ?></h2>
+        <h2>Submission ID: <?php if(isset($submission_id)) echo $submission_id; ?></h2>
         <address>by <a href="mailto:info@jgvisual.com">Don Button</a>, San Francisco, CA</address>
         <div id="submission-description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
       </div>
@@ -117,5 +119,5 @@ $submission_id = (int) $submission_id;
       </div>
 
     
-  </div>
-</div>
+  </div><!-- #submittion-content -->
+</div><!-- #colorbox-info -->

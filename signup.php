@@ -32,7 +32,7 @@
       <div id="confirm-posters">
         <h1>In order to migrate your work from 2008, we need you to confirm that each poster below is yours and that it is ok to migrate:</h1>
         
-        <img src="img/dfo/designs/confirm-image.jpg" width="192" height="247" alt="Awesome Poster" title="Awesome Poster for Barack Obama" />
+        <img src="img/dfo/designs/example-poster-192-247.jpg" width="192" height="247" alt="Awesome Poster" title="Awesome Poster for Barack Obama" />
         
         <form>
           <label class="checkbox">

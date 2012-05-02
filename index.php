@@ -41,7 +41,7 @@
           </div>
         </div>
 
-        <div class="page" id="the-book">
+        <div class="page the-book">
           <div class="page-header">
             <h1 class="hide-text" data-name="the-book" data-text="The Book">Design for Obama, Posters for Change - A Grassroots Anthology, Edited by Spike Lee and Aaron Perry-Zucker, Essay by Steven Heller</h1>
           </div>

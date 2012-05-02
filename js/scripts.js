@@ -11,7 +11,7 @@ $(function() { //Run when the DOM is ready to be manipulated.
   setPrevNextArrows(currentPage);
   
   //Set the correct navigation from the start.
-  $('#main-nav a[href="#' + currentPage + '"]').parent().addClass("active");
+  $('#main-nav a[data-name="' + currentPage + '"]').parent().addClass("active");
   
   
   /* CAN PULLDOWN MENU
@@ -85,16 +85,22 @@ $(function() { //Run when the DOM is ready to be manipulated.
   if($("#main-nav").exists()){
     
     var $el, leftPos, newWidth,
-    $mainNav = $("#main-nav");
+    $mainNav = $("#main-nav"),
+    $activeLi = $mainNav.children(".active");
 
     $mainNav.append("<li id='rollover-bar'></li>");
     var $rollover_bar = $("#rollover-bar");
-
+    
+    //We check to see if we are on the main page showing one of the pages.
+    //If not the rollover_bar is hidden from the start.
+    if($activeLi.exists()){
+      $rollover_bar
+        .width($activeLi.width())
+        .css("left", $activeLi.children(".active a").position().left)
+    }
     $rollover_bar
-    .width($(".active").width())
-    .css("left", $(".active a").position().left)
-    .data("origLeft", $rollover_bar.position().left)
-    .data("origWidth", $rollover_bar.width());
+      .data("origLeft", $rollover_bar.position().left)
+      .data("origWidth", $rollover_bar.width());
 
     $("#main-nav li a").hover(function() {
       $el = $(this);
@@ -125,9 +131,8 @@ $(function() { //Run when the DOM is ready to be manipulated.
       }); 
 
       //Handle page movement when a new page is clicked.
-      changePage($el.children("a").attr('href'));
+      changePage($el.children("a").attr('data-name'));
 
-      evt.preventDefault();
     });
   }//End of if statement to see if main-nav exists.
   
@@ -152,10 +157,10 @@ $(function() { //Run when the DOM is ready to be manipulated.
     
     if($("#main-nav").exists()){ //If the main nav exists we just trigger a click event.
       if(clickedArrow.hasClass("prev")){ //If they clicked the previous arrow.
-        $("#main-nav li a[href='#" + prevNextPages['prev'] + "']").parent().trigger('click');
+        $("#main-nav li a[data-name='" + prevNextPages['prev'] + "']").parent().trigger('click');
       }
       else{ //If they clicked the next arrow.
-        $("#main-nav li a[href='#" + prevNextPages['next'] + "']").parent().trigger('click');
+        $("#main-nav li a[data-name='" + prevNextPages['next'] + "']").parent().trigger('click');
       }
     }
     else { //If the main nav doesn't exist we move the pages without adjusting the navigation.
@@ -688,7 +693,7 @@ function setupSubmissionModal(submissionModal){
 
 //Show and hide certain video groups based on the current state we should show.
 function showVideoState(videoState, $this){
-  var submissionModal = $('#submission-modal');
+  var submissionModal = $('#submission-modal'),
       modalTitle = submissionModal.find('h3'),
       videoSelection = submissionModal.find('.video-selection'),
       videoLinkGroup = submissionModal.find('#video-link-group'),
@@ -741,7 +746,7 @@ function showVideoState(videoState, $this){
 
 //Show and hide certain image groups based on the current state we should show.
 function showImageState(imageState, $this){
-  var submissionModal = $('#submission-modal');
+  var submissionModal = $('#submission-modal'),
       modalTitle = submissionModal.find('h3'),
       processingGroup = submissionModal.find('.processing'),
       submitCompleteGroup = submissionModal.find('.submit-complete'),

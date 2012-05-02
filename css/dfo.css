@@ -53,6 +53,7 @@ h1, h2, h3 {
 
 #rollover-bar {
   background: url('../img/dfo/header-bg.jpg') repeat 0 0;
+  width: 0;
 }
 
 .nav.login {
@@ -163,7 +164,7 @@ h1, h2, h3 {
   margin-top: 30px;
 }
 
-#the-book .page-header h1 {
+.the-book .page-header h1 {
   height: 82px;
   background: url('../img/dfo/design-obama-book-text.png') no-repeat 50% 0;
 }
@@ -687,4 +688,11 @@ a.disagree:hover {
 .button-break {
   border-bottom: 2px solid #84BDD4;
   margin-bottom: 28px;
+}
+
+
+/**** STANDALONE CONTENT STYLES ****/
+/****************************************/
+body.content {
+  background: url('../img/dfo/header-bg.jpg') repeat 0 0;
 }
