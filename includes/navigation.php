@@ -25,7 +25,7 @@
       <ul class="logged-in">            
         <li>Hey
           <div>
-            <a href="#">Aaron</a>
+            <a href="#" class="right-icon icon-down">Aaron</a>
             <ul class="dropdown-menu">
               <li><a href="#">My Profile</a></li>
               <li class="divider"></li>

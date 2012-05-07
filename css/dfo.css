@@ -2,6 +2,224 @@
  * Design for Obama Stylesheet
 */
 
+/**** ICON FONT INCLUDE AND STYLES ****/
+/**************************************/
+@font-face {
+  font-family: "Shifticons";
+  src: url("../fonts/shifticons.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/shifticons.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/shifticons.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/shifticons.ttf")  format("truetype"), /* Safari, Android, iOS */
+       url("../fonts/shifticons.svg#Shifticons") format("svg"); /* Legacy iOS */
+}
+
+/* Shifticon styles */
+[class^="icon-"]:before, [class*=" icon-"]:before,
+.right-icon[class^="icon-"]:after, .right-icon[class*=" icon-"]:after {
+  font-family: Shifticons;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: inherit;
+  padding-right: .25em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.right-icon[class^="icon-"]:before, .right-icon[class*=" icon-"]:before {
+  padding-right: 0;
+  content: none;
+}
+
+.right-icon[class^="icon-"]:after, .right-icon[class*=" icon-"]:after {
+  padding-left: .25em;
+  padding-right: 0;
+}
+
+
+/* Order-specific styles */
+.icon-alert:before { content: ""; }
+.icon-browse:before { content: ""; }
+.icon-camera:before { content: ""; }
+.icon-cart:before { content: ""; }
+.icon-email:before { content: ""; }
+.icon-download:before { content: ""; }
+.icon-facebook:before { content: ""; }
+.icon-facebook-2:before { content: ""; }
+.icon-favorite-heart:before { content: ""; }
+.icon-favorite-star:before { content: ""; }
+.icon-comment:before { content: ""; }
+.icon-clock:before { content: ""; }
+.icon-rss:before { content: ""; }
+.icon-tools:before { content: ""; }
+.icon-trash:before { content: ""; }
+.icon-tweet:before { content: ""; }
+.icon-user-1:before { content: ""; }
+.icon-user-2:before { content: ""; }
+.icon-user-3:before { content: ""; }
+.icon-up-arrow:before { content: ""; }
+.icon-down-arrow:before { content: ""; }
+.icon-pencil:before { content: ""; }
+.icon-reload:before { content: ""; }
+.icon-play:before { content: ""; }
+.icon-view-as-grid:before { content: ""; }
+.icon-view-as-list:before { content: ""; }
+.icon-write:before { content: ""; }
+.icon-zoom-out:before { content: ""; }
+.icon-zoom-in:before { content: ""; }
+.icon-search:before { content: ""; }
+.icon-twitter:before { content: ""; }
+.icon-twitter-2:before { content: ""; }
+.icon-like:before { content: ""; }
+.icon-close:before { content: ""; }
+.icon-home:before { content: ""; }
+.icon-minimize:before { content: ""; }
+.icon-maximize:before { content: ""; }
+.icon-ipad:before { content: ""; }
+.icon-iphone:before { content: ""; }
+.icon-mobile-phone:before { content: ""; }
+.icon-info:before { content: ""; }
+.icon-share:before { content: ""; }
+.icon-tag:before { content: ""; }
+.icon-unlock:before { content: ""; }
+.icon-view-by-row:before { content: ""; }
+.icon-windows:before { content: ""; }
+.icon-up:before { content: ""; }
+.icon-flat-file:before { content: ""; }
+.icon-lock:before { content: ""; }
+.icon-stop:before { content: ""; }
+.icon-dvd:before { content: ""; }
+.icon-down:before { content: ""; }
+.icon-globe:before { content: ""; }
+.icon-super-8:before { content: ""; }
+.icon-close-2:before { content: ""; }
+.icon-sound-off:before { content: ""; }
+.icon-pie-chart:before { content: ""; }
+.icon-bar-chart:before { content: ""; }
+.icon-video:before { content: ""; }
+.icon-book:before { content: ""; }
+.icon-grid-solid:before { content: ""; }
+.icon-print:before { content: ""; }
+.icon-fever-chart:before { content: ""; }
+.icon-pencil-detail:before { content: ""; }
+.icon-money:before { content: ""; }
+.icon-paper:before { content: ""; }
+.icon-right:before { content: ""; }
+.icon-check:before { content: ""; }
+.icon-ribbon:before { content: ""; }
+.icon-moneybag:before { content: ""; }
+.icon-ipod:before { content: ""; }
+.icon-notify:before { content: ""; }
+.icon-pin:before { content: ""; }
+.icon-bullhorn:before { content: ""; }
+.icon-sound-1:before { content: ""; }
+.icon-slideshow:before { content: ""; }
+.icon-sound-2:before { content: ""; }
+.icon-view-by-column:before { content: ""; }
+.icon-help:before { content: ""; }
+.icon-phone:before { content: ""; }
+.icon-newspaper:before { content: ""; }
+.icon-left:before { content: ""; }
+.icon-news-tower:before { content: ""; }
+.icon-dislike:before { content: ""; }
+.icon-plus:before { content: ""; }
+.icon-wireless:before { content: ""; }
+
+
+/* Right icon styles */
+.right-icon.icon-alert:after { content: ""; }
+.right-icon.icon-browse:after { content: ""; }
+.right-icon.icon-camera:after { content: ""; }
+.right-icon.icon-cart:after { content: ""; }
+.right-icon.icon-email:after { content: ""; }
+.right-icon.icon-download:after { content: ""; }
+.right-icon.icon-facebook:after { content: ""; }
+.right-icon.icon-facebook-2:after { content: ""; }
+.right-icon.icon-favorite-heart:after { content: ""; }
+.right-icon.icon-favorite-star:after { content: ""; }
+.right-icon.icon-comment:after { content: ""; }
+.right-icon.icon-clock:after { content: ""; }
+.right-icon.icon-rss:after { content: ""; }
+.right-icon.icon-tools:after { content: ""; }
+.right-icon.icon-trash:after{ content: ""; }
+.right-icon.icon-tweet:after { content: ""; }
+.right-icon.icon-user-1:after { content: ""; }
+.right-icon.icon-user-2:after { content: ""; }
+.right-icon.icon-user-3:after { content: ""; }
+.right-icon.icon-up-arrow:after { content: ""; }
+.right-icon.icon-down-arrow:after { content: ""; }
+.right-icon.icon-pencil:after { content: ""; }
+.right-icon.icon-reload:after { content: ""; }
+.right-icon.icon-play:after { content: ""; }
+.right-icon.icon-view-as-grid:after { content: ""; }
+.right-icon.icon-view-as-list:after { content: ""; }
+.right-icon.icon-write:after { content: ""; }
+.right-icon.icon-zoom-out:after { content: ""; }
+.right-icon.icon-zoom-in:after { content: ""; }
+.right-icon.icon-search:after { content: ""; }
+.right-icon.icon-twitter:after { content: ""; }
+.right-icon.icon-twitter-2:after { content: ""; }
+.right-icon.icon-like:after { content: ""; }
+.right-icon.icon-close:after { content: ""; }
+.right-icon.icon-home:after { content: ""; }
+.right-icon.icon-minimize:after { content: ""; }
+.right-icon.icon-maximize:after { content: ""; }
+.right-icon.icon-ipad:after { content: ""; }
+.right-icon.icon-iphone:after { content: ""; }
+.right-icon.icon-mobile-phone:after { content: ""; }
+.right-icon.icon-info:after { content: ""; }
+.right-icon.icon-share:after { content: ""; }
+.right-icon.icon-tag:after { content: ""; }
+.right-icon.icon-unlock:after { content: ""; }
+.right-icon.icon-view-by-row:after { content: ""; }
+.right-icon.icon-windows:after { content: ""; }
+.right-icon.icon-up:after { content: ""; }
+.right-icon.icon-flat-file:after { content: ""; }
+.right-icon.icon-lock:after { content: ""; }
+.right-icon.icon-stop:after { content: ""; }
+.right-icon.icon-dvd:after { content: ""; }
+.right-icon.icon-down:after { content: ""; }
+.right-icon.icon-globe:after { content: ""; }
+.right-icon.icon-super-8:after { content: ""; }
+.right-icon.icon-close-2:after { content: ""; }
+.right-icon.icon-sound-off:after { content: ""; }
+.right-icon.icon-pie-chart:after { content: ""; }
+.right-icon.icon-bar-chart:after { content: ""; }
+.right-icon.icon-video:after { content: ""; }
+.right-icon.icon-book:after { content: ""; }
+.right-icon.icon-grid-solid:after { content: ""; }
+.right-icon.icon-print:after{ content: ""; }
+.right-icon.icon-fever-chart:after { content: ""; }
+.right-icon.icon-pencil-detail:after { content: ""; }
+.right-icon.icon-money:after { content: ""; }
+.right-icon.icon-paper:after { content: ""; }
+.right-icon.icon-right:after { content: ""; }
+.right-icon.icon-check:after { content: ""; }
+.right-icon.icon-ribbon:after { content: ""; }
+.right-icon.icon-moneybag:after { content: ""; }
+.right-icon.icon-ipod:after { content: ""; }
+.right-icon.icon-notify:after { content: ""; }
+.right-icon.icon-pin:after { content: ""; }
+.right-icon.icon-bullhorn:after { content: ""; }
+.right-icon.icon-sound-1:after { content: ""; }
+.right-icon.icon-slideshow:after { content: ""; }
+.right-icon.icon-sound-2:after { content: ""; }
+.right-icon.icon-view-by-column:after { content: ""; }
+.right-icon.icon-help:after { content: ""; }
+.right-icon.icon-phone:after { content: ""; }
+.right-icon.icon-newspaper:after { content: ""; }
+.right-icon.icon-left:after { content: ""; }
+.right-icon.icon-news-tower:after { content: ""; }
+.right-icon.icon-dislike:after { content: ""; }
+.right-icon.icon-plus:after { content: ""; }
+.right-icon.icon-wireless:after { content: ""; }
+
+/* IE8 hack */
+@media \0screen\,screen\9 { body:hover{} }
+
+
+
+
 /**** GENERAL STYLES ****/
 /************************/
 body {
@@ -75,6 +293,11 @@ h1, h2, h3 {
 
 .navbar .logged-in a {
   text-decoration: underline;
+  font-weight: bold;
+}
+
+.navbar .logged-in a:after {
+  text-decoration: none;
 }
 
 .navbar .logged-in ul a {
