@@ -93,3 +93,18 @@
     <a href="#" class="btn btn-large">Preview</a>
   </div>
 </div>
+
+
+<!-- Welcome Modal for profile.php -->
+<div class="modal hide fade" id="welcome-msg">
+  <div class="modal-body">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Welcome to the new Design for Obama</h3>
+  
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="buttons">
+      <a href="/can-front-end" class="btn btn-primary">View Collection</a>
+      <a href="/can-front-end/#contributing" class="btn btn-primary">Contribute</a>
+    </div>
+  </div>
+</div>

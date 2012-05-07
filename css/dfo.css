@@ -274,10 +274,6 @@ h1, h2, h3 {
   width: 0;
 }
 
-.nav.login {
-  display: none;
-}
-
 .logged-in {
   list-style-type: none;
   float: right;
@@ -587,7 +583,64 @@ h1, h2, h3 {
 
 /**** MODAL STYLES ****/
 /***********************/
+.modal {
+  background-color: #D7EBF7;
+  color: #000;
+  text-align: justify;
+}
 
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #0E527C;
+  opacity: .7;
+  filter: alpha(opacity=70);
+  font: bold 50px/20px "proxima-nova", sans-serif;
+}
+
+.modal .close:hover{
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal h3 {
+  font: bold 32px/36px "proxima-nova", sans-serif;
+  text-transform: none;
+  color: #0E527C;
+  padding: 0 20px 10px;
+  border-bottom: 1px solid #0E527C;
+  margin-bottom: 10px;
+}
+
+#welcome-msg .buttons {
+  text-align: center;
+  margin-left: -2%;
+}
+
+#welcome-msg .btn {
+  padding: 10px 0;
+  font: bold 20px/22px "proxima-nova", sans-serif;
+  margin-left: 2%;
+  width: 47%;
+  background-color: mix(#D7EBF7, #0E527C, 60%);
+  background-image: -moz-linear-gradient(top, #D7EBF7, #0E527C);
+  background-image: -ms-linear-gradient(top, #D7EBF7, #0E527C);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08C), to(#0E527C));
+  background-image: -webkit-linear-gradient(top, #08C, #0E527C);
+  background-image: -o-linear-gradient(top, #D7EBF7, #0E527C);
+  background-image: linear-gradient(top, #D7EBF7, #0E527C);
+  background-repeat: repeat-x;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",#D7EBF7,#0E527C));
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background-color: #0E527C;
+}
 
 
 /**** COLORBOX STYLES ****/
@@ -1034,6 +1087,16 @@ body.content {
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
           border-radius: 2px;
+}
+
+#user-info img.no-photo {
+  height: 100px;
+  width: 100px;
+  padding: 0;
+  background-color: transparent;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 
 #user-info #user-content {

@@ -7,7 +7,11 @@
     <div id="pages">
       <div class="page">
         <div id="user-info">
-          <img src="img/dfo/spike-lee-profile.jpg" height="96" width="96" alt="Add Profile Photo" title="Add Profile Photo" />
+          <img class="no-photo" src="img/dfo/add-profile-pic.png" height="100" width="100" alt="Add Profile Photo" title="Add Profile Photo" />
+          
+          <!-- Spike's Photo >> Remove no-photo class for all real pictures
+            <img src="img/dfo/spike-lee-profile.jpg" height="96" width="96" alt="Spizike Lee" title="Spizike Lee Profile" />
+          -->
           
           <div id="user-content">
             <div class="user-stats">
@@ -43,5 +47,8 @@
     <a class="btn" href="/can-front-end/#contributing">Contribute</a>
   </div>
   
-<?php //include_once 'includes/grid.php';  //Uncomment this include and remove .no-submissions above to show grid. ?>
+<?php //include_once 'includes/grid.php';  //Uncomment this include and remove .no-submissions above to show grid. ?>  
+  
+<?php include_once 'includes/modals.php'; ?>
+  
 <?php include_once 'includes/footer.php'; ?>

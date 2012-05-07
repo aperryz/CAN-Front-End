@@ -5,7 +5,8 @@
       
       <div class="dfo-logo hide-text">Design for Obama Logo</div>
       
-      <div id="signup-form" class="hide">
+      <!-- Artist Beta Signup Form 
+      <div id="signup-form">
         <h1>2008 Artist Beta Signup</h1>
 
         <a href="#" class="facebook-login">Login with Facebook</a>
@@ -25,7 +26,7 @@
           </label>
           <button type="submit" class="btn">Create Account</button>
         </form>
-      </div><!-- #signup-form -->
+      </div> --><!-- #signup-form -->
       
       
       

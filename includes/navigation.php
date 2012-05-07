@@ -16,12 +16,15 @@
 
       <button id="submit-btn" class="btn pull-right" type="submit">Contribute</button>
 
+      <!-- Register and Login Links
       <ul class="nav login">            
         <li><a id="register-link" data-toggle="modal" href="#login-reg-modal">Register</a></li>
         <li class="sep">|</li>
         <li><a id="login-link" data-toggle="modal" href="#login-reg-modal">Login</a></li>
       </ul>
-
+      -->
+      
+      <!-- Logged in message -->
       <ul class="logged-in">            
         <li>Hey
           <div>
@@ -36,6 +39,7 @@
           </div>
           only 198 days until the election!</li>
       </ul>
+      <!-- -->
 
 
     </div>

@@ -78,6 +78,11 @@ $(function() { //Run when the DOM is ready to be manipulated.
   });
   
   
+  /* SHOW WELCOME MESSAGE TO NEW USERS WHEN THEY LAND ON THE PROFILE PAGE.
+  * ====================== */
+  $('body.profile #welcome-msg').modal('show');
+  
+  
   /* MAIN NAVIGATION AND SHOWING PAGES
   * ====================== */
   //Adjusted from http://css-tricks.com/jquery-magicline-navigation/.
@@ -306,8 +311,7 @@ $('#confirm-posters input').change(function() {
     else {
       proceedButton.removeAttr('disabled');
     }
-});
-    
+});    
 }); //END OF DOCUMENT READY FUNCTION
 
 
