@@ -7,9 +7,14 @@
     <div id="pages">
       <div class="page">
         <div id="user-info">
-          <img src="FILL IN DUDE" height="100" width="100" alt="Add Profile Photo" title="Add Profile Photo" />
+          <img src="img/dfo/spike-lee-profile.jpg" height="96" width="96" alt="Add Profile Photo" title="Add Profile Photo" />
           
           <div id="user-content">
+            <div class="user-stats">
+              <span class="heavy">6</span> Posters,
+              <span class="heavy">402</span> Downloads,
+              <span class="heavy">6,201</span> Shares
+            </div>
             <h1>Spizike Lee</h1>
             <div id="bio">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies suscipit interdum.
@@ -17,10 +22,11 @@
                 Vestibulum turpis erat, rutrum ac viverra eget, pharetra et neque.</p>
             </div>
             <div class="circle-nav">
-              <a href="#">&nbsp;</a>
-              <a href="#">&nbsp;</a>
-              <a href="#">&nbsp;</a>
-              <a href="#">&nbsp;</a>
+              <a href="#" class="circle">&nbsp;</a>
+              <a href="#" class="circle">&nbsp;</a>
+              <a href="#" class="circle">&nbsp;</a>
+              <a href="#" class="circle">&nbsp;</a>
+              <a href="#">Brooklyn</a>
             </div>
           </div> 
           
@@ -32,5 +38,10 @@
 
 
 <div class="container">
-<?php //include_once 'includes/grid.php'; ?>
+  <div class="no-submissions">
+    <p>You haven't contributed any posters yet!</p>
+    <a class="btn" href="/can-front-end/#contributing">Contribute</a>
+  </div>
+  
+<?php //include_once 'includes/grid.php';  //Uncomment this include and remove .no-submissions above to show grid. ?>
 <?php include_once 'includes/footer.php'; ?>

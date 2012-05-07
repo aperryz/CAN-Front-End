@@ -1001,7 +1001,7 @@ body.content {
 }
 
 
-/**** PROFILE STYLES *********/
+/****** PROFILE STYLES *******/
 /*****************************/
 .profile #pages {
   padding-bottom: 0;
@@ -1028,13 +1028,26 @@ body.content {
 #user-info img {
   float: left;
   background-color: #0e527c;
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
+  height: 96px;
+  width: 96px;
+  padding: 2px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 
 #user-info #user-content {
   margin-left: 115px;
+}
+
+#user-info .user-stats {
+  float: right;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.heavy {
+  font-weight: bold;
 }
 
 #user-info h1 {
@@ -1046,7 +1059,24 @@ body.content {
   margin-bottom: 12px;
 }
 
+.circle-nav {
+  *zoom: 1;
+}
+.circle-nav:before,
+.circle-nav:after {
+  content: "";
+  display: table;
+}
+.circle-nav:after {
+  clear: both;
+}
+
 .circle-nav a {
+  color: #0E527C;
+  text-decoration: none;
+}
+
+.circle-nav a.circle {
   float: left;
   display: block;
   width: 14px;
@@ -1056,4 +1086,20 @@ body.content {
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
           border-radius: 10px;
+}
+
+.no-submissions {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.no-submissions p {
+  font: 32px/36px "proxima-nova", sans-serif;
+}
+
+.no-submissions .btn {
+  padding: 15px 33px;
+  font: bold 40px/44px "proxima-nova", sans-serif;
+  color: #0E527C;
+  margin-top: 26px;
 }
