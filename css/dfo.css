@@ -239,6 +239,10 @@ h1, h2, h3 {
   color: #fff;
 }
 
+a:link {
+  color: #fff;
+}
+
 .hide-text,
 .navbar .brand.hide-text {
   font: 0/0 a;
@@ -267,6 +271,9 @@ h1, h2, h3 {
 .navbar .btn {
   color: #156990;
   font-weight: bold;
+  font: bold 15px/16px "proxima-nova", sans-serif;
+  padding: 3px 10px 3px;
+  margin-top: 7px;
 }
 
 #rollover-bar {

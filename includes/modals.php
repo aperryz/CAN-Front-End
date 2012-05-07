@@ -103,8 +103,8 @@
   
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <div class="buttons">
-      <a href="/can-front-end" class="btn btn-primary">View Collection</a>
-      <a href="/can-front-end/#contributing" class="btn btn-primary">Contribute</a>
+      <a href="index.php" class="btn btn-primary">View Collection</a>
+      <a href="index.php#contributing" class="btn btn-primary">Contribute</a>
     </div>
   </div>
 </div>
