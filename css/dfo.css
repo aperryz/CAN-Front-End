@@ -976,6 +976,13 @@ a.disagree:hover {
 }
 
 
+/**** PROFILE SETTINGS STYLES *********/
+/**************************************/
+body.settings {
+  background: url('../img/dfo/header-bg.jpg') repeat 0 0;
+}
+
+
 /**** STANDALONE CONTENT STYLES *********/
 /****************************************/
 body.content {
