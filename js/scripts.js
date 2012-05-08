@@ -133,10 +133,14 @@ $(function() { //Run when the DOM is ready to be manipulated.
       $rollover_bar.animate({
         left: $rollover_bar.data("origLeft"),
         width: $rollover_bar.data("origWidth")
-      }); 
+      });
+      
+      //Close colorbox in case they click the navigation when they are in the image modal.
+      $.colorbox.close();
 
       //Handle page movement when a new page is clicked.
       changePage($el.children("a").attr('data-name'));
+      
 
     });
   }//End of if statement to see if main-nav exists.
@@ -766,7 +770,8 @@ function setupColorBox(){
        width:'849px',
        opacity:0.8,
        scalePhotos: false,
-       scrolling: false
+       scrolling: false,
+       top: "110px"
     });  
     
   //Add establish click events again when colorbox runs

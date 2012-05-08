@@ -46,9 +46,10 @@
   </div>
 
   <!-- Submission confirmation fixed bar -->
+  <!-- Add class "show" on the outer div when you want this bar to appear -->
   <div class="fill submit-bar" id="share-bar">
     <div class="container">
-      <a href="#" class="edit">Edit</a>
+      <a href="#" class="edit icon-left">Edit</a>
       <span>
         How Does This Look?
       </span>
@@ -60,6 +61,7 @@
   </div>
 
   <!-- Share fixed bar -->
+  <!-- Add class "show" on the outer div when you want this bar to appear -->
   <div class="fill submit-bar" id="submit-confirm-bar">
     <div class="container">
       <span>

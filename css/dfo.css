@@ -765,6 +765,22 @@ a:link {
 
 /**** COLORBOX STYLES ****/
 /*************************/
+#colorbox, #cboxOverlay, #cboxWrapper {
+  z-index: 1000;
+}
+
+#cboxOverlay {
+  top: 0;
+}
+
+#cboxContent {
+  margin-top: 0;
+}
+
+#colorbox-info {
+  padding-top: 20px;
+}
+
 #image-holder .fb-like {
   right: -4px;
   opacity: 1;
@@ -1357,4 +1373,42 @@ body.content {
   font: bold 40px/44px "proxima-nova", sans-serif;
   color: #0E527C;
   margin-top: 26px;
+}
+
+
+/****** CONTENT PREVIEW STYLES *******/
+/*************************************/
+#share-bar.show, #submit-confirm-bar.show {
+  display: block;
+}
+
+.navbar .submit-bar a.edit {
+  color: #fff;
+  background: none;
+  top: -6px;
+  opacity: .6;
+  filter: alpha(opacity=60);
+}
+
+.navbar .submit-bar a.edit:hover {
+  color: #fff;
+  background-image: none;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar .submit-bar a.edit:before {
+  font-size: 45px;
+  line-height: 30px;
+}
+
+.navbar .submit-bar span a {
+  color: #0E527C;
+}
+
+.navbar .fill.submit-bar {
+  border-top: 1px solid #fff;
+  -moz-box-shadow: 0 30px 30px 0 rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0 30px 30px 0 rgba(0,0,0,0.7);
+      box-shadow: 0 30px 30px 0 rgba(0,0,0,0.7);
 }
