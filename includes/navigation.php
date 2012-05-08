@@ -32,7 +32,7 @@
             <ul class="dropdown-menu">
               <li><a href="profile.php">My Profile</a></li>
               <li class="divider"></li>
-              <li><a href="#">Settings</a></li>
+              <li><a href="settings.php">Settings</a></li>
               <li class="divider"></li>
               <li><a href="#">Logout</a></li>
             </ul>
