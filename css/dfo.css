@@ -1126,6 +1126,7 @@ body.settings h1 {
 body.settings label,
 .help-block {
   color: #fff;
+  font-family: "proxima-nova", sans-serif;
 }
 
 body.settings label {
