@@ -217,7 +217,12 @@
 /* IE8 hack */
 @media \0screen\,screen\9 { body:hover{} }
 
-
+/* Fix for conflict with Bootstrap icons */
+[class^="icon-"] {
+  display: inherit;
+  width: inherit;
+  height: inherit;
+}
 
 
 /**** GENERAL STYLES ****/
@@ -284,7 +289,7 @@ a:link {
 .logged-in {
   list-style-type: none;
   float: right;
-  padding-top: 10px;
+  padding-top: 9px;
   margin-right: 10px;
   font-size: 14px;
 }
@@ -647,6 +652,114 @@ a:link {
 .btn-primary.disabled,
 .btn-primary[disabled] {
   background-color: #0E527C;
+}
+
+.modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+#submission-modal .modal-body {
+  padding: 15px 15px 0;
+}
+
+#submission-modal .modal-footer {
+  background-color: transparent;
+  width: 233px;
+  margin: 0 auto;
+  border-top: 1px solid #0E527C;
+  padding: 14px 93px 15px;
+}
+
+.modal .image-upload a, .modal .processing a {
+  color: #0E527C;
+  padding: 43px 50px 0;
+  width: 103px;
+  height: 267px;
+  background: #D7EBF7 url('../img/dfo/upload-image.png') no-repeat 50% 50%;
+  border: 3px dashed #0E527C;
+  line-height: 16px;
+}
+
+.modal .image-upload a span, .modal .processing a span {
+  margin-top: 160px;
+}
+
+.modal .submit-complete img {
+  border: 5px solid #0E527C;
+}
+
+::-webkit-input-placeholder {
+    color: #0E527C;
+}
+:-moz-placeholder {
+    color: #0E527C;
+}
+
+.modal input, .modal textarea {
+  font-weight: bold;
+  border: none;
+}
+
+.modal select {
+  border: none;
+  font-size: 16px;
+}
+
+.modal label, .modal label a,
+.modal .text-links a {
+  color: #0E527C;
+}
+
+.modal .btn {
+  background-color: mix(#D7EBF7, #0E527C, 60%);
+  background-image: -moz-linear-gradient(top, #D7EBF7, #0E527C);
+  background-image: -ms-linear-gradient(top, #D7EBF7, #0E527C);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08C), to(#0E527C));
+  background-image: -webkit-linear-gradient(top, #08C, #0E527C);
+  background-image: -o-linear-gradient(top, #D7EBF7, #0E527C);
+  background-image: linear-gradient(top, #D7EBF7, #0E527C);
+  background-repeat: repeat-x;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",#D7EBF7,#0E527C));
+  color: #fff;
+  text-shadow: none;
+  font: bold 24px/26px "proxima-nova", sans-serif;
+}
+
+#login-reg-modal #login-reg-button {
+  padding: 17px 0;
+}
+
+.modal .btn:hover,
+.modal .btn:active,
+.modal .btn.active,
+.modal .btn.disabled,
+.modal .btn[disabled] {
+  background-color: #0E527C;
+}
+
+.modal .hide {
+  display: none;
+}
+
+#back {
+  background: none;
+  padding-left: 0;
+  color: #0E527C;
+  text-shadow: none;
+  font-size: 13px;
+  line-height: 19px;
+  top: 2px;
+}
+
+#back:hover {
+  color: #0E527C;
+  background: none;
+  text-shadow: none;
+}
+
+#back:before {
+  font-size: 30px;
 }
 
 
@@ -1245,5 +1358,3 @@ body.content {
   color: #0E527C;
   margin-top: 26px;
 }
-
-

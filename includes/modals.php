@@ -30,18 +30,18 @@
 
 <!-- Submission Modal -->
 <!-- Adjust data-submission-type between 'video' and 'image' to show the different submission processes. -->
-<div class="modal hide fade" id="submission-modal" data-submission-type="video">
+<div class="modal hide fade" id="submission-modal" data-submission-type="image">
   <div class="modal-header">
     <a class="close" data-dismiss="modal">×</a>
-    <a href="#" class="hide" id="back">Back</a>
-    <h3>Submit an Image</h3>
+    <a href="#" class="hide icon-left" id="back">Back</a>
+    <h3>This Text is Replaced via JavaScript</h3>
   </div>
   <div class="modal-body">
     <form class="form-horizontal">
       <div class="control-group image-upload">
         <a href="#">
-          Click to upload an image file
-          <span>Or drag an image from your desktop</span>
+          Drag an image from your desktop
+          <span>Or click to upload an image file</span>
         </a>
       </div>
       <div class="control-group video-selection hide">
@@ -68,18 +68,18 @@
         <input type="text" class="input-xlarge" id="video-link" placeholder="Link">
       </div>
       <div class="control-group">
-        <input type="text" class="input-xlarge" id="title" placeholder="Title">
+        <input type="text" class="input-xlarge" id="title" placeholder="Title*">
       </div>
       <div class="control-group">
-        <textarea class="input-xlarge" id="description" rows="3" placeholder="Description"></textarea>
+        <textarea class="input-xlarge" id="description" rows="3" placeholder="Description*"></textarea>
       </div>
       <div class="control-group">
         <select id="select01" class="input-xlarge">
-          <option>Tag1</option>
-          <option>Tag2</option>
-          <option>Tag3</option>
-          <option>Tag4</option>
-          <option>Tag5</option>
+          <option>Select one of the President's accomplishments</option>
+          <option>Accomplishment 1</option>
+          <option>Accomplishment 2</option>
+          <option>Accomplishment 3</option>
+          <option>Accomplishment 4</option>
         </select>
       </div>
       <div class="control-group">

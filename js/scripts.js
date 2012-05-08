@@ -678,7 +678,7 @@ function showVideoState(videoState, $this){
   
   switch(videoState){
     case 'videoButtons':
-      modalTitle.text('Submit a Video');
+      modalTitle.text('Submit A Video');
       videoSelection.removeClass('hide');
       videoSelection.find('a.active').removeClass('active');
       submissionModal.find('.image-upload').addClass('hide');
@@ -729,7 +729,7 @@ function showImageState(imageState, $this){
   
   switch(imageState){      
     case 'uploadImage':
-      modalTitle.text('Submit an Image');
+      modalTitle.text('Submit A Poster');
       submissionModal.find('.image-upload').removeClass('hide');
       processingGroup.addClass('hide');
       submitCompleteGroup.addClass('hide');
