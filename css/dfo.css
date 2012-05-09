@@ -1151,7 +1151,7 @@ form input, form textarea, form select {
 }
 .settings .twitter-login {
     background-image: url('../img/twitter-login.png');
-    margin-top: 3px;
+    margin-top: 7px;
 }
 .settings .facebook-login:hover,
 .settings .twitter-login:hover {
