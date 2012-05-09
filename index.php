@@ -102,7 +102,6 @@
     </div><!-- End .container div -->
     </div><!-- End #pages-container div -->
       <!-- End of the pages -->
-      <div class="container">
      <?php include_once 'includes/grid.php'; ?>
       
      <?php include_once 'includes/modals.php'; ?>

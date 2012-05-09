@@ -186,7 +186,7 @@ $(function() { //Run when the DOM is ready to be manipulated.
   if($('#sorts-filters').exists()){
   
     var $container = $('#images'),
-    filters = {};
+        filters = {};
 
     $container.isotope({
       itemSelector: '.image',
@@ -206,10 +206,17 @@ $(function() { //Run when the DOM is ready to be manipulated.
 
     //Fade in the sorts and filters when you rollover the grid.
     $container.mouseover(function(){
-      $('#sorts-filters').animate({
-        opacity: 100
-      }, 3000);
+      if($('#sorts-filters').css('opacity') != 1){ //Only animate if we haven't already.
+        $('#sorts-filters').animate({
+          opacity: 1,
+          height: 'show'
+        }, 500);
+
+        //Set filters to stick when we move below the page.
+        makeFilterStick();
+      }
     });
+    
 
     // Handle the combined filters
     $('.filter a').click(function(evt){
@@ -250,9 +257,6 @@ $(function() { //Run when the DOM is ready to be manipulated.
 
       return false;
     });
-
-    //Set filters to stick when we move below the page.
-    makeFilterStick();
 
     //Show the sort and filter dropdowns on hover.
     $('#sorts-filters .sort-filter').hover(function(){
@@ -549,7 +553,8 @@ function makeFilterStick(){
     if ($window.scrollTop() > sortsFiltersTop - 50) {
       //If the sorts and filters aren't already shown we want to do that here.
       sortsFilters.animate({
-        opacity: 100
+        opacity: 1,
+        height: 'show'
       }, 3000);
       
       sortsFilters.addClass('low-scroll');
@@ -558,6 +563,10 @@ function makeFilterStick(){
       sortsFilters.removeClass('low-scroll');
     }
   }); 
+}
+
+function animateFilters(){
+  
 }
 
 
