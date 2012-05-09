@@ -205,8 +205,8 @@ $(function() { //Run when the DOM is ready to be manipulated.
     });
 
     //Fade in the sorts and filters when you rollover the grid.
-    $container.mouseover(function(){
-      if($('#sorts-filters').css('opacity') != 1){ //Only animate if we haven't already.
+    //We use the one() jquery function to remove the event handler after it fires one time.
+    $container.one("mouseover", function(){
         $('#sorts-filters').animate({
           opacity: 1,
           height: 'show'
@@ -214,7 +214,6 @@ $(function() { //Run when the DOM is ready to be manipulated.
 
         //Set filters to stick when we move below the page.
         makeFilterStick();
-      }
     });
     
 
@@ -564,11 +563,6 @@ function makeFilterStick(){
     }
   }); 
 }
-
-function animateFilters(){
-  
-}
-
 
 /* COUNTING UP
   * ====================== */
