@@ -47,14 +47,21 @@ a:hover {
 }
 .btn {
     padding: 2px 10px 2px;
+    font-family: "proxima-nova", sans-serif;
 }
 .btn-large {
     padding: 9px 0;
     width: 100%;
 }
-form input,
-form textarea,
-form select {
+#submit-btn {
+  color: black;
+}
+input, textarea, select, label {
+  font-family: "proxima-nova", sans-serif;
+}
+.modal form input,
+.modal form textarea,
+.modal form select {
   font: 23px/29px "league-gothic", sans-serif;
   text-transform: uppercase;
 }
@@ -144,13 +151,21 @@ footer .nav > li > a:hover {
 footer a {
     color: #e0e0e0;
 }
-li.sep {
+.nav.login li {
+    padding: 9px 0;
+    font-size: 14px;    
+    line-height:19px;
+}
+li.sep, .nav.login li.sep {
     padding: 10px 5px 11px;
 }
 .navbar .nav > li > a,
 footer .nav > li > a {
     padding: 9px 0;
     font-size: 14px;
+}
+.nav.login li > a {
+    padding: 0;
 }
 #rollover-bar {
     position: absolute;
@@ -344,6 +359,9 @@ footer .nav > li > a {
   margin-left: 6px;
   width: 954px;
 }
+body[class^="profile"] #images {
+  margin-top: 10px;
+}
 #images .image {
     margin: 0 0 14px 14px;
     float: left;
@@ -390,10 +408,10 @@ footer .nav > li > a {
 /**** Isotope CSS3 transitions ****/
 .isotope,
 .isotope .isotope-item {
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    transition-duration: 0.8s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
 .isotope {
@@ -454,6 +472,10 @@ select, input[type="file"] {
 .modal select.input-xlarge {
   width: 425px;
 }
+.modal input.hide {
+  display: none !important;
+  margin: 0;
+}
 .modal .form-horizontal .control-group > label {
   width: 300px;
   padding-bottom: 2px; /*IE7 Fix*/
@@ -489,6 +511,31 @@ select, input[type="file"] {
 .modal .video-upload a span,
 .modal .processing a span { display: block; }
 
+// Styles for the dropzone
+
+.modal .image-upload #fileupload {
+  visibility: hidden;
+  position:absolute;
+  top:-999px;
+}
+#dropzone.in {
+    width: 600px;
+    height: 200px;
+    line-height: 200px;
+    font-size: larger;
+}
+#dropzone.hover {
+    background: lawngreen;
+}
+#dropzone.fade {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}
+
 .modal .text-links {
     text-align: center;
 }
@@ -522,6 +569,7 @@ select, input[type="file"] {
   line-height: 190px;
   text-align: center; 
   text-decoration: none;
+  opacity: .5;
 }
 .modal form a.select-video.active,
 .modal form a.select-video:hover {
@@ -532,7 +580,7 @@ select, input[type="file"] {
 #upload-video-select.active,
 #upload-video-select:hover { background-image: url('../img/upload-video-arrow-selected.png'); }
 
-#record-video-select { background-image: url('../img/record-video-icon.png'); }
+#record-video-select { opacity:1; background-image: url('../img/record-video-icon.png'); }
 #record-video-select.active,
 #record-video-select:hover { background-image: url('../img/record-video-icon-selected.png'); }
 
@@ -653,18 +701,29 @@ select, input[type="file"] {
   padding-top: 15px;
 }
 #social-boxes textarea {
-  width: 76%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom:5px;
+  background: rgba(255,255,255,0.7);
 }
 #comments-list,
 #comments-list ul,
 #tweets-list {
   margin: 0;
 }
-#comments-list li,
+#comments-list > li,
 #tweets-list li {
   list-style-type: none;
   background: url('../img/comment-up-arrow.png') no-repeat 0 17px;
   padding: 12px 0 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+#comments-list > ul {
+  list-style-type: none;  
+  background: url('../img/comment-up-arrow.png') no-repeat 0 17px;  
   border-bottom: 1px solid #ccc;
 }
 #tweets-list li {
@@ -672,6 +731,7 @@ select, input[type="file"] {
   padding: 12px 0 10px 0;
 }
 #comments-list li.last,
+#comments-list > li:last-child, 
 #tweets-list li.last {
   border-bottom: none;
 }
@@ -690,8 +750,8 @@ select, input[type="file"] {
 }
 .submission-engage-box {
   background-color: #fff;
-  opacity: 0.75;
-  filter: alpha(opacity=75); 
+  opacity: 0.85;
+  filter: alpha(opacity=85); 
   padding: 10px;
   margin-bottom: 3px;
 }
@@ -880,4 +940,27 @@ footer li.sep {
     width: auto;
     padding: 9px 0;
     margin: 0 10px 0 0;
+}
+
+/*Interaction Animations*/
+
+@-webkit-keyframes shake {
+  0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+  10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+  30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+  40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+  50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+  70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+  80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+  90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+  100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shake {
+  -webkit-animation-name: shake;
+  -webkit-animation-duration: 0.1s;
+  -webkit-transform-origin:50% 50%;
+  -webkit-animation-iteration-count: 2;
+  -webkit-animation-timing-function: linear;
 }
