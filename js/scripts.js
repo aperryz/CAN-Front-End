@@ -192,16 +192,29 @@ $(function() { //Run when the DOM is ready to be manipulated.
       itemSelector: '.image',
       itemPositionDataEnabled: true,
       getSortData : {
-        //SortOne is a regular text field.  We sort alphabetically.
-        one : function ( $elem ) {
-          return $elem.find('.sort-one').text();
+        recent : function ( $elem ) {
+          return parseInt($elem.find('.sort-recent').text());  //Number
         },
-        //SortTwo is a number so we are going to cast it to an integer then sort counting up.
-        two : function ( $elem ) {
-          return parseInt($elem.find('.sort-two').text(), 10);
+        artist : function ( $elem ) {
+          return $elem.find('.sort-artist').text();
+        },
+        obamaccomplishment : function ( $elem ) {
+          return $elem.find('.sort-obamaccomplishment').text();
+        },
+        liked : function ( $elem ) {
+          return parseInt($elem.find('.sort-liked').text()); //Number
+        },
+        shared : function ( $elem ) {
+          return parseInt($elem.find('.sort-shared').text()); //Number
+        },
+        downloaded : function ( $elem ) {
+          return parseInt($elem.find('.sort-downloaded').text()); //Number
+        },
+        purchased : function ( $elem ) {
+          return parseInt($elem.find('.sort-purchased').text()); //Number
         }
       },
-      sortBy : 'one'
+      sortBy : 'recent'
     });
 
     //Fade and slideDown the sorts and filters when you rollover the grid.
@@ -221,6 +234,7 @@ $(function() { //Run when the DOM is ready to be manipulated.
     $('.filter a').click(function(evt){
       var $this = $(this), //Filter that was just clicked
           $optionSet = $this.parents('.filter'), //Entire set of filters
+          $otherOptionSet = $optionSet.closest('.sort-filter').siblings('.sort-filter').find('.filter'), //Other set of filters
           $allFilter = $optionSet.find('a[data-filter-value="*"]'); //Filter that shows all
       
       //If user clicked a sub that was already selected.  We don't do this for the all selection.
@@ -245,32 +259,38 @@ $(function() { //Run when the DOM is ready to be manipulated.
         $this.addClass('active');
       }
       
+      var currentGroup = $optionSet.attr('data-filter-group'), 
+          otherGroup = $otherOptionSet.attr('data-filter-group'),
+          currentSelectors = [];
       
-      
-
-      // store filter value in object
-      // i.e. filters.color = 'red'
-      var group = $optionSet.attr('data-filter-group');
-      // console.log(group);
-      
-      var selectors = [];
+      //Add all the currently active filters from this group and put them in an array. Then add to the filters object.
       $optionSet.find('a.active').each(function(){
-        console.log($(this).attr('data-filter-value'));
-        selectors.push($(this).attr('data-filter-value'));
+        currentSelectors.push($(this).attr('data-filter-value'));
       });
-      console.log(selectors);
+      filters[currentGroup] = currentSelectors;
       
-      filters[ group ] = selectors;
-      console.log(filters);
-      // convert object into array
-      var isoFilters = [];
-      for ( var prop in filters ) {
-        isoFilters.push( filters[ prop ] )
-        console.log(isoFilters);
+      //Loop through and create an array in the correct format for isotope.
+      var selector = [],
+          filterLength = filters[currentGroup].length;
+      for (var i = 0; i < filterLength; i++){
+       
+        //If the other group is defined and isn't set to all then loop through them.
+        if(typeof filters[otherGroup] !== 'undefined' && filters[otherGroup][0] != '*'){
+          var otherFilterLength = filters[otherGroup].length;
+          
+          //Loop through the other group for each item.
+          for(var j = 0; j < otherFilterLength; j++){
+            selector.push(filters[currentGroup][i] + filters[otherGroup][j]);
+          }
+        }
+        else {
+          selector.push(filters[ currentGroup ][i]);
+        }
+        
       }
-      var selector = isoFilters.join(', ');
-      console.log('selector: ' + selector);
-      //console.log(selector);
+      
+      selector = selector.join(); //Format it how isotope likes it
+      
       $container.isotope({
         filter: selector
       });
@@ -278,13 +298,24 @@ $(function() { //Run when the DOM is ready to be manipulated.
       //Run colorbox again so those that were filtered out are no longer included.
       setupColorBox();
     });
+    
+    //Create an array that specifies.  False if we want it to be descending.
+    var sortAscending = [];
+    sortAscending['recent'] = false;
+    sortAscending['artist'] = true;
+    sortAscending['obamaccomplishment'] = true;
+    sortAscending['liked'] = false;
+    sortAscending['shared'] = false;
+    sortAscending['downloaded'] = false;
+    sortAscending['purchased'] = false;
 
     //Add click event to sorting links.
     $('#sort a').click(function(){
       // get href attribute, minus the '#'
       var sortName = $(this).attr('href').slice(1);
       $container.isotope({
-        sortBy : sortName
+        sortBy : sortName,
+        sortAscending: sortAscending[sortName]
       });
 
       return false;

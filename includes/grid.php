@@ -21,8 +21,13 @@
     <div class="span3 sort-filter">
       <span>Most Recent</span>
       <ul id="sort" class="hide">
-        <li><a href="#one" class="active">Most Recent</a></li>
-        <li><a href="#two">Sort by Number</a></li>
+        <li><a href="#recent" class="active">Most Recent</a></li>
+        <li><a href="#artist">By Artist</a></li>
+        <li><a href="#obamaccomplishment">By Obamaccomplishment</a></li>
+        <li><a href="#liked">Most Liked</a></li>
+        <li><a href="#shared">Most Shared</a></li>
+        <li><a href="#downloaded">Most Downloaded</a></li>
+        <li><a href="#purchased">Most Purchased</a></li>        
       </ul>
     </div>
     <div class="span3 image-form">
@@ -41,8 +46,13 @@
       <div class="image brown programmer" data-colorbox-url="includes/colorbox.php?id=34">
         <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
         <div class="img-content">
-          <p class="sort-one">Bill Nye</p>
-          <p class="sort-two">628</p>
+          <p class="sort-recent">1336854959</p><!-- Timestamp -->
+          <p class="sort-artist">Lk</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">100</p>
+          <p class="sort-shared">200</p>
+          <p class="sort-downloaded">300</p>
+          <p class="sort-purchased">400</p>
           <p>Submission ID: 34</p>
         </div>
         <ul class="dropdown-menu">
@@ -54,232 +64,377 @@
       </div>
       <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=33">
         <div class="img-content">
-          <p class="sort-one">Athlete</p>
-          <p class="sort-two">172</p>
+          <p class="sort-recent">1336854252</p><!-- Timestamp -->
+          <p class="sort-artist">Lj</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">101</p>
+          <p class="sort-shared">201</p>
+          <p class="sort-downloaded">301</p>
+          <p class="sort-purchased">401</p>
           <p>Submission ID: 33</p>
         </div>
         <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=32">
         <div class="img-content">
-          <p class="sort-one">James Earl Jones</p>
-          <p class="sort-two">77</p>
+          <p class="sort-recent">1336854000</p><!-- Timestamp -->
+          <p class="sort-artist">Lh</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">102</p>
+          <p class="sort-shared">202</p>
+          <p class="sort-downloaded">302</p>
+          <p class="sort-purchased">402</p>
           <p>Submission ID: 32</p>
         </div>
         <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=31">
         <div class="img-content">
-          <p class="sort-one">Marie Curie</p>
-          <p class="sort-two">815</p>
+          <p class="sort-recent">1336854695</p><!-- Timestamp -->
+          <p class="sort-artist">Lg</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">103</p>
+          <p class="sort-shared">203</p>
+          <p class="sort-downloaded">303</p>
+          <p class="sort-purchased">403</p>
           <p>Submission ID: 31</p>
         </div>
         <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=30">
         <div class="img-content">
-          <p class="sort-one">Diana, Princess of Whales</p>
-          <p class="sort-two">357</p>
+          <p class="sort-recent">1336854357</p><!-- Timestamp -->
+          <p class="sort-artist">Lp</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">104</p>
+          <p class="sort-shared">204</p>
+          <p class="sort-downloaded">304</p>
+          <p class="sort-purchased">404</p>
           <p>Submission ID: 30</p>
         </div>
         <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=29">
         <div class="img-content">
-          <p class="sort-one">Mohandas Gandhi</p>
-          <p class="sort-two">21</p>
+         <p class="sort-recent">1336854222</p><!-- Timestamp -->
+          <p class="sort-artist">Lo</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">105</p>
+          <p class="sort-shared">205</p>
+          <p class="sort-downloaded">305</p>
+          <p class="sort-purchased">405</p>
           <p>Submission ID: 29</p>
         </div>
         <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=28">
         <div class="img-content">
-          <p class="sort-one">H</p>
-          <p class="sort-two">987</p>
+         <p class="sort-recent">1336854111</p><!-- Timestamp -->
+          <p class="sort-artist">Li</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">106</p>
+          <p class="sort-shared">206</p>
+          <p class="sort-downloaded">306</p>
+          <p class="sort-purchased">406</p>
           <p>Submission ID: 28</p>
         </div>
         <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=27">
         <div class="img-content">
-          <p class="sort-one">I</p>
-          <p class="sort-two">752</p>
+          <p class="sort-recent">1336854987</p><!-- Timestamp -->
+          <p class="sort-artist">Lu</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">107</p>
+          <p class="sort-shared">207</p>
+          <p class="sort-downloaded">307</p>
+          <p class="sort-purchased">407</p>
           <p>Submission ID: 27</p>
         </div>
         <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image brown programmer" data-colorbox-url="includes/colorbox.php?id=26">
         <div class="img-content">
-          <p class="sort-one">F</p>
-          <p class="sort-two">7</p>
+          <p class="sort-recent">1336854999</p><!-- Timestamp -->
+          <p class="sort-artist">Ly</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">108</p>
+          <p class="sort-shared">208</p>
+          <p class="sort-downloaded">308</p>
+          <p class="sort-purchased">408</p>
           <p>Submission ID: 26</p>
         </div>
         <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=25">
         <div class="img-content">
-          <p class="sort-one">J</p>
-          <p class="sort-two">6</p>
+          <p class="sort-recent">1336854333</p><!-- Timestamp -->
+          <p class="sort-artist">Lt</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">109</p>
+          <p class="sort-shared">209</p>
+          <p class="sort-downloaded">309</p>
+          <p class="sort-purchased">409</p>
           <p>Submission ID: 25</p>
         </div>
         <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=24">
         <div class="img-content">
-          <p class="sort-one">K</p>
-          <p class="sort-two">231</p>
+          <p class="sort-recent">1336854444</p><!-- Timestamp -->
+          <p class="sort-artist">Lr</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">110</p>
+          <p class="sort-shared">210</p>
+          <p class="sort-downloaded">310</p>
+          <p class="sort-purchased">410</p>
           <p>Submission ID: 24</p>
         </div>
         <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=23">
         <div class="img-content">
-          <p class="sort-one">L</p>
-          <p class="sort-two">999</p>
+          <p class="sort-recent">1336854555</p><!-- Timestamp -->
+          <p class="sort-artist">Le</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">111</p>
+          <p class="sort-shared">211</p>
+          <p class="sort-downloaded">311</p>
+          <p class="sort-purchased">411</p>
           <p>Submission ID: 23</p>
         </div>
         <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=22">
         <div class="img-content">
-          <p class="sort-one">M</p>
-          <p class="sort-two">634</p>
+          <p class="sort-recent">1336854666</p><!-- Timestamp -->
+          <p class="sort-artist">Lw</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">112</p>
+          <p class="sort-shared">212</p>
+          <p class="sort-downloaded">312</p>
+          <p class="sort-purchased">412</p>
           <p>Submission ID: 22</p>
         </div>
         <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image brown programmer" data-colorbox-url="includes/colorbox.php?id=21">
         <div class="img-content">
-          <p class="sort-one">N</p>
-          <p class="sort-two">751</p>
+          <p class="sort-recent">1336854646</p><!-- Timestamp -->
+          <p class="sort-artist">Lq</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">113</p>
+          <p class="sort-shared">213</p>
+          <p class="sort-downloaded">313</p>
+          <p class="sort-purchased">413</p>
           <p>Submission ID: 21</p>
         </div>
         <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=20">
         <div class="img-content">
-          <p class="sort-one">O</p>
-          <p class="sort-two">546</p>
+          <p class="sort-recent">1336854351</p><!-- Timestamp -->
+          <p class="sort-artist">Ll</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">114</p>
+          <p class="sort-shared">214</p>
+          <p class="sort-downloaded">314</p>
+          <p class="sort-purchased">414</p>
           <p>Submission ID: 20</p>
         </div>
         <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=19">
         <div class="img-content">
-          <p class="sort-one">P</p>
-          <p class="sort-two">826</p>
+          <p class="sort-recent">1336854465</p><!-- Timestamp -->
+          <p class="sort-artist">Lk</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">115</p>
+          <p class="sort-shared">215</p>
+          <p class="sort-downloaded">315</p>
+          <p class="sort-purchased">415</p>
           <p>Submission ID: 19</p>
         </div>
         <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=18">
         <div class="img-content">
-          <p class="sort-one">Q</p>
-          <p class="sort-two">156</p>
+          <p class="sort-recent">1336854854</p><!-- Timestamp -->
+          <p class="sort-artist">Lj</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">116</p>
+          <p class="sort-shared">216</p>
+          <p class="sort-downloaded">316</p>
+          <p class="sort-purchased">416</p>
           <p>Submission ID: 18</p>
         </div>
         <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=17">
         <div class="img-content">
-          <p class="sort-one">R</p>
-          <p class="sort-two">579</p>
+          <p class="sort-recent">1336854354</p><!-- Timestamp -->
+          <p class="sort-artist">Lh</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">117</p>
+          <p class="sort-shared">217</p>
+          <p class="sort-downloaded">317</p>
+          <p class="sort-purchased">417</p>
           <p>Submission ID: 17</p>
         </div>
         <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=16">
         <div class="img-content">
-          <p class="sort-one">S</p>
-          <p class="sort-two">364</p>
+          <p class="sort-recent">1336854875</p><!-- Timestamp -->
+          <p class="sort-artist">Lg</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">118</p>
+          <p class="sort-shared">218</p>
+          <p class="sort-downloaded">318</p>
+          <p class="sort-purchased">418</p>
           <p>Submission ID: 16</p>
         </div>
         <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=15">
         <div class="img-content">
-          <p class="sort-one">T</p>
-          <p class="sort-two">33</p>
+         <p class="sort-recent">1336854150</p><!-- Timestamp -->
+          <p class="sort-artist">Lf</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">119</p>
+          <p class="sort-shared">219</p>
+          <p class="sort-downloaded">319</p>
+          <p class="sort-purchased">480</p>
           <p>Submission ID: 15</p>
         </div>
         <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=14">
         <div class="img-content">
-          <p class="sort-one">U</p>
-          <p class="sort-two">84</p>
+         <p class="sort-recent">1336854160</p><!-- Timestamp -->
+          <p class="sort-artist">Ld</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">120</p>
+          <p class="sort-shared">220</p>
+          <p class="sort-downloaded">380</p>
+          <p class="sort-purchased">420</p>
           <p>Submission ID: 14</p>
         </div>
         <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=13">
         <div class="img-content">
-          <p class="sort-one">M</p>
-          <p class="sort-two">64</p>
+          <p class="sort-recent">1336854196</p><!-- Timestamp -->
+          <p class="sort-artist">Ls</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">180</p>
+          <p class="sort-shared">221</p>
+          <p class="sort-downloaded">321</p>
+          <p class="sort-purchased">421</p>
           <p>Submission ID: 13</p>
         </div>
         <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=12">
         <div class="img-content">
-          <p class="sort-one">N</p>
-          <p class="sort-two">97</p>
+          <p class="sort-recent">1336854268</p><!-- Timestamp -->
+          <p class="sort-artist">La</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">122</p>
+          <p class="sort-shared">280</p>
+          <p class="sort-downloaded">322</p>
+          <p class="sort-purchased">422</p>
           <p>Submission ID: 12</p>
         </div>
         <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=11">
         <div class="img-content">
-          <p class="sort-one">O</p>
-          <p class="sort-two">10</p>
+         <p class="sort-recent">1336854391</p><!-- Timestamp -->
+          <p class="sort-artist">Lm</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">123</p>
+          <p class="sort-shared">223</p>
+          <p class="sort-downloaded">323</p>
+          <p class="sort-purchased">423</p>
           <p>Submission ID: 11</p>
         </div>
         <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=10">
         <div class="img-content">
-          <p class="sort-one">P</p>
-          <p class="sort-two">1</p>
+          <p class="sort-recent">1336854578</p><!-- Timestamp -->
+          <p class="sort-artist">Ln</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">124</p>
+          <p class="sort-shared">224</p>
+          <p class="sort-downloaded">324</p>
+          <p class="sort-purchased">424</p>
           <p>Submission ID: 10</p>
         </div>
         <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=9">
         <div class="img-content">
-          <p class="sort-one">Q</p>
-          <p class="sort-two">51</p>
+          <p class="sort-recent">1336854652</p><!-- Timestamp -->
+          <p class="sort-artist">Lb</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">125</p>
+          <p class="sort-shared">225</p>
+          <p class="sort-downloaded">325</p>
+          <p class="sort-purchased">425</p>
           <p>Submission ID: 9</p>
         </div>
         <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=8">
         <div class="img-content">
-          <p class="sort-one">R</p>
-          <p class="sort-two">80</p>
+          <p class="sort-recent">1336854941</p><!-- Timestamp -->
+          <p class="sort-artist">Lv</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">126</p>
+          <p class="sort-shared">226</p>
+          <p class="sort-downloaded">326</p>
+          <p class="sort-purchased">426</p>
           <p>Submission ID: 8</p>
         </div>
         <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=7">
         <div class="img-content">
-          <p class="sort-one">S</p>
-          <p class="sort-two">1400</p>
+          <p class="sort-recent">1336854981</p><!-- Timestamp -->
+          <p class="sort-artist">Lc</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">127</p>
+          <p class="sort-shared">227</p>
+          <p class="sort-downloaded">327</p>
+          <p class="sort-purchased">427</p>
           <p>Submission ID: 7</p>
         </div>
         <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=6">
         <div class="img-content">
-          <p class="sort-one">T</p>
-          <p class="sort-two">12</p>
+          <p class="sort-recent">1336854687</p><!-- Timestamp -->
+          <p class="sort-artist">Lx</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">128</p>
+          <p class="sort-shared">228</p>
+          <p class="sort-downloaded">328</p>
+          <p class="sort-purchased">428</p>
           <p>Submission ID: 6</p>
         </div>
         <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
       <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=5">
         <div class="img-content">
-          <p class="sort-one">U</p>
-          <p class="sort-two">575</p>
+          <p class="sort-recent">1336854385</p><!-- Timestamp -->
+          <p class="sort-artist">Lz</p>
+          <p class="sort-obamaccomplishment">Obamacare</p>
+          <p class="sort-liked">129</p>
+          <p class="sort-shared">229</p>
+          <p class="sort-downloaded">329</p>
+          <p class="sort-purchased">429</p>
           <p>Submission ID: 5</p>
         </div>
         <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
