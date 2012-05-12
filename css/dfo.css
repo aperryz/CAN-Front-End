@@ -478,32 +478,48 @@ a:link {
   -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
     -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
       box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
-  width: 304px;
+  width: 225px;
+  margin-left: 13px;
 }
 
 .sort-filter ul,
 #sorts-filters .image-form {
-  width: 304px;
+  width: 225px;
 }
 
-#sorts-filters .image-form {
-  margin-left: 13px;
+.sort-filter ul {
+  background-color: transparent;
 }
 
 .sort-filter span, .sort-filter a {
-  color: #214251;
+  color: #0E527C;
+  -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
+      box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.3);
 }
 
 .sort-filter span {
-  background: #d9e3e6 url('../img/sort-filter-left-arrow.png') no-repeat 289px 4px;
+  background: #e6e6e6 url('../img/dfo/sort-filter-left-arrow.png') no-repeat 210px 4px;
+}
+
+.sort-filter:hover span {
+  background-image: url('../img/dfo/sort-filter-down-arrow.png');
 }
 
 .sort-filter a {
-  background: #d9e3e6 url('../img/sort-filter.png') no-repeat 289px 4px;
+  background: #e6e6e6 url('../img/dfo/unchecked.png') no-repeat 210px 3px;
 }
 
 .sort-filter a:hover, .sort-filter a.active {
-  background: #d9e3e6 url('../img/sort-filter-selected.png') no-repeat 289px 4px;
+  background: #e6e6e6 url('../img/dfo/checked.png') no-repeat 210px 1px;
+}
+
+.sort-filter #sort a {
+  background: #e6e6e6 url('../img/dfo/unsorted.png') no-repeat 210px 3px;
+}
+
+.sort-filter #sort a:hover, .sort-filter #sort a.active {
+  background: #e6e6e6 url('../img/dfo/sorted.png') no-repeat 210px 3px;
 }
 
 .form-search input, .form-search button {
@@ -513,17 +529,18 @@ a:link {
 }
 
 #sorts-filters form input {
-  width: 214px;
+  width: 162px;
 }
 
-.form-search button {
+#sorts-filters .form-search button {
   background-image: none;
-  background-color: #d32f2f;
+  background-color: #0E527C;
+  border-color: #0E527C;
   color: #fff;
-  border-color: #d32f2f;
   text-shadow: none;
+  font: bold 12px/16px "proxima-nova", sans-serif;
+  padding: 0 17px;
   margin-left: -3px;
-  font: bold 12px/12px "proxima-nova", sans-serif;
 }
 
 .form-search .btn:hover {

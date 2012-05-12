@@ -1,27 +1,35 @@
 <!-- GRID -->
 <div id="sorts-filters">
   <div class="container sorts-filters-container"><!-- Used to fix jump bug with jquery slidedown -->  
-      <div class="span4 sort-filter">
-        <span>Sorting: Most Popular</span>
-        <ul id="sort" class="hide">
-          <li><a href="#one" class="active">Sort By Letter</a></li>
-          <li><a href="#two">Sort By Number</a></li>
-        </ul>
-      </div>
-      <div class="span4 sort-filter">
-        <span>Showing: All Posters</span>
-        <ul id="filter-one" class="hide filter" data-filter-group="eyes">
-          <li><a data-filter-value="" href="#" class="active">All Eye Colors</a></li>
-          <li><a data-filter-value=".blue" href="#">Blue Eyes</a></li>
-          <li><a data-filter-value=".green" href="#">Green Eyes</a></li>
-          <li><a data-filter-value=".brown" href="#">Brown Eyes</a></li>
-        </ul>
-      </div>
-      <div class="span4 image-form">
-        <form class="form-search">
-          <input type="text" placeholder="Search" />
-          <button type="submit" class="btn">Search</button>
-        </form>
+    <div class="span3 sort-filter">
+      <span>All Posters (771)</span>
+      <ul id="filter-one" class="hide filter" data-filter-group="eyes">
+        <li><a data-filter-value="*" href="#" class="active">All Eye Colors</a></li>
+        <li><a data-filter-value=".blue" href="#">Blue Eyes</a></li>
+        <li><a data-filter-value=".green" href="#">Green Eyes</a></li>
+        <li><a data-filter-value=".brown" href="#">Brown Eyes</a></li>
+      </ul>
+    </div>
+    <div class="span3 sort-filter">
+      <span>All Obamaccomplishments (5)</span>
+      <ul id="filter-two" class="hide filter" data-filter-group="job">
+        <li><a data-filter-value="*" href="#" class="active">All Jobs</a></li>
+        <li><a data-filter-value=".designer" href="#">Designers</a></li>
+        <li><a data-filter-value=".programmer" href="#">Programmers</a></li>
+      </ul>
+    </div>
+    <div class="span3 sort-filter">
+      <span>Most Recent</span>
+      <ul id="sort" class="hide">
+        <li><a href="#one" class="active">Most Recent</a></li>
+        <li><a href="#two">Sort by Number</a></li>
+      </ul>
+    </div>
+    <div class="span3 image-form">
+      <form class="form-search">
+        <input type="text" placeholder="Search" />
+        <button type="submit" class="btn">Go</button>
+      </form>
     </div>
   </div>
 </div><!-- /.sorts-filters-container -->

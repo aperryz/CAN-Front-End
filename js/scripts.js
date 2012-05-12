@@ -204,7 +204,7 @@ $(function() { //Run when the DOM is ready to be manipulated.
       sortBy : 'one'
     });
 
-    //Fade in the sorts and filters when you rollover the grid.
+    //Fade and slideDown the sorts and filters when you rollover the grid.
     //We use the one() jquery function to remove the event handler after it fires one time.
     $container.one("mouseover", function(){
         $('#sorts-filters').animate({
@@ -219,25 +219,58 @@ $(function() { //Run when the DOM is ready to be manipulated.
 
     // Handle the combined filters
     $('.filter a').click(function(evt){
-      var $this = $(this);
-      // don't proceed if already selected
-      if ( $this.hasClass('active') ) {
-        return;
+      var $this = $(this), //Filter that was just clicked
+          $optionSet = $this.parents('.filter'), //Entire set of filters
+          $allFilter = $optionSet.find('a[data-filter-value="*"]'); //Filter that shows all
+      
+      //If user clicked a sub that was already selected.  We don't do this for the all selection.
+      if($this.attr('data-filter-value') != '*' && $this.hasClass('active')){
+        $this.removeClass('active');
+        if(!$optionSet.find('a.active').exists()){ //If nothing is checked then reselect all.
+          $allFilter.addClass('active');
+        }
       }
-      var $optionSet = $this.parents('.filter');
-      $optionSet.find('.active').removeClass('active');
-      $this.addClass('active');
+      //If user clicked a sub and all is selected.
+      else if($this.attr('data-filter-value') != '*' && $allFilter.hasClass('active')){
+        $allFilter.removeClass('active');
+        $this.addClass('active');
+      }
+      //If user selected all when other subs were selected.
+      else if($this.attr('data-filter-value') == '*'){
+        $optionSet.find('a').removeClass('active');
+        $this.addClass('active');
+      }
+      //If this is a general sub
+      else {
+        $this.addClass('active');
+      }
+      
+      
+      
 
       // store filter value in object
       // i.e. filters.color = 'red'
       var group = $optionSet.attr('data-filter-group');
-      filters[ group ] = $this.attr('data-filter-value');
+      // console.log(group);
+      
+      var selectors = [];
+      $optionSet.find('a.active').each(function(){
+        console.log($(this).attr('data-filter-value'));
+        selectors.push($(this).attr('data-filter-value'));
+      });
+      console.log(selectors);
+      
+      filters[ group ] = selectors;
+      console.log(filters);
       // convert object into array
       var isoFilters = [];
       for ( var prop in filters ) {
         isoFilters.push( filters[ prop ] )
+        console.log(isoFilters);
       }
-      var selector = isoFilters.join('');
+      var selector = isoFilters.join(', ');
+      console.log('selector: ' + selector);
+      //console.log(selector);
       $container.isotope({
         filter: selector
       });
