@@ -2,20 +2,22 @@
 <div id="sorts-filters">
   <div class="container sorts-filters-container"><!-- Used to fix jump bug with jquery slidedown -->  
     <div class="span3 sort-filter">
-      <span>All Posters (771)</span>
+      <span>All Posters</span>
       <ul id="filter-one" class="hide filter" data-filter-group="eyes">
-        <li><a data-filter-value="*" href="#" class="active">All Eye Colors</a></li>
-        <li><a data-filter-value=".blue" href="#">Blue Eyes</a></li>
-        <li><a data-filter-value=".green" href="#">Green Eyes</a></li>
-        <li><a data-filter-value=".brown" href="#">Brown Eyes</a></li>
+        <li><a data-filter-value="*" href="#" class="active">All Posters</a></li>
+        <li class="parent"><a data-filter-value=".poster-2008" href="#">2008 Posters</a></li>
+        <li class="sub"><a data-filter-value=".posters-book" href="#">Posters in the Book</a></li>
+        <li><a data-filter-value=".poster-2012" href="#">2012 Posters</a></li>
       </ul>
     </div>
     <div class="span3 sort-filter">
-      <span>All Obamaccomplishments (5)</span>
+      <span>All Obamaccomplishments</span>
       <ul id="filter-two" class="hide filter" data-filter-group="job">
-        <li><a data-filter-value="*" href="#" class="active">All Jobs</a></li>
-        <li><a data-filter-value=".designer" href="#">Designers</a></li>
-        <li><a data-filter-value=".programmer" href="#">Programmers</a></li>
+        <li><a data-filter-value="*" href="#" class="active">All Obamaccomplishments</a></li>
+        <li><a data-filter-value=".dont-ask" href="#">Repealing Don't Ask Don't Tell</a></li>
+        <li><a data-filter-value=".osama" href="#">Killed Osama bin Laden</a></li>
+        <li><a data-filter-value=".obamacare" href="#">Obamacare</a></li>
+        <li><a data-filter-value=".auto" href="#">Saving the Auto Industry</a></li>
       </ul>
     </div>
     <div class="span3 sort-filter">
@@ -43,7 +45,7 @@
   <!-- Begin image gallery -->
   <div class="row">
     <div class="span12" id="images">
-      <div class="image brown programmer" data-colorbox-url="includes/colorbox.php?id=34">
+      <div class="image osama poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=34">
         <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
         <div class="img-content">
           <p class="sort-recent">1336854959</p><!-- Timestamp -->
@@ -62,7 +64,7 @@
           <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
         </ul>
       </div>
-      <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=33">
+      <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=33">
         <div class="img-content">
           <p class="sort-recent">1336854252</p><!-- Timestamp -->
           <p class="sort-artist">Lj</p>
@@ -75,7 +77,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=32">
+      <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=32">
         <div class="img-content">
           <p class="sort-recent">1336854000</p><!-- Timestamp -->
           <p class="sort-artist">Lh</p>
@@ -88,7 +90,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=31">
+      <div class="image poster-2008 posters-book" data-colorbox-url="includes/colorbox.php?id=31">
         <div class="img-content">
           <p class="sort-recent">1336854695</p><!-- Timestamp -->
           <p class="sort-artist">Lg</p>
@@ -101,7 +103,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=30">
+      <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=30">
         <div class="img-content">
           <p class="sort-recent">1336854357</p><!-- Timestamp -->
           <p class="sort-artist">Lp</p>
@@ -114,7 +116,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=29">
+      <div class="image poster-2008 posters-book" data-colorbox-url="includes/colorbox.php?id=29">
         <div class="img-content">
          <p class="sort-recent">1336854222</p><!-- Timestamp -->
           <p class="sort-artist">Lo</p>
@@ -127,7 +129,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=28">
+      <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=28">
         <div class="img-content">
          <p class="sort-recent">1336854111</p><!-- Timestamp -->
           <p class="sort-artist">Li</p>
@@ -140,7 +142,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=27">
+      <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=27">
         <div class="img-content">
           <p class="sort-recent">1336854987</p><!-- Timestamp -->
           <p class="sort-artist">Lu</p>
@@ -153,7 +155,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image brown programmer" data-colorbox-url="includes/colorbox.php?id=26">
+      <div class="image poster-2008 posters-book" data-colorbox-url="includes/colorbox.php?id=26">
         <div class="img-content">
           <p class="sort-recent">1336854999</p><!-- Timestamp -->
           <p class="sort-artist">Ly</p>
@@ -166,7 +168,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=25">
+      <div class="image poster-2008 osama" data-colorbox-url="includes/colorbox.php?id=25">
         <div class="img-content">
           <p class="sort-recent">1336854333</p><!-- Timestamp -->
           <p class="sort-artist">Lt</p>
@@ -179,7 +181,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=24">
+      <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=24">
         <div class="img-content">
           <p class="sort-recent">1336854444</p><!-- Timestamp -->
           <p class="sort-artist">Lr</p>
@@ -192,7 +194,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=23">
+      <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=23">
         <div class="img-content">
           <p class="sort-recent">1336854555</p><!-- Timestamp -->
           <p class="sort-artist">Le</p>
@@ -205,7 +207,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=22">
+      <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=22">
         <div class="img-content">
           <p class="sort-recent">1336854666</p><!-- Timestamp -->
           <p class="sort-artist">Lw</p>
@@ -218,7 +220,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image brown programmer" data-colorbox-url="includes/colorbox.php?id=21">
+      <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=21">
         <div class="img-content">
           <p class="sort-recent">1336854646</p><!-- Timestamp -->
           <p class="sort-artist">Lq</p>
@@ -231,7 +233,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=20">
+      <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=20">
         <div class="img-content">
           <p class="sort-recent">1336854351</p><!-- Timestamp -->
           <p class="sort-artist">Ll</p>
@@ -244,7 +246,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=19">
+      <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=19">
         <div class="img-content">
           <p class="sort-recent">1336854465</p><!-- Timestamp -->
           <p class="sort-artist">Lk</p>
@@ -257,7 +259,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=18">
+      <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=18">
         <div class="img-content">
           <p class="sort-recent">1336854854</p><!-- Timestamp -->
           <p class="sort-artist">Lj</p>
@@ -270,7 +272,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=17">
+      <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=17">
         <div class="img-content">
           <p class="sort-recent">1336854354</p><!-- Timestamp -->
           <p class="sort-artist">Lh</p>
@@ -283,7 +285,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=16">
+      <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=16">
         <div class="img-content">
           <p class="sort-recent">1336854875</p><!-- Timestamp -->
           <p class="sort-artist">Lg</p>
@@ -296,7 +298,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=15">
+      <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=15">
         <div class="img-content">
          <p class="sort-recent">1336854150</p><!-- Timestamp -->
           <p class="sort-artist">Lf</p>
@@ -309,7 +311,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=14">
+      <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=14">
         <div class="img-content">
          <p class="sort-recent">1336854160</p><!-- Timestamp -->
           <p class="sort-artist">Ld</p>
@@ -322,7 +324,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=13">
+      <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=13">
         <div class="img-content">
           <p class="sort-recent">1336854196</p><!-- Timestamp -->
           <p class="sort-artist">Ls</p>
@@ -335,7 +337,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=12">
+      <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=12">
         <div class="img-content">
           <p class="sort-recent">1336854268</p><!-- Timestamp -->
           <p class="sort-artist">La</p>
@@ -348,7 +350,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image green programmer" data-colorbox-url="includes/colorbox.php?id=11">
+      <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=11">
         <div class="img-content">
          <p class="sort-recent">1336854391</p><!-- Timestamp -->
           <p class="sort-artist">Lm</p>
@@ -361,7 +363,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=10">
+      <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=10">
         <div class="img-content">
           <p class="sort-recent">1336854578</p><!-- Timestamp -->
           <p class="sort-artist">Ln</p>
@@ -374,7 +376,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=9">
+      <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=9">
         <div class="img-content">
           <p class="sort-recent">1336854652</p><!-- Timestamp -->
           <p class="sort-artist">Lb</p>
@@ -387,7 +389,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image blue programmer" data-colorbox-url="includes/colorbox.php?id=8">
+      <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=8">
         <div class="img-content">
           <p class="sort-recent">1336854941</p><!-- Timestamp -->
           <p class="sort-artist">Lv</p>
@@ -400,7 +402,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image brown designer" data-colorbox-url="includes/colorbox.php?id=7">
+      <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=7">
         <div class="img-content">
           <p class="sort-recent">1336854981</p><!-- Timestamp -->
           <p class="sort-artist">Lc</p>
@@ -413,7 +415,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image green designer" data-colorbox-url="includes/colorbox.php?id=6">
+      <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=6">
         <div class="img-content">
           <p class="sort-recent">1336854687</p><!-- Timestamp -->
           <p class="sort-artist">Lx</p>
@@ -426,7 +428,7 @@
         </div>
         <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       </div>
-      <div class="image blue designer" data-colorbox-url="includes/colorbox.php?id=5">
+      <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=5">
         <div class="img-content">
           <p class="sort-recent">1336854385</p><!-- Timestamp -->
           <p class="sort-artist">Lz</p>

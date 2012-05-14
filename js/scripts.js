@@ -236,7 +236,7 @@ $(function() { //Run when the DOM is ready to be manipulated.
           $optionSet = $this.parents('.filter'), //Entire set of filters
           $otherOptionSet = $optionSet.closest('.sort-filter').siblings('.sort-filter').find('.filter'), //Other set of filters
           $allFilter = $optionSet.find('a[data-filter-value="*"]'); //Filter that shows all
-      
+            
       //If user clicked a sub that was already selected.  We don't do this for the all selection.
       if($this.attr('data-filter-value') != '*' && $this.hasClass('active')){
         $this.removeClass('active');
@@ -254,6 +254,11 @@ $(function() { //Run when the DOM is ready to be manipulated.
         $optionSet.find('a').removeClass('active');
         $this.addClass('active');
       }
+      //If this is a subcategory of another sub then we uncheck the parent category first.
+      else if($this.closest('li').hasClass('sub')){
+        $this.closest('li').prev('.parent').find('a').removeClass('active');
+        $this.addClass('active');
+      }
       //If this is a general sub
       else {
         $this.addClass('active');
@@ -261,13 +266,19 @@ $(function() { //Run when the DOM is ready to be manipulated.
       
       var currentGroup = $optionSet.attr('data-filter-group'), 
           otherGroup = $otherOptionSet.attr('data-filter-group'),
-          currentSelectors = [];
+          currentSelectors = [],
+          currentSelectorsText = [];
       
       //Add all the currently active filters from this group and put them in an array. Then add to the filters object.
       $optionSet.find('a.active').each(function(){
-        currentSelectors.push($(this).attr('data-filter-value'));
+        var $this = $(this);
+        currentSelectors.push($this.attr('data-filter-value'));
+        currentSelectorsText.push($this.text());
       });
       filters[currentGroup] = currentSelectors;
+      
+      //Change the text in the title to match the selected filters.
+      setSortFilterTitle(currentSelectorsText, $optionSet.siblings('span'));      
       
       //Loop through and create an array in the correct format for isotope.
       var selector = [],
@@ -311,12 +322,17 @@ $(function() { //Run when the DOM is ready to be manipulated.
 
     //Add click event to sorting links.
     $('#sort a').click(function(){
-      // get href attribute, minus the '#'
-      var sortName = $(this).attr('href').slice(1);
+      var $this = $(this),
+          sortName = $this.attr('href').slice(1), // get href attribute, minus the '#'
+          sortNameArray = new Array($this.text()); //Create an array to change the title
+          
       $container.isotope({
         sortBy : sortName,
         sortAscending: sortAscending[sortName]
       });
+      
+      //Change the sort title to match the chosen sort
+      setSortFilterTitle(sortNameArray, $this.closest('ul').siblings('span'));
 
       return false;
     });
@@ -626,6 +642,18 @@ function makeFilterStick(){
       sortsFilters.removeClass('low-scroll');
     }
   }); 
+}
+
+//Set the title of the sorts and filters when they're changed.
+function setSortFilterTitle(currentSelectorsText, titleElement){
+  currentSelectorsText = currentSelectorsText.join(', ');
+  
+  //If the text is too long cut it and add '...' to it.
+  if(currentSelectorsText.length > 30){
+    currentSelectorsText = currentSelectorsText.substring(0,30) + '...';
+  }
+  
+  titleElement.text(currentSelectorsText);
 }
 
 /* COUNTING UP
