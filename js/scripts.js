@@ -215,7 +215,12 @@ $(function() { //Run when the DOM is ready to be manipulated.
         }
       },
       sortBy : 'recent'
+      }, function(){
+        addGridClasses($container); //Add classes to specific grid images so we can move their rollover content.
     });
+    
+    
+    
 
     //Fade and slideDown the sorts and filters when you rollover the grid.
     //We use the one() jquery function to remove the event handler after it fires one time.
@@ -304,8 +309,10 @@ $(function() { //Run when the DOM is ready to be manipulated.
       
       $container.isotope({
         filter: selector
-      });
-
+      }, function(){
+        addGridClasses($container); //Add classes to specific grid images so we can move their rollover content.
+      });      
+      
       //Run colorbox again so those that were filtered out are no longer included.
       setupColorBox();
     });
@@ -617,7 +624,7 @@ function showPageContent(pageToShow, moveDirection){
 }
 
 
-/* FILTERS
+/* FILTERS AND GRID
   * ====================== */
 function makeFilterStick(){  
   //Make sorts and filters fixed once we scroll down.
@@ -655,6 +662,36 @@ function setSortFilterTitle(currentSelectorsText, titleElement){
   
   titleElement.text(currentSelectorsText);
 }
+
+//Add classes to the bottom, left and right elements so we can style their rollover content so it doesn't cut off.
+function addGridClasses($container){
+  var $images = $container.find('.image'),
+    farRightPos = $container.width() - $images.outerWidth(true),
+    bottomPos = $container.height() - $images.outerHeight(true);
+
+  $images.each(function(){
+    var $this = $(this),
+        position = $this.data('isotope-item-position');
+    
+    //Remove all the classes first.
+    $this.removeClass('left right bottom');
+
+    //Add far left and right classes.
+    if(position.x == 0){
+      $this.addClass('left');
+    }
+    else if(position.x == farRightPos){
+      $this.addClass('right');
+    }
+
+    //Add class if the image sits at the very bottom.
+    if(position.y == bottomPos){
+      $this.addClass('bottom');
+    }
+  });
+}
+
+
 
 /* COUNTING UP
   * ====================== */
