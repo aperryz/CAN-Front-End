@@ -1128,7 +1128,7 @@ body.signup {
 }
 
 .signup p {
-  margin: 41px; 0 32px;
+  margin: 41px 0 32px;
 }
 
 .signup input {
@@ -1170,6 +1170,19 @@ body.signup {
   color: #0E527C;
 }
 
+.poster {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px;
+}
+
+.poster.confirmed {
+  background: url('../img/dfo/body-bg.jpg') repeat 0 0;
+  -moz-box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.7);
+      box-shadow: 1px 5px 10px 1px rgba(0,0,0,0.7);
+}
+
 #confirm-posters img {
   padding: 4px;
   background-color: #fff;
@@ -1178,36 +1191,27 @@ body.signup {
 #confirm-posters label {
   width: 200px;
   font: 16px/18px "proxima-nova", sans-serif;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #84BDD4;
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 #confirm-posters input {
-  margin-bottom: 45px;
+  margin-bottom: 10px;
   margin-top: 3px;
 }
 
-a.disagree {
-  display: block;
-  margin: 0 auto;
-  width: 135px;
+#proceed-container {
+  border-top: 2px solid #84BDD4;
+  margin-top: 45px;
+}
+
+#proceed-container p {
+  margin: 20px 0 10px;
+}
+
+#proceed-container a {
   color: #fff;
-  opacity: .65;
-  filter: alpha(opacity=65);
-  margin-bottom: 55px;
+  text-decoration: underline;
 }
-
-a.disagree:hover {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-
-.button-break {
-  border-bottom: 2px solid #84BDD4;
-  margin-bottom: 28px;
-}
-
 
 /**** PROFILE SETTINGS STYLES *********/
 /**************************************/

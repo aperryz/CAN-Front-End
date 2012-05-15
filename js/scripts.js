@@ -399,13 +399,14 @@ $('input, textarea').placeholder();
 /* POSTER CONFIRMATION - DISABLE BUTTON UNTIL TERMS AND POSTER CONFIRMED
   * ====================== */ 
 $('#confirm-posters input').change(function() {
-    var proceedButton = $('#proceed');
+    var $this = $(this);
     
-    if (!$(this).is(':checked')) {
-      proceedButton.attr('disabled', 'disabled');
+    if (!$this.is(':checked')) {
+      $this.closest('.poster').removeClass('confirmed');
     }
     else {
-      proceedButton.removeAttr('disabled');
+      console.log()
+      $this.closest('.poster').addClass('confirmed');
     }
 });    
 }); //END OF DOCUMENT READY FUNCTION

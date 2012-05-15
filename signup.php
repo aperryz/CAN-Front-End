@@ -31,21 +31,54 @@
       
       
       <div id="confirm-posters">
-        <h1>In order to migrate your work from 2008, we need you to confirm that each poster below is yours and that it is ok to migrate:</h1>
-        
-        <img src="img/dfo/designs/example-poster-192-247.jpg" width="192" height="247" alt="Awesome Poster" title="Awesome Poster for Barack Obama" />
-        
+        <h1>In order to migrate your work from 2008, we need to ensure each poster below is yours.  Please uncheck any that are not yours and click the button to proceed.</h1>
         <form>
-          <label class="checkbox">
-            <input type="checkbox"> This is my poster and I agree to the <a href="#">terms</a>
-          </label>
+        
+        <div id="posters">
           
-          <div class="button-break"> 
-            <a href="#" class="disagree">No, this isn’t mine or I don’t agree to the terms</a>
-          </div>
+          <div class="poster confirmed">
+            <img src="img/dfo/designs/example-poster-192-247.jpg" width="192" height="247" alt="Awesome Poster" title="Awesome Poster for Barack Obama" />
+            <label class="checkbox">
+              <input type="checkbox" checked="checked"> This is my really cool poster
+            </label>
+          </div><!-- .poster -->
           
-          <button id="proceed" type="submit" class="btn" disabled>Proceed</button>
-        </form>        
+          <div class="poster confirmed">
+            <img src="img/dfo/designs/example-poster-192-247.jpg" width="192" height="247" alt="Awesome Poster" title="Awesome Poster for Barack Obama" />
+            <label class="checkbox">
+              <input type="checkbox" checked="checked"> This is my very awesome poster
+            </label>
+          </div><!-- .poster -->
+          
+          <div class="poster confirmed">
+            <img src="img/dfo/designs/example-poster-192-247.jpg" width="192" height="247" alt="Awesome Poster" title="Awesome Poster for Barack Obama" />
+            <label class="checkbox">
+              <input type="checkbox" checked="checked"> This is my completely great poster
+            </label>
+          </div><!-- .poster -->
+          
+          <div class="poster confirmed">
+            <img src="img/dfo/designs/example-poster-192-247.jpg" width="192" height="247" alt="Awesome Poster" title="Awesome Poster for Barack Obama" />
+            <label class="checkbox">
+              <input type="checkbox" checked="checked"> This is my wonderful poster
+            </label>
+          </div><!-- .poster -->
+          
+          <div class="poster confirmed">
+            <img src="img/dfo/designs/example-poster-192-247.jpg" width="192" height="247" alt="Awesome Poster" title="Awesome Poster for Barack Obama" />
+            <label class="checkbox">
+              <input type="checkbox" checked="checked"> This is my beautiful poster
+            </label>
+          </div><!-- .poster -->
+
+        </div><!-- #posters -->
+        
+        <div id="proceed-container">
+          <p>By clicking proceed you agree to <a href="#">our legal jargon</a>.</p>
+          <button id="proceed" type="submit" class="btn">Proceed</button>
+        </div><!-- #proceed-container -->
+        
+        </form> 
         
       </div><!-- #confirm-posters -->
     
