@@ -605,8 +605,7 @@ a:link {
   display: inline-block;
   border-left:   8px solid transparent;
   border-right:  8px solid transparent;
-  border-bottom: 8px solid #222;
-  border-bottom-color: #fff;
+  border-bottom: 8px solid #fff;
   position: absolute;
   top: -8px;
   left: 47%;
@@ -621,6 +620,56 @@ a:link {
   position: absolute;
   top: -6px;
   left: 48%;
+}
+
+/* Far Left Container Images */
+.left .dropdown-menu {
+  margin-left: 0px;
+}
+
+.left .dropdown-menu:before {
+  left: 22%;
+}
+
+.left .dropdown-menu:after {
+  left: 23%;
+}
+
+/* Far Right Container Images */
+.right .dropdown-menu {
+  margin-left: -155px;
+}
+
+.right .dropdown-menu:before {
+  left: 73%;
+}
+
+.right .dropdown-menu:after {
+  left: 74%;
+}
+
+/* Bottom Container Images */
+.bottom .dropdown-menu {
+  top: -48%;
+}
+
+.bottom .dropdown-menu:before {
+  bottom: -8px;
+  top: auto;
+  border-bottom: none;
+  border-top: 8px solid #fff;
+}
+
+.bottom .dropdown-menu:after {
+  bottom: -6px;
+  top: auto;
+  border-bottom: none;
+  border-top: 6px solid #000;
+}
+
+/* One Row Container Images */
+.top.bottom .dropdown-menu {
+  top: 47%;
 }
 
 .dropdown-menu .submission-title {

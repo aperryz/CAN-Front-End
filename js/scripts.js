@@ -336,6 +336,8 @@ $(function() { //Run when the DOM is ready to be manipulated.
       $container.isotope({
         sortBy : sortName,
         sortAscending: sortAscending[sortName]
+      }, function(){
+        addGridClasses($container); //Add classes to specific grid images so we can move their rollover content.
       });
       
       //Change the sort title to match the chosen sort
@@ -665,7 +667,7 @@ function setSortFilterTitle(currentSelectorsText, titleElement){
 
 //Add classes to the bottom, left and right elements so we can style their rollover content so it doesn't cut off.
 function addGridClasses($container){
-  var $images = $container.find('.image'),
+  var $images = $container.find('.image').not('.isotope-hidden'),
     farRightPos = $container.width() - $images.outerWidth(true),
     bottomPos = $container.height() - $images.outerHeight(true);
 
@@ -674,9 +676,9 @@ function addGridClasses($container){
         position = $this.data('isotope-item-position');
     
     //Remove all the classes first.
-    $this.removeClass('left right bottom');
+    $this.removeClass('left right top bottom');
 
-    //Add far left and right classes.
+    //Add far left or far right class.
     if(position.x == 0){
       $this.addClass('left');
     }
@@ -684,7 +686,11 @@ function addGridClasses($container){
       $this.addClass('right');
     }
 
-    //Add class if the image sits at the very bottom.
+    //Add top row class.
+    if(position.y == 0){
+      $this.addClass('top');
+    }
+    //Add bottom row class.
     if(position.y == bottomPos){
       $this.addClass('bottom');
     }
