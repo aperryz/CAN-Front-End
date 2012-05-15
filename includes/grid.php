@@ -65,6 +65,7 @@
         </ul>
       </div>
       <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=33">
+        <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854252</p><!-- Timestamp -->
           <p class="sort-artist">Lj</p>
@@ -75,9 +76,15 @@
           <p class="sort-purchased">401</p>
           <p>Submission ID: 33</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=32">
+        <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854000</p><!-- Timestamp -->
           <p class="sort-artist">Lh</p>
@@ -88,9 +95,15 @@
           <p class="sort-purchased">402</p>
           <p>Submission ID: 32</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2008 posters-book" data-colorbox-url="includes/colorbox.php?id=31">
+        <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854695</p><!-- Timestamp -->
           <p class="sort-artist">Lg</p>
@@ -101,9 +114,15 @@
           <p class="sort-purchased">403</p>
           <p>Submission ID: 31</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=30">
+        <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854357</p><!-- Timestamp -->
           <p class="sort-artist">Lp</p>
@@ -114,9 +133,15 @@
           <p class="sort-purchased">404</p>
           <p>Submission ID: 30</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2008 posters-book" data-colorbox-url="includes/colorbox.php?id=29">
+        <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
          <p class="sort-recent">1336854222</p><!-- Timestamp -->
           <p class="sort-artist">Lo</p>
@@ -127,9 +152,15 @@
           <p class="sort-purchased">405</p>
           <p>Submission ID: 29</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=28">
+        <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
          <p class="sort-recent">1336854111</p><!-- Timestamp -->
           <p class="sort-artist">Li</p>
@@ -140,9 +171,15 @@
           <p class="sort-purchased">406</p>
           <p>Submission ID: 28</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=27">
+        <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854987</p><!-- Timestamp -->
           <p class="sort-artist">Lu</p>
@@ -153,9 +190,15 @@
           <p class="sort-purchased">407</p>
           <p>Submission ID: 27</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2008 posters-book" data-colorbox-url="includes/colorbox.php?id=26">
+        <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854999</p><!-- Timestamp -->
           <p class="sort-artist">Ly</p>
@@ -166,9 +209,15 @@
           <p class="sort-purchased">408</p>
           <p>Submission ID: 26</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2008 osama" data-colorbox-url="includes/colorbox.php?id=25">
+        <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854333</p><!-- Timestamp -->
           <p class="sort-artist">Lt</p>
@@ -179,9 +228,15 @@
           <p class="sort-purchased">409</p>
           <p>Submission ID: 25</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=24">
+        <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854444</p><!-- Timestamp -->
           <p class="sort-artist">Lr</p>
@@ -192,9 +247,15 @@
           <p class="sort-purchased">410</p>
           <p>Submission ID: 24</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=23">
+        <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854555</p><!-- Timestamp -->
           <p class="sort-artist">Le</p>
@@ -205,9 +266,15 @@
           <p class="sort-purchased">411</p>
           <p>Submission ID: 23</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=22">
+        <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854666</p><!-- Timestamp -->
           <p class="sort-artist">Lw</p>
@@ -218,9 +285,15 @@
           <p class="sort-purchased">412</p>
           <p>Submission ID: 22</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=21">
+        <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854646</p><!-- Timestamp -->
           <p class="sort-artist">Lq</p>
@@ -231,9 +304,15 @@
           <p class="sort-purchased">413</p>
           <p>Submission ID: 21</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=20">
+        <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854351</p><!-- Timestamp -->
           <p class="sort-artist">Ll</p>
@@ -244,9 +323,15 @@
           <p class="sort-purchased">414</p>
           <p>Submission ID: 20</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=19">
+        <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854465</p><!-- Timestamp -->
           <p class="sort-artist">Lk</p>
@@ -257,9 +342,15 @@
           <p class="sort-purchased">415</p>
           <p>Submission ID: 19</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=18">
+        <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854854</p><!-- Timestamp -->
           <p class="sort-artist">Lj</p>
@@ -270,9 +361,15 @@
           <p class="sort-purchased">416</p>
           <p>Submission ID: 18</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=17">
+        <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854354</p><!-- Timestamp -->
           <p class="sort-artist">Lh</p>
@@ -283,9 +380,15 @@
           <p class="sort-purchased">417</p>
           <p>Submission ID: 17</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=16">
+        <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854875</p><!-- Timestamp -->
           <p class="sort-artist">Lg</p>
@@ -296,9 +399,15 @@
           <p class="sort-purchased">418</p>
           <p>Submission ID: 16</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=15">
+        <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
          <p class="sort-recent">1336854150</p><!-- Timestamp -->
           <p class="sort-artist">Lf</p>
@@ -309,9 +418,15 @@
           <p class="sort-purchased">480</p>
           <p>Submission ID: 15</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=14">
+        <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
          <p class="sort-recent">1336854160</p><!-- Timestamp -->
           <p class="sort-artist">Ld</p>
@@ -322,9 +437,15 @@
           <p class="sort-purchased">420</p>
           <p>Submission ID: 14</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=13">
+        <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854196</p><!-- Timestamp -->
           <p class="sort-artist">Ls</p>
@@ -335,9 +456,15 @@
           <p class="sort-purchased">421</p>
           <p>Submission ID: 13</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=12">
+        <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854268</p><!-- Timestamp -->
           <p class="sort-artist">La</p>
@@ -348,9 +475,15 @@
           <p class="sort-purchased">422</p>
           <p>Submission ID: 12</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=11">
+        <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
          <p class="sort-recent">1336854391</p><!-- Timestamp -->
           <p class="sort-artist">Lm</p>
@@ -361,9 +494,15 @@
           <p class="sort-purchased">423</p>
           <p>Submission ID: 11</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=10">
+        <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854578</p><!-- Timestamp -->
           <p class="sort-artist">Ln</p>
@@ -374,9 +513,15 @@
           <p class="sort-purchased">424</p>
           <p>Submission ID: 10</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=9">
+        <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854652</p><!-- Timestamp -->
           <p class="sort-artist">Lb</p>
@@ -387,9 +532,15 @@
           <p class="sort-purchased">425</p>
           <p>Submission ID: 9</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=8">
+        <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854941</p><!-- Timestamp -->
           <p class="sort-artist">Lv</p>
@@ -400,9 +551,15 @@
           <p class="sort-purchased">426</p>
           <p>Submission ID: 8</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=7">
+        <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854981</p><!-- Timestamp -->
           <p class="sort-artist">Lc</p>
@@ -413,9 +570,15 @@
           <p class="sort-purchased">427</p>
           <p>Submission ID: 7</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-4.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=6">
+        <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />        
         <div class="img-content">
           <p class="sort-recent">1336854687</p><!-- Timestamp -->
           <p class="sort-artist">Lx</p>
@@ -426,9 +589,15 @@
           <p class="sort-purchased">428</p>
           <p>Submission ID: 6</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-5.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
       <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=5">
+        <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
         <div class="img-content">
           <p class="sort-recent">1336854385</p><!-- Timestamp -->
           <p class="sort-artist">Lz</p>
@@ -439,7 +608,12 @@
           <p class="sort-purchased">429</p>
           <p>Submission ID: 5</p>
         </div>
-        <img src="img/dfo/designs/dfo-design-6.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
+        <ul class="dropdown-menu">
+          <li class="submission-title">Did the Right Thing</li>
+          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li class="divider"></li>
+          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+        </ul>
       </div>
     </div>
   </div><!-- END GRID -->
