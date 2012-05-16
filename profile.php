@@ -44,7 +44,7 @@
 <div class="container">
   <div class="no-submissions">
     <p>You haven't contributed any posters yet!</p>
-    <a class="btn" href="/can-front-end/#contributing">Contribute</a>
+    <a class="btn" href="index.php#contributing">Contribute</a>
   </div>
   
 <?php //include_once 'includes/grid.php';  //Uncomment this include and remove .no-submissions above to show grid. ?>  
