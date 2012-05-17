@@ -10,7 +10,7 @@ if(isset($_GET['id'])){
 
 <!-- ColorBox for displaying individual submissions in modal view. -->
 <!-- Inline height for #colorbox-info needs to be adjusted with PHP to content height to avoid cutting off content -->
-<div id="colorbox-info" style="height: 1300px;">
+<div id="colorbox-info" style="height: 1800px;">
   <div id="image-holder">
     <img src="img/dfo/designs/example-poster-443-573.jpg" width="435" height="564" alt="Crazy Awesome Poster Alt" title="Crazy Totally Sweet Poster Title" />
     <div class="fb-like" data-href="http://bignewideas.com/" data-send="false" data-layout="button_count" data-width="40" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div>
@@ -78,8 +78,8 @@ if(isset($_GET['id'])){
         <div id="social-boxes">
           <div id="comments">
             <form class="form-search">
-              <textarea rows="1"></textarea>
               <button type="submit" class="btn">Add Comment</button>
+              <textarea class="expanding" rows="1"></textarea>
             </form>
             <ul id="comments-list">
               <li>

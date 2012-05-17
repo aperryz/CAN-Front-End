@@ -1068,7 +1068,7 @@ a:link {
 
 #comments textarea {
   border: 1px solid #0e527c;
-  width: 82%;
+  width: 521px;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
@@ -1078,6 +1078,7 @@ a:link {
 }
 
 #comments .form-search button {
+  float: right;
   background-color: #0E527C;
   color: #fff;
   border: none;
@@ -1091,6 +1092,10 @@ a:link {
   background-color: #0E527C;
 }
 
+#social-boxes div.expandingText,
+#social-boxes pre div { 
+  padding-top: 0;
+}
 
 /**** FOOTER STYLES ****/
 /***********************/

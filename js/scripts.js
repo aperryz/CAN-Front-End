@@ -954,6 +954,9 @@ function colorboxClickEvents(){
       $.colorbox.close();
     }
   });
+  
+  //Make the comment textarea expand automatically when users type.
+  $("#colorbox textarea").expandingTextarea();
 }
 
 

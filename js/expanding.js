@@ -31,7 +31,7 @@
         'marginLeft', 'marginRight',
         'marginTop','marginBottom',
         'boxSizing', 'webkitBoxSizing', 'mozBoxSizing', 'msBoxSizing',
-        'word-break', 'width'
+        'word-break'
     ];
     
     var textareaCSS = {
@@ -52,6 +52,7 @@
     
     function resize() {
         $(this).closest('.expandingText').find("div").text(this.value + ' ');
+        $(this).closest('.expandingText').find("pre").width($(this).outerWidth());
         $(this).trigger("resize.expanding");
     }
     
