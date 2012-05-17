@@ -5,8 +5,8 @@ $(function() { //Run when the DOM is ready to be manipulated.
   
   //show the correct content from the start.
   var currentPage = getCurrentPage(),
-    pages = getPages(),
-    landingPage = showLandingPage(currentPage);
+  pages = getPages(),
+  landingPage = showLandingPage(currentPage);
     
   setPrevNextArrows(currentPage);
   
@@ -19,8 +19,8 @@ $(function() { //Run when the DOM is ready to be manipulated.
   //Animate the pulldown to show and hide when the pulldown button is clicked.
   $('#pulldown-btn').click(function(){
     var dropdown = $('.dropdown'),
-      body = $('body'),
-      sortsFilters = $('#sorts-filters');
+    body = $('body'),
+    sortsFilters = $('#sorts-filters');
     
     if (dropdown.hasClass('active')){
       dropdown.animate({
@@ -100,12 +100,12 @@ $(function() { //Run when the DOM is ready to be manipulated.
     //If not the rollover_bar is hidden from the start.
     if($activeLi.exists()){
       $rollover_bar
-        .width($activeLi.width())
-        .css("left", $activeLi.children(".active a").position().left)
+      .width($activeLi.width())
+      .css("left", $activeLi.children(".active a").position().left);
     }
     $rollover_bar
-      .data("origLeft", $rollover_bar.position().left)
-      .data("origWidth", $rollover_bar.width());
+    .data("origLeft", $rollover_bar.position().left)
+    .data("origWidth", $rollover_bar.width());
 
     $("#main-nav li a").hover(function() {
       $el = $(this);
@@ -161,8 +161,8 @@ $(function() { //Run when the DOM is ready to be manipulated.
   //We do this by triggering a click event on that navigation item.
   $('.page-control').click(function(evt){
     var clickedArrow = $(this),
-      currentPage = getCurrentPage(),
-      prevNextPages = getPrevNextPages(currentPage);
+    currentPage = getCurrentPage(),
+    prevNextPages = getPrevNextPages(currentPage);
     
     if($("#main-nav").exists()){ //If the main nav exists we just trigger a click event.
       if(clickedArrow.hasClass("prev")){ //If they clicked the previous arrow.
@@ -186,14 +186,14 @@ $(function() { //Run when the DOM is ready to be manipulated.
   if($('#sorts-filters').exists()){
   
     var $container = $('#images'),
-        filters = {};
+    filters = {};
 
     $container.isotope({
       itemSelector: '.image',
       itemPositionDataEnabled: true,
       getSortData : {
         recent : function ( $elem ) {
-          return parseInt($elem.find('.sort-recent').text());  //Number
+          return parseInt($elem.find('.sort-recent').text(), 10);  //Number
         },
         artist : function ( $elem ) {
           return $elem.find('.sort-artist').text();
@@ -202,21 +202,21 @@ $(function() { //Run when the DOM is ready to be manipulated.
           return $elem.find('.sort-obamaccomplishment').text();
         },
         liked : function ( $elem ) {
-          return parseInt($elem.find('.sort-liked').text()); //Number
+          return parseInt($elem.find('.sort-liked').text(), 10); //Number
         },
         shared : function ( $elem ) {
-          return parseInt($elem.find('.sort-shared').text()); //Number
+          return parseInt($elem.find('.sort-shared').text(), 10); //Number
         },
         downloaded : function ( $elem ) {
-          return parseInt($elem.find('.sort-downloaded').text()); //Number
+          return parseInt($elem.find('.sort-downloaded').text(), 10); //Number
         },
         purchased : function ( $elem ) {
-          return parseInt($elem.find('.sort-purchased').text()); //Number
+          return parseInt($elem.find('.sort-purchased').text(), 10); //Number
         }
       },
       sortBy : 'recent'
-      }, function(){
-        addGridClasses($container); //Add classes to specific grid images so we can move their rollover content.
+    }, function(){
+      addGridClasses($container); //Add classes to specific grid images so we can move their rollover content.
     });
     
     
@@ -225,37 +225,37 @@ $(function() { //Run when the DOM is ready to be manipulated.
     //Fade and slideDown the sorts and filters when you rollover the grid.
     //We use the one() jquery function to remove the event handler after it fires one time.
     $container.one("mouseover", function(){
-        $('#sorts-filters').animate({
-          opacity: 1,
-          height: 'show'
-        }, 500);
+      $('#sorts-filters').animate({
+        opacity: 1,
+        height: 'show'
+      }, 500);
 
-        //Set filters to stick when we move below the page.
-        makeFilterStick();
+      //Set filters to stick when we move below the page.
+      makeFilterStick();
     });
     
 
     // Handle the combined filters
     $('.filter a').click(function(evt){
       var $this = $(this), //Filter that was just clicked
-          $optionSet = $this.parents('.filter'), //Entire set of filters
-          $otherOptionSet = $optionSet.closest('.sort-filter').siblings('.sort-filter').find('.filter'), //Other set of filters
-          $allFilter = $optionSet.find('a[data-filter-value="*"]'); //Filter that shows all
+      $optionSet = $this.parents('.filter'), //Entire set of filters
+      $otherOptionSet = $optionSet.closest('.sort-filter').siblings('.sort-filter').find('.filter'), //Other set of filters
+      $allFilter = $optionSet.find('a[data-filter-value="*"]'); //Filter that shows all
             
       //If user clicked a sub that was already selected.  We don't do this for the all selection.
-      if($this.attr('data-filter-value') != '*' && $this.hasClass('active')){
+      if($this.attr('data-filter-value') !== '*' && $this.hasClass('active')){
         $this.removeClass('active');
         if(!$optionSet.find('a.active').exists()){ //If nothing is checked then reselect all.
           $allFilter.addClass('active');
         }
       }
       //If user clicked a sub and all is selected.
-      else if($this.attr('data-filter-value') != '*' && $allFilter.hasClass('active')){
+      else if($this.attr('data-filter-value') !== '*' && $allFilter.hasClass('active')){
         $allFilter.removeClass('active');
         $this.addClass('active');
       }
       //If user selected all when other subs were selected.
-      else if($this.attr('data-filter-value') == '*'){
+      else if($this.attr('data-filter-value') === '*'){
         $optionSet.find('a').removeClass('active');
         $this.addClass('active');
       }
@@ -270,9 +270,9 @@ $(function() { //Run when the DOM is ready to be manipulated.
       }
       
       var currentGroup = $optionSet.attr('data-filter-group'), 
-          otherGroup = $otherOptionSet.attr('data-filter-group'),
-          currentSelectors = [],
-          currentSelectorsText = [];
+      otherGroup = $otherOptionSet.attr('data-filter-group'),
+      currentSelectors = [],
+      currentSelectorsText = [];
       
       //Add all the currently active filters from this group and put them in an array. Then add to the filters object.
       $optionSet.find('a.active').each(function(){
@@ -287,11 +287,11 @@ $(function() { //Run when the DOM is ready to be manipulated.
       
       //Loop through and create an array in the correct format for isotope.
       var selector = [],
-          filterLength = filters[currentGroup].length;
+      filterLength = filters[currentGroup].length;
       for (var i = 0; i < filterLength; i++){
        
         //If the other group is defined and isn't set to all then loop through them.
-        if(typeof filters[otherGroup] !== 'undefined' && filters[otherGroup][0] != '*'){
+        if(typeof filters[otherGroup] !== 'undefined' && filters[otherGroup][0] !== '*'){
           var otherFilterLength = filters[otherGroup].length;
           
           //Loop through the other group for each item.
@@ -330,8 +330,8 @@ $(function() { //Run when the DOM is ready to be manipulated.
     //Add click event to sorting links.
     $('#sort a').click(function(){
       var $this = $(this),
-          sortName = $this.attr('href').slice(1), // get href attribute, minus the '#'
-          sortNameArray = new Array($this.text()); //Create an array to change the title
+      sortName = $this.attr('href').slice(1), // get href attribute, minus the '#'
+      sortNameArray = new Array($this.text()); //Create an array to change the title
           
       $container.isotope({
         sortBy : sortName,
@@ -365,50 +365,49 @@ $(function() { //Run when the DOM is ready to be manipulated.
   
   /* SETUP SUBMISSION MODAL
   * ====================== */ 
- //Check if the submission modal even exists first.
- if($('#submission-modal').exists()){
-  setupSubmissionModal($('#submission-modal'));
- }
+  //Check if the submission modal even exists first.
+  if($('#submission-modal').exists()){
+    setupSubmissionModal($('#submission-modal'));
+  }
   
   
- /* SETUP COLORBOX FROM PAGE LOAD
+  /* SETUP COLORBOX FROM PAGE LOAD
   * ====================== */ 
- //Setup colorbox to run on the current submissions that are available.
- setupColorBox();
+  //Setup colorbox to run on the current submissions that are available.
+  setupColorBox();
  
- //Setup click events from initial page load in case we're on a standalone content page.
- colorboxClickEvents();
+  //Setup click events from initial page load in case we're on a standalone content page.
+  colorboxClickEvents();
  
 
-/* FACEBOOK LIKE BUTTON FOR COLORBOX
+  /* FACEBOOK LIKE BUTTON FOR COLORBOX
   * ====================== */ 
-//In order to load another Facebook like button from AJAX we need to reparse the FBML.
-$(document).ajaxComplete(function(){
+  //In order to load another Facebook like button from AJAX we need to reparse the FBML.
+  $(document).ajaxComplete(function(){
     try{
-        FB.XFBML.parse(); 
+      FB.XFBML.parse(); 
     }catch(ex){}
-});
+  });
 
-/* PLACEHOLDER SUPPORT
+  /* PLACEHOLDER SUPPORT
   * ====================== */ 
-//Add support for the placeholder attribute in older browsers.
-$('input, textarea').placeholder(); 
+  //Add support for the placeholder attribute in older browsers.
+  $('input, textarea').placeholder(); 
 
 
 
-/* POSTER CONFIRMATION - DISABLE BUTTON UNTIL TERMS AND POSTER CONFIRMED
+  /* POSTER CONFIRMATION - ADD STYLING CLASS WHEN CHECKBOX IS CHECKED
   * ====================== */ 
-$('#confirm-posters input').change(function() {
+  $('#confirm-posters input').change(function() {
     var $this = $(this);
     
     if (!$this.is(':checked')) {
       $this.closest('.poster').removeClass('confirmed');
     }
     else {
-      console.log()
       $this.closest('.poster').addClass('confirmed');
     }
-});    
+  });    
 }); //END OF DOCUMENT READY FUNCTION
 
 
@@ -420,11 +419,10 @@ function changePage(pageToShow){
   //Handle page movement when a new page is clicked.
   pageToShow = removeHash(pageToShow);
 
-  currentPage = getCurrentPage();
+  var currentPage = getCurrentPage(),
+      moveDirection = getPageDirection(currentPage, pageToShow);
 
-  var moveDirection = getPageDirection(currentPage, pageToShow);
-
-  if(moveDirection != 'same') { //Only show the new page and previous and next arrows if it's a different page.
+  if(moveDirection !== 'same') { //Only show the new page and previous and next arrows if it's a different page.
     showPageContent(pageToShow, moveDirection);
     setPrevNextArrows(pageToShow, moveDirection);
   }
@@ -457,7 +455,7 @@ function getPages(){
   var pages = [];
   $("#pages .page-header h1").each(function(index){
     pages.push($(this).attr('data-name'));
-  })
+  });
       
   return pages;
 }
@@ -465,15 +463,15 @@ function getPages(){
 //Find out if the page we are going to show is before or after the current page.
 function getPageDirection(currentPage, pageToShow){
   var pages = getPages(),
-    currentPagePlace,
-    pageToShowPlace;
+  currentPagePlace,
+  pageToShowPlace;
     
   //Find the location of both the current page and the page to show in the array.
   for(var i = 0; i < pages.length; i++){
-    if(currentPage == pages[i]){
+    if(currentPage === pages[i]){
       currentPagePlace = i;
     }
-    if(pageToShow == pages[i]){
+    if(pageToShow === pages[i]){
       pageToShowPlace = i;
     }
   }
@@ -495,18 +493,18 @@ function getPageDirection(currentPage, pageToShow){
 //We can't use this when we click the navigation because the default change comes after what we do.
 function getCurrentPage(){
   var pages = getPages(),
-      currentPage = removeHash(window.location.hash),
-      foundPage = false;
+  currentPage = removeHash(window.location.hash),
+  foundPage = false;
   
   //Loop through each of the pages and if one of the pages matches then keep that as the current page.
-  for(var i=0; i < pages.length; i++){
-    if(pages[i] == currentPage){
+  for(var i = 0; i < pages.length; i++){
+    if(pages[i] === currentPage){
       foundPage = true;
     }
   }
   
-  //If the has doesn't match any of th pages then show the first page.
-  if (foundPage == false) { 
+  //If the hash doesn't match any of th pages then show the first page.
+  if (foundPage === false) { 
     currentPage = pages[0];
   }
     
@@ -517,22 +515,22 @@ function getCurrentPage(){
 //Set previous and next button text.
 function setPrevNextArrows(currentPage, moveDirection){
   var prevNextPages = getPrevNextPages(currentPage),
-    pageControlPrev = $('#pages .page-control.prev'),
-    pageControlNext = $('#pages .page-control.next');
+  pageControlPrev = $('#pages .page-control.prev'),
+  pageControlNext = $('#pages .page-control.next');
     
   pageControlPrev.fadeOut(100);
   pageControlNext.fadeOut(100);
     
   //If the previous link should be shown change the text and fade it in.
-  if(prevNextPages['prev'] != false){
+  if(prevNextPages['prev'] !== false){
     pageControlPrev.html(getLinkString(prevNextPages['prev']));
     pageControlPrev.attr('data-name', prevNextPages['prev']);
     
     pageControlPrev.fadeIn(100);
   }
     
-  //If the next link should be showng change the text and fade it in.
-  if(prevNextPages['next'] != false){
+  //If the next link should be shown change the text and fade it in.
+  if(prevNextPages['next'] !== false){
     pageControlNext.html(getLinkString(prevNextPages['next']));
     pageControlNext.attr('data-name', prevNextPages['next']);
     
@@ -545,15 +543,15 @@ function setPrevNextArrows(currentPage, moveDirection){
 //Return false for that array value if a previous or current doesn't exist.
 function getPrevNextPages(currentPage){
   var prevNextPages = [],
-    pages = getPages();
+  pages = getPages();
   
-  for (i = 0; i < pages.length; i++){
-    if (pages[i] ==  currentPage){
-      if(i == 0){
+  for (var i = 0; i < pages.length; i++){
+    if (pages[i] ===  currentPage){
+      if(i === 0){
         prevNextPages['prev'] = false;
         prevNextPages['next'] = pages[i + 1];
       }
-      else if(i == pages.length - 1){
+      else if(i === pages.length - 1){
         prevNextPages['prev'] = pages[i - 1];
         prevNextPages['next'] = false;
       }
@@ -583,9 +581,9 @@ function showLandingPage(landingPageName){
   
 function showPageContent(pageToShow, moveDirection){
   var pages = $('#pages'),
-    currentContent = $('#pages .page.active'),
-    currentContentHeight = currentContent.height(),
-    pageToShowContent = $('#pages .page h1[data-name="' + pageToShow + '"]').closest('div.page');
+  currentContent = $('#pages .page.active'),
+  currentContentHeight = currentContent.height(),
+  pageToShowContent = $('#pages .page h1[data-name="' + pageToShow + '"]').closest('div.page');
     
   //Set the height of the pages div to the current page height.
   pages.css('height', currentContentHeight);
@@ -606,7 +604,7 @@ function showPageContent(pageToShow, moveDirection){
     });
 
     //Based on the location of the new page vs. the old page, we set the starting location.
-    var startLocation = (moveDirection == 'next') ? '100px' : '-100px';
+    var startLocation = (moveDirection === 'next') ? '100px' : '-100px';
     pageToShowContent.css('left', startLocation);
     pageToShowContent.addClass("active");  
     pageToShowContent.animate({
@@ -631,12 +629,13 @@ function showPageContent(pageToShow, moveDirection){
   * ====================== */
 function makeFilterStick(){  
   //Make sorts and filters fixed once we scroll down.
-  var $window = $(window),  
-    sortsFilters = $('#sorts-filters'),
-    sortsFiltersTop = sortsFilters.offset().top;
+  var $window = $(window), 
+  navbarFill = $('.navbar .fill'),
+  sortsFilters = $('#sorts-filters'),
+  sortsFiltersTop = sortsFilters.offset().top;
      
   //Remove any previously set scroll events.
-  $window.unbind('scroll');  
+  $window.off('scroll');  
 
   $window.scroll(function(e){
     if ($window.scrollTop() > sortsFiltersTop - 50) {
@@ -647,9 +646,11 @@ function makeFilterStick(){
       }, 3000);
       
       sortsFilters.addClass('low-scroll');
+      navbarFill.addClass('low-scroll');
     }
     else {
       sortsFilters.removeClass('low-scroll');
+      navbarFill.removeClass('low-scroll');
     }
   }); 
 }
@@ -669,30 +670,30 @@ function setSortFilterTitle(currentSelectorsText, titleElement){
 //Add classes to the bottom, left and right elements so we can style their rollover content so it doesn't cut off.
 function addGridClasses($container){
   var $images = $container.find('.image').not('.isotope-hidden'),
-    farRightPos = $container.width() - $images.outerWidth(true),
-    bottomPos = $container.height() - $images.outerHeight(true);
+  farRightPos = $container.width() - $images.outerWidth(true),
+  bottomPos = $container.height() - $images.outerHeight(true);
 
   $images.each(function(){
     var $this = $(this),
-        position = $this.data('isotope-item-position');
+    position = $this.data('isotope-item-position');
     
     //Remove all the classes first.
     $this.removeClass('left right top bottom');
 
     //Add far left or far right class.
-    if(position.x == 0){
+    if(position.x === 0){
       $this.addClass('left');
     }
-    else if(position.x == farRightPos){
+    else if(position.x === farRightPos){
       $this.addClass('right');
     }
 
     //Add top row class.
-    if(position.y == 0){
+    if(position.y === 0){
       $this.addClass('top');
     }
     //Add bottom row class.
-    if(position.y == bottomPos){
+    if(position.y === bottomPos){
       $this.addClass('bottom');
     }
   });
@@ -760,7 +761,7 @@ function setupSubmissionModal(submissionModal){
       //Add event listener to record video link button.
       submissionModal.find('#record-video-select').click(function(){
         //This can be used to place JS actions for the record video content.
-      });
+        });
       
       //Add event listener to the add video link button.
       submissionModal.find('#link-video-select').click(function(){
@@ -789,7 +790,7 @@ function setupSubmissionModal(submissionModal){
     case 'default':
       showImageState('uploadImage', '');
       
-      //Add even listener for uploading image.
+      //Add event listener for uploading image.
       submissionModal.find('.image-upload a').click(function(){
         showImageState('processingImage', $(this));
       });
@@ -812,12 +813,12 @@ function setupSubmissionModal(submissionModal){
 //Show and hide certain video groups based on the current state we should show.
 function showVideoState(videoState, $this){
   var submissionModal = $('#submission-modal'),
-      modalTitle = submissionModal.find('h3'),
-      videoSelection = submissionModal.find('.video-selection'),
-      videoLinkGroup = submissionModal.find('#video-link-group'),
-      processingGroup = submissionModal.find('.processing'),
-      submitCompleteGroup = submissionModal.find('.submit-complete'),
-      backButton = submissionModal.find('#back');
+  modalTitle = submissionModal.find('h3'),
+  videoSelection = submissionModal.find('.video-selection'),
+  videoLinkGroup = submissionModal.find('#video-link-group'),
+  processingGroup = submissionModal.find('.processing'),
+  submitCompleteGroup = submissionModal.find('.submit-complete'),
+  backButton = submissionModal.find('#back');
   
   switch(videoState){
     case 'videoButtons':
@@ -865,10 +866,10 @@ function showVideoState(videoState, $this){
 //Show and hide certain image groups based on the current state we should show.
 function showImageState(imageState, $this){
   var submissionModal = $('#submission-modal'),
-      modalTitle = submissionModal.find('h3'),
-      processingGroup = submissionModal.find('.processing'),
-      submitCompleteGroup = submissionModal.find('.submit-complete'),
-      backButton = submissionModal.find('#back');
+  modalTitle = submissionModal.find('h3'),
+  processingGroup = submissionModal.find('.processing'),
+  submitCompleteGroup = submissionModal.find('.submit-complete'),
+  backButton = submissionModal.find('#back');
   
   switch(imageState){      
     case 'uploadImage':
@@ -903,58 +904,63 @@ function setupColorBox(){
   $.colorbox.remove();
   
   //Add colorbox functionality to only images that aren't hidden by isotope.
-  $('.image').not('.isotope-hidden')
-    .colorbox({
-       rel:'image',
-       width:'849px',
-       opacity:0.8,
-       scalePhotos: false,
-       scrolling: false,
-       top: "110px"
-    });  
+  var $images = $('.image');
+  $images.not('.isotope-hidden').colorbox({
+    rel:'image',
+    width:'849px',
+    opacity:0.8,
+    scalePhotos: false,
+    scrolling: false,
+    top: "110px"
+  });  
+  
+  //Make sure internal links still work how they normally would.
+  $images.find('a').click(function(e){
+    e.stopPropagation();
+  });
     
-  //Add establish click events again when colorbox runs
-  $(document).bind('cbox_complete', colorboxClickEvents);
+  //Establish click events again when colorbox runs
+  $(document).on('cbox_complete', colorboxClickEvents);
 }
 
 function colorboxClickEvents(){
-   //Handle showing and hiding the sidebar boxes for colorbox.
-    $('.submission-engage-box').click(function(){
-      var $this = $(this);
-      $this.toggleClass('active');
-      $this.find('.submission-engage-content').slideToggle(200);
+  //Handle showing and hiding the sidebar boxes for colorbox.
+  $('.submission-engage-box').click(function(){
+    var $this = $(this);
+    $this.toggleClass('active');
+    $this.find('.submission-engage-content').slideToggle(200);
 
-      $this.siblings('.submission-engage-box').removeClass('active');
-      $this.siblings('.submission-engage-box').find('.submission-engage-content').slideUp(200);
-    });
+    $this.siblings('.submission-engage-box').removeClass('active')
+      .find('.submission-engage-content').slideUp(200);
+  });
 
-   //Handle show and hiding the social boxes for Twitter and Comments.
-   $('.social-heading').click(function(){
-     var $this = $(this),
-      thisSocialBox = $('#' + $this.attr('data-social-box'));
+  //Handle show and hiding the social boxes for Twitter and Comments.
+  $('.social-heading').click(function(){
+    var $this = $(this),
+    thisSocialBox = $('#' + $this.attr('data-social-box'));
 
-      //Add and remove active class from headings.
-      $this.addClass('active');
-      $this.siblings().removeClass('active');
+    //Add and remove active class from headings.
+    $this.addClass('active');
+    $this.siblings().removeClass('active');
 
-      //Add and remove hide class from social box with content.
-      thisSocialBox.removeClass('hide');
-      thisSocialBox.siblings().addClass('hide');
-   });
+    //Add and remove hide class from social box with content.
+    thisSocialBox.removeClass('hide');
+    thisSocialBox.siblings().addClass('hide');
+  });
 
-   //Make clicking outside of any of the content boxes close the colorbox.
-   $('#colorbox-info, #submission-content').click(function(evt){
-     if (evt.target.id === "colorbox-info" || evt.target.id === "submission-content"){
+  //Make clicking outside of any of the content boxes close the colorbox.
+  $('#colorbox-info, #submission-content').click(function(evt){
+    if (evt.target.id === "colorbox-info" || evt.target.id === "submission-content"){
       $.colorbox.close();
-     }
-   });
+    }
+  });
 }
 
 
 
 /* GENERAL FUNCTIONS
   * ====================== */ 
- //Check if a jQuery selector returns any results.
- $.fn.exists = function () {
-    return this.length !== 0;
-}
+//Check if a jQuery selector returns any results.
+$.fn.exists = function () {
+  return this.length !== 0;
+};

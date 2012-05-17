@@ -1,7 +1,7 @@
 <div class="navbar navbar-fixed-top">
       
   <!-- Main navigation bar -->
-  <div class="fill">
+  <div class="fill main">
     <div class="container">
       <a class="brand hide-text" href="index.php#home" id="logo">Design for Obama</a>
       <ul class="nav" id="main-nav">

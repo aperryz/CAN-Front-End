@@ -59,9 +59,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=33">
@@ -78,9 +78,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=32">
@@ -97,9 +97,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2008 posters-book" data-colorbox-url="includes/colorbox.php?id=31">
@@ -116,9 +116,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=30">
@@ -135,9 +135,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2008 posters-book" data-colorbox-url="includes/colorbox.php?id=29">
@@ -154,9 +154,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=28">
@@ -173,9 +173,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=27">
@@ -192,9 +192,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2008 posters-book" data-colorbox-url="includes/colorbox.php?id=26">
@@ -211,9 +211,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2008 osama" data-colorbox-url="includes/colorbox.php?id=25">
@@ -230,9 +230,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=24">
@@ -249,9 +249,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=23">
@@ -268,9 +268,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=22">
@@ -287,9 +287,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=21">
@@ -306,9 +306,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=20">
@@ -325,9 +325,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=19">
@@ -344,9 +344,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=18">
@@ -363,9 +363,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=17">
@@ -382,9 +382,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=16">
@@ -401,9 +401,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=15">
@@ -420,9 +420,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 auto" data-colorbox-url="includes/colorbox.php?id=14">
@@ -439,9 +439,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=13">
@@ -458,9 +458,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2008" data-colorbox-url="includes/colorbox.php?id=12">
@@ -477,9 +477,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=11">
@@ -496,9 +496,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=10">
@@ -515,9 +515,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=9">
@@ -534,9 +534,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=8">
@@ -553,9 +553,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 obamacare" data-colorbox-url="includes/colorbox.php?id=7">
@@ -572,9 +572,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 osama" data-colorbox-url="includes/colorbox.php?id=6">
@@ -591,9 +591,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
       <div class="image poster-2012 dont-ask" data-colorbox-url="includes/colorbox.php?id=5">
@@ -610,9 +610,9 @@
         </div>
         <ul class="dropdown-menu">
           <li class="submission-title">Did the Right Thing</li>
-          <li>by <a href="#">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
+          <li>by <a href="profile.php">Don Button</a> on 4-27-12 about <a href="#">Repealing DADT</a></li>
           <li class="divider"></li>
-          <li>2.5K <a href="#">Shares</a> | 235 <a href="#">Downloads</a>  |  96 <a href="#">Sold</a></li>
+          <li>2.5K <span class="share">Shares</span> | 235 <span class="download">Downloads</span>  |  96 <span class="purchase">Sold</span></li>
         </ul>
       </div>
     </div>
