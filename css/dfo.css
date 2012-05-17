@@ -746,6 +746,12 @@ a:link {
   text-align: justify;
 }
 
+.modal .modal-body {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .modal .close {
   position: absolute;
   top: 10px;
