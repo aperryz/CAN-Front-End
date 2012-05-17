@@ -71,7 +71,7 @@
         <input type="text" class="input-xlarge" id="title" placeholder="Title*">
       </div>
       <div class="control-group">
-        <textarea class="input-xlarge" id="description" rows="3" placeholder="Description*"></textarea>
+        <textarea class="input-xlarge expanding" id="description" placeholder="Description*"></textarea>
       </div>
       <div class="control-group">
         <select id="select01" class="input-xlarge">
