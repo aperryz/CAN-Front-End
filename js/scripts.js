@@ -377,7 +377,7 @@ $(function() { //Run when the DOM is ready to be manipulated.
   setupColorBox();
  
   //Setup click events from initial page load in case we're on a standalone content page.
-  colorboxClickEvents();
+  colorboxEvents();
  
 
   /* FACEBOOK LIKE BUTTON FOR COLORBOX
@@ -918,12 +918,33 @@ function setupColorBox(){
   $images.find('a').click(function(e){
     e.stopPropagation();
   });
+  
+  //Store info about the click if they wanted to share, download or purchase.
+  //We use this information when colorbox opens to show one of the dropdowns automatically.
+  $images.find('span.share, span.download, span.purchase').click(function(){
+    var $this = $(this),
+        $imagesContainer = $this.closest('#images');
+        
+    if($this.hasClass('share')){
+      $imagesContainer.data('user-action', 'share');
+    }
+    else if($this.hasClass('download')){
+      $imagesContainer.data('user-action', 'download');
+    }
+    else {
+      $imagesContainer.data('user-action', 'purchase');
+    }
+  });
     
   //Establish click events again when colorbox runs
-  $(document).on('cbox_complete', colorboxClickEvents);
+  $(document).on('cbox_complete', colorboxEvents);
+  //When colorbox closes we want to set user action to '' so the same dropdown doesn't open automatically.
+  $(document).on('cbox_closed', function(){
+    $('#images').data('user-action', '');
+  });  
 }
 
-function colorboxClickEvents(){
+function colorboxEvents(){
   //Handle showing and hiding the sidebar boxes for colorbox.
   $('.submission-engage-box').click(function(){
     var $this = $(this);
@@ -933,6 +954,16 @@ function colorboxClickEvents(){
     $this.siblings('.submission-engage-box').removeClass('active')
       .find('.submission-engage-content').slideUp(200);
   });
+  
+  
+  //Automatically open the appropriate engagement dropdown if the user clicked on one in the dropdown.
+  var $imagesContainer = $('#images'),
+      userAction = $imagesContainer.data('user-action');
+  
+  if(userAction === 'share' || userAction === 'download' || userAction === 'purchase'){
+    $('#submission-engage').find('.' + userAction).trigger('click');
+  }
+  
 
   //Handle show and hiding the social boxes for Twitter and Comments.
   $('.social-heading').click(function(){

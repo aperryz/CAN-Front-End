@@ -123,7 +123,7 @@
     </div>
 
     <div class="more-posters">
-      <p>Other posters by <a href="#">Don Button</a></p>
+      <p>Other posters by <a href="profile.php">Don Button</a></p>
       <img src="img/dfo/designs/dfo-design-1.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       <img src="img/dfo/designs/dfo-design-2.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
       <img src="img/dfo/designs/dfo-design-3.jpg" width="145" height="187" alt="filler-alt" title="filler-title" />
