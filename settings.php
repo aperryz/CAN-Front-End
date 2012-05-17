@@ -37,8 +37,8 @@
           <div class="control-group">
             <label class="control-label" for="biography">Biography</label>
             <div class="controls">
-              <textarea class="input-xlarge" rows="5" id="biography" ></textarea>
-              <p class="help-block">Tell us a little about you.</p>
+              <textarea class="expanding input-xlarge" id="biography" style="overflow: hidden;"></textarea>
+              <p class="help-block expanding">Tell us a little about you.</p>
             </div>
           </div>
           

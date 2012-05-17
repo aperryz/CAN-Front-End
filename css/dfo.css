@@ -1297,6 +1297,10 @@ form input[type="file"] {
   color: #0E527C;
 }
 
+.help-block.expanding {
+  margin-top: 15px;
+}
+
 /**** STANDALONE CONTENT STYLES *********/
 /****************************************/
 body.content {

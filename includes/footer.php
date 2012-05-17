@@ -8,6 +8,7 @@
     <script src="js/jquery.hover-intent.min.js"></script>
     <script src="js/jquery.colorbox.js"></script>
     <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/expanding.js"></script>
     <script src="js/scripts.js"></script>
 
     <!-- Facebook Like button -->
