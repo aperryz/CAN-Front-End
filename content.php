@@ -81,8 +81,9 @@
       <div id="social-boxes">
         <div id="comments">
           <form class="form-search">
-            <textarea rows="1"></textarea>
             <button type="submit" class="btn">Add Comment</button>
+            <textarea class="expanding" rows="1"></textarea>
+            
           </form>
           <ul id="comments-list">
             <li>
